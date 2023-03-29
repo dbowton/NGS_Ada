@@ -11,14 +11,11 @@ public class Health : MonoBehaviour
 
 	public float CurrentHealth { get { return currentHealth; } }
 
-<<<<<<< Updated upstream
-=======
 	private void Start()
 	{
 		currentHealth = maxHealth;
 	}
 
->>>>>>> Stashed changes
 	public void Damage(float value)
 	{
 		if (currentHealth > 0)
