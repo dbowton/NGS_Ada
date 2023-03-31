@@ -24,6 +24,6 @@ public class AttackState : State
 
 	public override void OnUpdate()
 	{
-		
+	
 	}
 }

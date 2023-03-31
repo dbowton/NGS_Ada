@@ -48,6 +48,7 @@ public class StateAgent : Agent
         enemySeen.value = (enemies.Length) != 0;
         enemy = (enemies.Length != 0) ? enemies[0] : null;
         enemyDistance.value = (enemy != null) ? (Vector3.Distance(transform.position, enemy.transform.position)) : float.MaxValue;
+        timer.value -= Time.deltaTime;
 
         stateMachine.Update();
         animator.SetFloat("Speed", movement.velocity.magnitude);
@@ -57,6 +58,6 @@ public class StateAgent : Agent
     {
         Vector2 screen = Camera.main.WorldToScreenPoint(transform.position);
 
-        GUI.Label(new Rect(screen.x, Screen.height - screen.y, 300, 20), stateMachine.GetStateName());
+        GUI.Label(new Rect(screen.x, Screen.height - screen.y, 900, 60), stateMachine.GetStateName());
     }
 }
