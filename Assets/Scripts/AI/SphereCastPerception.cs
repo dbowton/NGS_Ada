@@ -12,6 +12,8 @@ public class SphereCastPerception : Perception
 	{
 		List<GameObject> result = new List<GameObject>();
 
+		//Debug.DrawRay(raycastTransform.position, raycastTransform.forward * 5, Color.red);
+
 		float angleOffset = (angle * 2) / (numRaycast - 1);
 		for (int i = 0; i < numRaycast; i++)
 		{
@@ -29,7 +31,7 @@ public class SphereCastPerception : Perception
 
 			else
 			{
-				Debug.DrawLine(ray.origin, ray.direction * distance, Color.white);
+				Debug.DrawRay(ray.origin, ray.direction * distance, Color.white);
 			}
 		}
 		return result.ToArray();
