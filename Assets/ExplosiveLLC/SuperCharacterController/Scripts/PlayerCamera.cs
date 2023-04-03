@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerCamera : MonoBehaviour {
+public class playerCamera : MonoBehaviour {
 
     public float Distance = 5.0f;
     public float Height = 2.0f;
