@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
+    public Animator animator;
 
     public float speed = 5;
     public float gravity = -9.18f;
@@ -16,8 +17,11 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+    bool attacking = false;
     void Update()
     {
+        animator.SetBool("IsGrounded", isGrounded);
+        
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -25,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        if (Input.GetKey("left shift") && isGrounded)
+        if (Input.GetKey("left shift"))
         {
             speed = 10;
         }
@@ -34,20 +38,51 @@ public class PlayerMovement : MonoBehaviour
             speed = 5;
         }
 
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !attacking)
+        {
+            animator.SetTrigger("Attack");
+        }
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
+        animator.SetFloat("Speed", move.magnitude * speed);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            animator.SetTrigger("Jump");
         }
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        
+
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            transform.localEulerAngles += Vector3.up * Input.GetAxis("Mouse X");
+        }
+    }
+
+    public void AttackStart()
+    {
+        attacking = true;
+    }
+
+    public void AttackEnd()
+    {
+        attacking = false;
     }
 }
