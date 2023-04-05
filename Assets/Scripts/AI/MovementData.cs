@@ -8,7 +8,7 @@ public class MovementData : ScriptableObject
 	[Range(0, 20)] public float maxSpeed = 12;
 	[Range(0, 20)] public float minSpeed = 6;
 	[Range(0, 100)] public float maxForce = 8;
-	[Range(0, 20)] public float turnRate = 360;
+	[Range(0, 500)] public float turnRate = 360;
 
 	public bool orientMovement = true;
 }

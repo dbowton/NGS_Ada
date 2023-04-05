@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public Animator animator;
+    public Camera cam;
+    public GameObject character;
 
     public float speed = 5;
     public float gravity = -9.18f;
@@ -14,16 +16,22 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public LayerMask walkableMask;
 
     Vector3 velocity;
     bool isGrounded;
     bool attacking = false;
+    int combinedLayerMask;
+
+    private void Start()
+    {
+        combinedLayerMask = groundMask | walkableMask;
+    }
+
     void Update()
     {
         animator.SetBool("IsGrounded", isGrounded);
         
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -73,7 +81,14 @@ public class PlayerMovement : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             transform.localEulerAngles += Vector3.up * Input.GetAxis("Mouse X");
+            //cam.transform.localEulerAngles += character.transform.localPosition * -Input.GetAxis("Mouse Y")  ;
+            cam.transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y"));
         }
+    }
+
+    private void FixedUpdate()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, combinedLayerMask);
     }
 
     public void AttackStart()
@@ -84,5 +99,15 @@ public class PlayerMovement : MonoBehaviour
     public void AttackEnd()
     {
         attacking = false;
+    }
+
+    public void FootL()
+    {
+
+    }
+
+    public void FootR()
+    {
+
     }
 }
