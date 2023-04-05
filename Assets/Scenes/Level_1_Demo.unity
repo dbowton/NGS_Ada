@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1470247, g: 0.36394262, b: 0.5799059, a: 1}
+  m_IndirectSpecularColor: {r: 0.14703749, g: 0.3639866, b: 0.57992274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -946,7 +946,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
       propertyPath: m_RootOrder
-      value: 78
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
       propertyPath: m_LocalScale.x
@@ -1809,7 +1809,7 @@ MonoBehaviour:
   - wave:
     - EnemyPrefab: {fileID: 4595046257672559247, guid: 50e7b878aa274d34fa153c9c6d3c5080, type: 3}
       count: 5
-  pathName: MainPath
+  pathName: 
 --- !u!1 &414068815
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,6 +3418,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
   m_PrefabInstance: {fileID: 628157145}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &633855853 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7815402983352564284, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
+  m_PrefabInstance: {fileID: 919143147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &649932482
 GameObject:
   m_ObjectHideFlags: 0
@@ -4489,7 +4494,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
       propertyPath: m_RootOrder
-      value: 77
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
       propertyPath: m_LocalScale.x
@@ -4939,7 +4944,7 @@ PrefabInstance:
     - target: {fileID: 3365280617181064579, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 2045543037}
+      objectReference: {fileID: 633855853}
     - target: {fileID: 3365280617181064700, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -5552,7 +5557,7 @@ MonoBehaviour:
   excludeLayer:
     serializedVersion: 2
     m_Bits: 0
-  cam: {fileID: 2045543035}
+  cam: {fileID: 1170548126}
   validMat: {fileID: 2100000, guid: f58260126faeb84448a20500046b9534, type: 2}
   invalidMat: {fileID: 2100000, guid: b0d2be75edcf1cc448358564433b05dd, type: 2}
 --- !u!1001 &1105124865
@@ -5720,7 +5725,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
       propertyPath: m_RootOrder
-      value: 75
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
       propertyPath: m_LocalScale.x
@@ -8328,7 +8333,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
       propertyPath: m_RootOrder
-      value: 76
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
       propertyPath: m_LocalScale.x
@@ -8927,7 +8932,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
       propertyPath: m_RootOrder
-      value: 74
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: 4965270263476978590, guid: 2d6aaf9ece74c8e4a9fe0dc776b4334c, type: 3}
       propertyPath: m_LocalScale.x
@@ -9034,13 +9039,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2045543035 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5293133547365383539, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
-  m_PrefabInstance: {fileID: 919143147}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &2045543037 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 7815402983352564284, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
-  m_PrefabInstance: {fileID: 919143147}
-  m_PrefabAsset: {fileID: 0}
