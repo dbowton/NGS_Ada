@@ -5,7 +5,7 @@ using UnityEngine;
 public class StateAgent : Agent
 {
     [SerializeField] public Perception perception;
-    public PathFollower path = null;
+    public PathFollower path;
     public StateMachine stateMachine = new StateMachine();
 
     public BoolRef enemySeen;

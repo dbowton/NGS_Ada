@@ -2,15 +2,14 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 8
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PT_Water_mat
   m_Shader: {fileID: 4800000, guid: 39cf68574afc7f248bd78a99c3800e00, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -36,43 +35,42 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
     m_Floats:
     - _Cutoff: 0.5
-    - _Depth: 0.26
+    - _Depth: 0.233
     - _DepthStrength: 1
     - _EdgeLength: 23.1
     - _Float1: 0.1
     - _Float3: 1
     - _Float4: 10000
-    - _FoamAmount: 0.7
-    - _FoamNoiseScale: 545
-    - _FoamPower: 2.13
+    - _FoamAmount: 0.35
+    - _FoamNoiseScale: 597
+    - _FoamPower: 2.82
     - _FoamSpeed: 0.5
     - _GlossyReflections: 1
-    - _Mettalic: 0.63
-    - _NormalMapWavesSpeed: 0.39
-    - _NormalMapsWavesSize: 6.4
+    - _Mettalic: 0.755
+    - _NormalMapWavesSpeed: 0.1
+    - _NormalMapsWavesSize: 6.14
     - _SMOOTHNESS: 1
     - _SmallWavesSize: 1
     - _SmallWavesSize1: 3
     - _SmallWavesSpeed: 0.5
     - _Smoothness: 0.702
-    - _Smootness: 0.51
+    - _Smootness: 0.514
     - _Strenght: 0.5
     - _TRANSPARENCY: 0.73
     - _TessMax: 10
     - _TessMin: 1
-    - _TessValue: 17.9
+    - _TessValue: 5
     - _TransAmbient: 0.279
     - _TransDirect: 1
     - _TransNormalDistortion: 0.212
     - _TransScattering: 18.2
     - _TransShadow: 0.496
     - _Translucency: 15.5
-    - _WaveAmplitude: 1
-    - _WaveSpeed: 0.46
-    - _WaveTile: 0.9
+    - _WaveAmplitude: 0.2
+    - _WaveSpeed: 0.5
+    - _WaveTile: 0.5
     - _Wavespeed: 0.5
     - _Wavetile: 0.37
     - __dirty: 0

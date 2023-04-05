@@ -19,8 +19,6 @@ public class PathFollower : MonoBehaviour
                 return path;
 			}
 		}
-
-		print("badPath");
         return null;
 	}
 
@@ -31,20 +29,13 @@ public class PathFollower : MonoBehaviour
         return paths[Random.Range(0, paths.Length)];
 	}
 
-	public void Begin()
+	private void Start()
 	{
 	    if (pathNodes == null)
 		{
 			pathNodes = (pathName.Length != 0) ? GetPathByName(pathName) : GetRandomPath();
 		}
 	}
-
-	public void Begin(string pathName)
-	{
-		this.pathName = pathName;
-		Begin();
-	}
-
 
 	public void Move(Movement movement)
 	{

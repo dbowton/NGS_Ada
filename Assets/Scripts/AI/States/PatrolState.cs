@@ -11,12 +11,9 @@ public class PatrolState : State
 
 	public override void OnEnter()
 	{
-		if (owner.path)
-		{
-			owner.path.targetNode = owner.path.pathNodes.GetNearestNode(owner.transform.position);
-			owner.movement.Resume();
-			owner.timer.value = Random.Range(5, 10);
-		}
+		owner.path.targetNode = owner.path.pathNodes.GetNearestNode(owner.transform.position);
+		owner.movement.Resume();
+		owner.timer.value = Random.Range(5, 10);
 	}
 
 	public override void OnExit()
@@ -26,10 +23,7 @@ public class PatrolState : State
 
 	public override void OnUpdate()
 	{
-		if(owner.path)
-		{
-			owner.path.Move(owner.movement);
-		}
+		owner.path.Move(owner.movement);
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
