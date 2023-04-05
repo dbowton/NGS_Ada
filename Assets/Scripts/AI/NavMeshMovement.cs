@@ -23,6 +23,8 @@ public class NavMeshMovement : Movement
 		navMeshAgent.speed = movementData.maxSpeed;
 		navMeshAgent.acceleration = movementData.maxForce;
 		navMeshAgent.angularSpeed = movementData.turnRate;
+
+		HandleMovement();
 	}
 
 	public override void ApplyForce(Vector3 force)
@@ -32,8 +34,7 @@ public class NavMeshMovement : Movement
 
 	public override void MoveTowards(Vector3 target)
 	{
-		navMeshAgent.SetDestination(target);
-		velocity = navMeshAgent.velocity;
+		navMeshAgent.SetDestination(target);	
 	}
 
 	public override void Resume()
@@ -52,6 +53,35 @@ public class NavMeshMovement : Movement
 		set => base.destination = value; 
 	}
 
+	private void HandleMovement()
+	{
+		if (pathVectorList != null)
+		{
+			Vector3 targetPosition = pathVectorList[currentPathIndex];
+			if (Vector3.Distance(transform.position, targetPosition) > 1f)
+			{
+				Vector3 moveDir = (targetPosition - transform.position).normalized;
+
+				float distanceBefore = Vector3.Distance(transform.position, targetPosition);
+				transform.position = transform.position + moveDir * maxSpeed * Time.deltaTime;
+				MoveTowards(targetPosition);
+			}
+			else
+			{
+				currentPathIndex++;
+				if (currentPathIndex >= pathVectorList.Count)
+				{
+					StopMoving();
+				}
+			}
+		}
+	}
+
+	private void StopMoving()
+	{
+		pathVectorList = null;
+	}
+
 	public Vector3 Getposition()
 	{
 		return transform.position;
@@ -60,5 +90,6 @@ public class NavMeshMovement : Movement
 	public void SetTargetPosition()
 	{
 		currentPathIndex = 0;
+		//pathVectorList = PathFind
 	}
 }
