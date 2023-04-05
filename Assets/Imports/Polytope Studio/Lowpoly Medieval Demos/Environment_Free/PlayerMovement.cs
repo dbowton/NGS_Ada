@@ -16,10 +16,17 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public LayerMask walkableMask;
 
     Vector3 velocity;
     bool isGrounded;
     bool attacking = false;
+    int combinedLayerMask;
+
+    private void Start()
+    {
+        combinedLayerMask = groundMask | walkableMask;
+    }
 
     void Update()
     {
@@ -81,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, combinedLayerMask);
     }
 
     public void AttackStart()
