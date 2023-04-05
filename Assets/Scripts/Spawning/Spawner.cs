@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
 	[SerializeField] List<Wave> waves = new List<Wave>();
 
 	int currentWave = -1;
-	[SerializeField] GameObject firstNode;
+	[SerializeField] string pathName;
 
 	Timer spawnTimer;
 
@@ -48,7 +48,7 @@ public class Spawner : MonoBehaviour
 				{
 					EnemyWave selected = waves[currentWave].wave[Random.Range(0, waves[currentWave].wave.Count)];
 					GameObject spawnedEnemy = Instantiate(selected.EnemyPrefab, transform.position, Quaternion.identity);
-					//			spawnedEnemy.GetComponent<Enemy>().targetNode = firstNode;
+					spawnedEnemy.GetComponent<PathFollower>().Begin(pathName);
 					selected.count--;
 
 					if (selected.count <= 0)

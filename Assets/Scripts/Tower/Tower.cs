@@ -1,0 +1,69 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class Tower : MonoBehaviour
+{
+    public float towerSize;
+
+	[SerializeField] float attackDistance;
+
+	[SerializeField] LayerMask targetLayer;
+
+	[SerializeField] TargetMode targetMode;
+
+	public enum TargetMode
+	{
+		Closest,
+		Healthiest,
+		First,
+		Last
+	}
+
+	Timer attackTimer;
+	[SerializeField] float attackRate = 1f;
+	[SerializeField] float damage = 2f;
+	private void Start()
+	{
+		attackTimer = new Timer(attackRate);
+		attackTimer.End();
+	}
+
+	private void Update()
+	{
+		if (!attackTimer.IsOver) return;
+
+		List<Collider> hits = Physics.OverlapSphere(transform.position + transform.forward * attackDistance, towerSize, targetLayer).ToList();
+
+		if (hits.Count == 0) return;
+
+		GameObject targetObject = null;
+		switch (targetMode)
+		{
+			case TargetMode.Closest:
+				targetObject = hits.OrderBy(x => Vector3.Distance(transform.position, x.transform.position)).First().gameObject;
+				break;
+			case TargetMode.Healthiest:
+				targetObject = hits.OrderBy(x => x.transform.root.GetComponent<Health>().CurrentHealth).First().gameObject;
+				break;
+			case TargetMode.First:
+				break;
+			case TargetMode.Last:
+				break;
+			default:
+				break;
+		}
+
+		if (targetObject != null)
+		{
+			targetObject.transform.root.GetComponent<Health>().Damage(damage);
+			attackTimer.Reset();
+		}
+	}
+
+	private void OnDestroy()
+	{
+		if (attackTimer == null) attackTimer.Remove();
+	}
+}

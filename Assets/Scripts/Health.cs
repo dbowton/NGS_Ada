@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
 	[SerializeField] float maxHealth = 10;
-	[SerializeField] UnityEvent OnDeath;
+	public UnityEvent OnDeath;
 	private float currentHealth;
 
 	public float CurrentHealth { get { return currentHealth; } }
