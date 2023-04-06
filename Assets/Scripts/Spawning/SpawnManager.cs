@@ -31,7 +31,11 @@ public class SpawnManager : MonoBehaviour
 	{
 		if (this != instance) return;
 
-		waveTimer = new Timer(60, () => { foreach (var spawn in spawners) spawn.BeginWave(); }, true);
+		waveTimer = new Timer(60, () => 
+		{
+			runningWave = true;
+			foreach (var spawn in spawners) spawn.BeginWave(); 
+		}, true);
 	}
 
 	List<Spawner> spawners = new List<Spawner>();
@@ -50,20 +54,25 @@ public class SpawnManager : MonoBehaviour
 	{
 		if (this != instance) return;
 
+		if (runningWave && remainingEnemies <= 0)
+			WaveComplete();
+
 		if (waveTimer != null)
 		{
 			if (Input.GetKeyDown(KeyCode.P))
 			{
 				waveTimer.Remove();
 				waveTimer = null;
+				runningWave = true;
 				foreach (var spawn in spawners) 
 					spawn.BeginWave();
 			}
 		}
 	}
 
-	int completedSpawns = 0;
+	bool runningWave = false;
 	int completedWaves = 0;
+	public int remainingEnemies = 0;
 	Timer waveTimer;
 
 	public void WaveComplete()
@@ -74,21 +83,21 @@ public class SpawnManager : MonoBehaviour
 			return;
 		}
 
-		completedSpawns++;
-		if (completedSpawns >= spawners.Count)
+		runningWave = false;
+		completedWaves++;
+
+		if (completedWaves >= spawners.Max(x => x.waveCount()))
 		{
-			completedSpawns = 0;
-			completedWaves++;
-
-			if (completedWaves >= spawners.Max(x => x.waveCount()))
-			{
-				print("All Waves Complete");
-			}
-			else
-			{
-				waveTimer = new Timer(60, () => { foreach (var spawn in spawners) spawn.BeginWave(); }, true);
-			}
-
+			print("All Waves Complete");
 		}
+		else
+		{
+			waveTimer = new Timer(60, () =>
+			{
+				runningWave = true;
+				foreach (var spawn in spawners) spawn.BeginWave();
+			}, true);
+		}
+		
 	}
 }

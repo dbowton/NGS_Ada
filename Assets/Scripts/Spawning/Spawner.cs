@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -37,9 +38,11 @@ public class Spawner : MonoBehaviour
 	{
 		currentWave++;
 
-		if (currentWave >= waves.Count || waves[currentWave].wave.Count == 0)
-			SpawnManager.Instance.WaveComplete();
-		else
+		if (currentWave < waves.Count)
+			SpawnManager.Instance.remainingEnemies += waves[currentWave].wave.Sum(x => x.count);
+
+
+		if (currentWave < waves.Count && waves[currentWave].wave.Count > 0)
 		spawnTimer = new Timer(
 			0.25f,
 			() =>
@@ -48,6 +51,9 @@ public class Spawner : MonoBehaviour
 				{
 					EnemyWave selected = waves[currentWave].wave[Random.Range(0, waves[currentWave].wave.Count)];
 					GameObject spawnedEnemy = Instantiate(selected.EnemyPrefab, transform.position, Quaternion.identity);
+
+					spawnedEnemy.GetComponent<Health>().OnDeath.AddListener(() => SpawnManager.Instance.remainingEnemies--);
+
 					spawnedEnemy.GetComponent<PathFollower>().Begin(pathName);
 					selected.count--;
 
@@ -56,7 +62,6 @@ public class Spawner : MonoBehaviour
 						waves[currentWave].wave.Remove(selected);
 						if (waves[currentWave].wave.Count <= 0)
 						{
-							SpawnManager.Instance.WaveComplete();
 							spawnTimer.Remove();
 							spawnTimer = null;
 						}
