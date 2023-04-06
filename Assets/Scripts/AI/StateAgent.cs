@@ -27,6 +27,7 @@ public class StateAgent : Agent
         //from first state to second
         stateMachine.AddTransition(typeof(IdleState).Name, new Transition(new Condition[] { new BoolCondition(enemySeen, true)}), typeof(ChaseState).Name);
         stateMachine.AddTransition(typeof(IdleState).Name, new Transition(new Condition[] { new FloatCondition(timer, Condition.Predicate.LESS, 0) }), typeof(PatrolState).Name);
+        //stateMachine.AddTransition(typeof(IdleState).Name, new Transition(new Condition[] { new FloatCondition(health, Condition.Predicate.LESS_EQUAL, 0) }), typeof(DeathState).Name);
         stateMachine.AddTransition(typeof(IdleState).Name, new Transition(new Condition[] { new FloatCondition(health, Condition.Predicate.LESS_EQUAL, 0) }), typeof(DeathState).Name);
 
         stateMachine.AddTransition(typeof(PatrolState).Name, new Transition(new Condition[] { new BoolCondition(enemySeen, true) }), typeof(ChaseState).Name);
@@ -40,6 +41,9 @@ public class StateAgent : Agent
         //attack to death state
 
         stateMachine.SetState(stateMachine.StateFromName(typeof(PatrolState).Name));
+
+        //goes to death state when unity death event is triggered
+        transform.GetComponent<Health>().OnDeath.AddListener(() => stateMachine.SetState(stateMachine.StateFromName(typeof(DeathState).Name)));
     }
 
 	void Update()
@@ -52,6 +56,8 @@ public class StateAgent : Agent
 
         stateMachine.Update();
         animator.SetFloat("Speed", movement.velocity.magnitude);
+
+        
     }
 
     private void OnGUI()

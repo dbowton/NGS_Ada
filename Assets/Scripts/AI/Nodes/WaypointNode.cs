@@ -17,7 +17,7 @@ public class WaypointNode : Node
 		}
 	}*/
 
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.TryGetComponent<PathFollower>(out PathFollower agentPath))
 		{
