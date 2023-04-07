@@ -1292,7 +1292,15 @@ PrefabInstance:
       value: Rain System
       objectReference: {fileID: 0}
     - target: {fileID: 9088780776448498646, guid: 09bf64d1ce93c1c49b76260cf3221527, type: 3}
+      propertyPath: simulationSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9088780776448498646, guid: 09bf64d1ce93c1c49b76260cf3221527, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9088780776448498646, guid: 09bf64d1ce93c1c49b76260cf3221527, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
