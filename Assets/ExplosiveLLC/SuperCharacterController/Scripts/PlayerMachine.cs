@@ -5,7 +5,7 @@ using System.Collections;
  * Example implementation of the SuperStateMachine and SuperCharacterController
  */
 [RequireComponent(typeof(SuperCharacterController))]
-[RequireComponent(typeof(PlayerInputController))]
+[RequireComponent(typeof(playerInputController))]
 public class PlayerMachine : SuperStateMachine {
 
     public Transform AnimatedMesh;
@@ -26,12 +26,12 @@ public class PlayerMachine : SuperStateMachine {
     // current direction our character's art is facing
     public Vector3 lookDirection { get; private set; }
 
-    private PlayerInputController input;
+    private playerInputController input;
 
 	void Start () {
 	    // Put any code here you want to run ONCE, when the object is initialized
 
-        input = gameObject.GetComponent<PlayerInputController>();
+        input = gameObject.GetComponent<playerInputController>();
 
         // Grab the controller object from our object
         controller = gameObject.GetComponent<SuperCharacterController>();

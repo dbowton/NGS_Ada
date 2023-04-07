@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerInputController : MonoBehaviour {
+public class playerInputController : MonoBehaviour {
 
     public PlayerInput Current;
     public Vector2 RightStickMultiplier = new Vector2(3, -1.5f);
