@@ -38,4 +38,18 @@ public class Path : MonoBehaviour
 		}
 		return nearestNode;
 	}
+
+	public Node GetNextNode(Node currentNode)
+	{
+		if (currentNode == null)
+		{
+			currentNode = getStartNode();
+		}
+
+		Node nextNode = null;
+		Node[] nodes = GetComponentsInChildren<Node>();
+		
+
+		return nextNode;
+	}
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaypointNode : Node
 {
     public WaypointNode[] nextWaypoints;
+	public WaypointNode nextWayPointNode;
 
 	/*private void OnTriggerEnter(Collider other)
 	{
