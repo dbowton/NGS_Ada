@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaypointNode : Node
 {
     public WaypointNode[] nextWaypoints;
+	public WaypointNode nextWayPointNode;
 
 	/*private void OnTriggerEnter(Collider other)
 	{
@@ -17,7 +18,7 @@ public class WaypointNode : Node
 		}
 	}*/
 
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.TryGetComponent<PathFollower>(out PathFollower agentPath))
 		{

@@ -36,6 +36,7 @@ public class NavMeshMovement : Movement
 	{
 		navMeshAgent.SetDestination(target);
 		velocity = navMeshAgent.velocity;
+		//Debug.Log(velocity);
 	}
 
 	public override void Resume()

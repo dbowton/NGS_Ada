@@ -12,12 +12,14 @@ public class IdleState : State
 	public override void OnEnter()
 	{
 		owner.movement.Stop();
-		owner.timer.value = 2;
+		owner.movement.velocity = Vector3.zero;
+		owner.timer.value = 0;
+		owner.animator.SetBool("IsIdle", true);
 	}
 
 	public override void OnExit()
 	{
-		
+		owner.animator.SetBool("IsIdle", false);
 	}
 
 	public override void OnUpdate()
