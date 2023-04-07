@@ -5565,6 +5565,46 @@ MonoBehaviour:
   cam: {fileID: 633855855}
   validMat: {fileID: 2100000, guid: f58260126faeb84448a20500046b9534, type: 2}
   invalidMat: {fileID: 2100000, guid: b0d2be75edcf1cc448358564433b05dd, type: 2}
+--- !u!114 &1085071535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3365280617181064579, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
+  m_PrefabInstance: {fileID: 919143147}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085071526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5721f45a4372242a249d3bb70958a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1085071541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085071526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29fb87fe008d6364baa0367c32af2af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1085071542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085071526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6693c972262654c9918bd7df95a0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 1085071535}
 --- !u!1001 &1105124865
 PrefabInstance:
   m_ObjectHideFlags: 0

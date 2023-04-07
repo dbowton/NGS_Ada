@@ -31,7 +31,21 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         animator.SetBool("IsGrounded", isGrounded);
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            animator.SetTrigger("Jump");
+        }
+
         
+    }
+
+    private void FixedUpdate()
+    {
+        
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, combinedLayerMask);
+
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -59,36 +73,11 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
         animator.SetFloat("Speed", move.magnitude * speed);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            animator.SetTrigger("Jump");
-        }
+        
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-
-        
-
-        if (Input.GetKey(KeyCode.LeftAlt))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            transform.localEulerAngles += Vector3.up * Input.GetAxis("Mouse X");
-            //cam.transform.localEulerAngles += character.transform.localPosition * -Input.GetAxis("Mouse Y")  ;
-            cam.transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y"));
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, combinedLayerMask);
     }
 
     public void AttackStart()
