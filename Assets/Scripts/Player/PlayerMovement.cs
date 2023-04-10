@@ -82,12 +82,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void AttackStart()
     {
-        attacking = true;
+        gameObject.GetComponent<playerInput>().Attack(true);
     }
 
     public void AttackEnd()
     {
+        gameObject.GetComponent<playerInput>().Attack(false);
         attacking = false;
+    }
+
+    public void AttackAnimationStart()
+    {
+        attacking = true;
     }
 
     public void FootL()

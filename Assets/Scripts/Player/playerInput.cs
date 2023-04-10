@@ -25,8 +25,9 @@ public class playerInput : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             transform.localEulerAngles += Vector3.up * Input.GetAxis("Mouse X");
-            //cam.transform.localEulerAngles += character.transform.localPosition * -Input.GetAxis("Mouse Y")  ;
-            movement.cam.transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y"));
+            //transform.localEulerAngles += Vector3.up * movement.cam.transform.eulerAngles.x;
+            //cam.transform.localEulerAngles += character.transform.localPosition * -Input.GetAxis("Mouse Y");
+            //movement.cam.transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y"));
         }
 
         if (Input.GetKey(KeyCode.L))
@@ -35,8 +36,8 @@ public class playerInput : MonoBehaviour
         }
     }
 
-    void Attack()
+    public void Attack(bool isAttacking)
     {
-
+        weapon.isAttacking = isAttacking;
     }
 }
