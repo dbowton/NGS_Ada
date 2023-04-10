@@ -11,7 +11,8 @@ public class Tower : MonoBehaviour
 
 	[SerializeField] LayerMask targetLayer;
 
-	[SerializeField] TargetMode targetMode;
+	public TargetMode targetMode;
+	public Material towerIcon;
 
 	public enum TargetMode
 	{

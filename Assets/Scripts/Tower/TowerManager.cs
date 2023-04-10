@@ -20,6 +20,15 @@ public class TowerManager : MonoBehaviour
 
 	float yRot = 0;
 
+	private void Start()
+	{
+		List<Material> towerMats = new List<Material>();
+		foreach (var tower in towerPrefabs)
+			towerMats.Add(tower.GetComponent<Tower>().towerIcon);
+
+		UIGameManager.Instance.SetTowerIcons(towerMats);
+	}
+
 	private void Update()
 	{
 		if (awaitingPlacement)
