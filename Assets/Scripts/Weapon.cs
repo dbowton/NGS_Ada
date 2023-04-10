@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public string enemyTagName;
     public float damage;
-    public bool attacking;
+    public bool isAttacking;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (attacking && other.CompareTag(enemyTagName))
+        if (isAttacking && other.CompareTag(enemyTagName))
         {
             other.GetComponent<Health>().Damage(damage);
         }
