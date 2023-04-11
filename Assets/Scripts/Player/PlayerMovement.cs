@@ -22,10 +22,16 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     bool attacking = false;
     int combinedLayerMask;
+    int attackCount = 0;
+
+    Timer attackTimer;
+
 
     private void Start()
     {
         combinedLayerMask = groundMask | walkableMask;
+        attackTimer = new Timer(2.0f, () => attackCount = 0);
+        attackTimer.End();
     }
 
     void Update()
@@ -38,7 +44,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetTrigger("Jump");
         }
 
-        
+//        if (attackTimer.IsOver) attackCount = 0;
+
     }
 
     private void FixedUpdate()
@@ -60,9 +67,13 @@ public class PlayerMovement : MonoBehaviour
             speed = 5;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !attacking)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attackCount % 2 == 0 && !attacking)
         {
             animator.SetTrigger("Attack");
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attackCount % 2 == 1 && !attacking)
+        {
+            animator.SetTrigger("Attack 2");
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -89,11 +100,14 @@ public class PlayerMovement : MonoBehaviour
     {
         gameObject.GetComponent<playerInput>().Attack(false);
         attacking = false;
+
     }
 
     public void AttackAnimationStart()
     {
         attacking = true;
+        attackCount++;
+        attackTimer.Reset();
     }
 
     public void FootL()
