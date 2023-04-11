@@ -854,7 +854,7 @@ Transform:
   m_GameObject: {fileID: 226642958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -60.84, y: -1.26, z: -0.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1996088498}
@@ -874,6 +874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextWaypoints:
   - {fileID: 1886687594}
+  nextWayPointNode: {fileID: 0}
 --- !u!135 &226642961
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1044,7 +1045,7 @@ Transform:
   m_GameObject: {fileID: 265181360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -131.39, y: -1.26, z: -22.26}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1996088498}
@@ -1064,6 +1065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextWaypoints:
   - {fileID: 889951944}
+  nextWayPointNode: {fileID: 0}
 --- !u!135 &265181363
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2189,7 +2191,7 @@ Transform:
   m_GameObject: {fileID: 429951292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -93.57, y: -1.26, z: 32.36}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1996088498}
@@ -2209,6 +2211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextWaypoints:
   - {fileID: 678453274}
+  nextWayPointNode: {fileID: 0}
 --- !u!135 &429951295
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3632,7 +3635,7 @@ Transform:
   m_GameObject: {fileID: 651791622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.28, y: -1.26, z: -0.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1996088498}
@@ -3652,6 +3655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextWaypoints:
   - {fileID: 226642960}
+  nextWayPointNode: {fileID: 0}
 --- !u!135 &651791625
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3823,7 +3827,7 @@ Transform:
   m_GameObject: {fileID: 678453272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -95.35, y: -1.26, z: -22.26}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1996088498}
@@ -3843,6 +3847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextWaypoints:
   - {fileID: 265181362}
+  nextWayPointNode: {fileID: 0}
 --- !u!135 &678453275
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4597,7 +4602,7 @@ Transform:
   m_GameObject: {fileID: 889951942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -131.39, y: -1.26, z: -58.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1996088498}
@@ -4617,6 +4622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextWaypoints:
   - {fileID: 1347167673}
+  nextWayPointNode: {fileID: 0}
 --- !u!135 &889951945
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6575,7 +6581,7 @@ Transform:
   m_GameObject: {fileID: 1347167671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -114.21, y: -1.26, z: -59.96}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1996088498}
@@ -6594,6 +6600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextWaypoints: []
+  nextWayPointNode: {fileID: 0}
 --- !u!135 &1347167674
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8090,7 +8097,7 @@ Transform:
   m_GameObject: {fileID: 1886687592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -61.87, y: -1.26, z: 32.36}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1996088498}
@@ -8110,6 +8117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextWaypoints:
   - {fileID: 429951294}
+  nextWayPointNode: {fileID: 0}
 --- !u!135 &1886687595
 SphereCollider:
   m_ObjectHideFlags: 0

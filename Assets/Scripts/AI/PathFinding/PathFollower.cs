@@ -6,6 +6,8 @@ public class PathFollower : MonoBehaviour
 {
     public Path pathNodes;
     public string pathName;
+	public int lowerRange;
+	public int upperRange;
     public Node targetNode { get; set; }
     public bool complete { get => targetNode == null; }
 
@@ -50,7 +52,7 @@ public class PathFollower : MonoBehaviour
 	{
 		if (targetNode != null)
 		{
-			movement.MoveTowards(targetNode.transform.position);
+			movement.MoveTowards(targetNode.transform.position + new Vector3(Random.Range(lowerRange, upperRange), 0, Random.Range(lowerRange, upperRange)));
 		}
 	}
 }
