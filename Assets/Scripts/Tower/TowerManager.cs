@@ -26,7 +26,7 @@ public class TowerManager : MonoBehaviour
 		foreach (var tower in towerPrefabs)
 			towerMats.Add(tower.GetComponent<Tower>().towerIcon);
 
-		UIGameManager.Instance.SetTowerIcons(towerMats);
+//		UIGameManager.Instance.SetTowerIcons(towerMats);
 	}
 
 	private void Update()
