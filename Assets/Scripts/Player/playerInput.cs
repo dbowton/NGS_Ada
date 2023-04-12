@@ -10,24 +10,31 @@ public class playerInput : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Health>().OnDeath.AddListener(() => movement.animator.SetTrigger("death"));
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftAlt))
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }
-        else
+        if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            transform.localEulerAngles += Vector3.up * Input.GetAxis("Mouse X");
+            
             //transform.localEulerAngles += Vector3.up * movement.cam.transform.eulerAngles.x;
             //cam.transform.localEulerAngles += character.transform.localPosition * -Input.GetAxis("Mouse Y");
             //movement.cam.transform.Rotate(Vector3.right, -Input.GetAxis("Mouse Y"));
+        }
+
+        if (!Input.GetKey(KeyCode.LeftAlt))
+		{
+            transform.localEulerAngles += Vector3.up * Input.GetAxis("Mouse X");
         }
 
         if (Input.GetKey(KeyCode.L))

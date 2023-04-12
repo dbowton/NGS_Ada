@@ -5,8 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+	public GameObject UI;
+
+	private void OnTriggerEnter(Collider other)
+	{
+		UI.gameObject.SetActive(true);
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.Confined;
+		Time.timeScale = 0;
+	}
+
 	public void Restart()
 	{
+		Debug.Log("check");
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
