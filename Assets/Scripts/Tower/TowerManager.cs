@@ -42,8 +42,8 @@ public class TowerManager : MonoBehaviour
 				return;
 			}
 
-			if (Input.GetKey(KeyCode.Q)) yRot -= Time.deltaTime * 45f;
-			if (Input.GetKey(KeyCode.E)) yRot += Time.deltaTime * 45f;
+			if (Input.GetKey(KeyCode.Q)) yRot -= Time.deltaTime * 180f;
+			if (Input.GetKey(KeyCode.E)) yRot += Time.deltaTime * 180f;
 
 			if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hitInfo, placementRange, targetLayer))
 			{
