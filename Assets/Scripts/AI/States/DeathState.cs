@@ -12,6 +12,9 @@ public class DeathState : State
 	public override void OnEnter()
 	{
 		owner.movement.Stop();
+		owner.movement.velocity = Vector3.zero;
+		owner.GetComponent<Rigidbody>().Sleep();
+
 		owner.animator.SetTrigger("death");
 		GameObject.Destroy(owner.gameObject, 3);
 	}
