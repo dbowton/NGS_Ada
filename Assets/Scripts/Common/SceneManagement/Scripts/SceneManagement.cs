@@ -109,7 +109,6 @@ public class SceneManagement : MonoBehaviour
 			workingTime += Time.deltaTime;
 			if (workingTime >= totalFadeInTime)
 			{
-				ObjectiveManager.instance.Data.UpdateObjective("open " + tempSceneName, 1);
 				tempSceneName = "";
 				Destroy(fadeScreen);
 				loading = null;

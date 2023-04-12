@@ -2723,14 +2723,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPrefabs:
   - {fileID: 2164639080217304375, guid: e5df80913944f0b4b9be2be6a6f199be, type: 3}
-  placementRange: 12
+  placementRange: 16
   targetLayer:
     serializedVersion: 2
     m_Bits: 8
   excludeLayer:
     serializedVersion: 2
     m_Bits: 0
-  cam: {fileID: 0}
   validMat: {fileID: 2100000, guid: f58260126faeb84448a20500046b9534, type: 2}
   invalidMat: {fileID: 2100000, guid: b0d2be75edcf1cc448358564433b05dd, type: 2}
 --- !u!114 &1428653070431300190

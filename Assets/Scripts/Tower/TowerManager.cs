@@ -13,7 +13,7 @@ public class TowerManager : MonoBehaviour
 	GameObject awaitingTower;
 	[SerializeField] LayerMask targetLayer;
 	[SerializeField] LayerMask excludeLayer;
-	[SerializeField] Transform cam;
+	Transform cam;
 
 	[SerializeField] Material validMat;
 	[SerializeField] Material invalidMat;
@@ -22,6 +22,8 @@ public class TowerManager : MonoBehaviour
 
 	private void Start()
 	{
+		cam = Camera.main.transform;
+
 		List<Material> towerMats = new List<Material>();
 		foreach (var tower in towerPrefabs)
 			towerMats.Add(tower.GetComponent<Tower>().towerIcon);
