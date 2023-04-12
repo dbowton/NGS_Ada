@@ -60,10 +60,10 @@ public class StateAgent : Agent
         
     }
 
-    private void OnGUI()
+    /*private void OnGUI()
     {
         Vector2 screen = Camera.main.WorldToScreenPoint(transform.position);
 
         GUI.Label(new Rect(screen.x, Screen.height - screen.y, 900, 60), stateMachine.GetStateName());
-    }
+    }*/
 }
