@@ -6,8 +6,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     public float towerSize;
-
-	[SerializeField] float attackDistance;
+	[SerializeField] float attackSize = 1;
 	[SerializeField] LayerMask targetLayer;
 	[SerializeField] Transform hitCenter;
 
@@ -35,19 +34,20 @@ public class Tower : MonoBehaviour
 		attackTimer.End();
 	}
 
+	[SerializeField] GameObject spherePrefab;
+
 	private void Update()
 	{
 		if (!attackTimer.IsOver) return;
 
 		if (hitSphere == null)
 		{
-			hitSphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+			hitSphere = Instantiate(spherePrefab);
 			hitSphere.transform.position = hitCenter.transform.position;
-			hitSphere.transform.localScale = Vector3.one * towerSize;
-			if(hitSphere.TryGetComponent<Collider>(out Collider co)) Destroy(co);
+			hitSphere.transform.localScale = Vector3.one * attackSize;
 		}
 
-		List<Collider> hits = Physics.OverlapSphere(hitCenter.position, towerSize, targetLayer).ToList();
+		List<Collider> hits = Physics.OverlapSphere(hitCenter.position, attackSize, targetLayer).ToList();
 
 		if (hits.Count == 0) return;
 
@@ -70,6 +70,7 @@ public class Tower : MonoBehaviour
 
 		if (targetObject != null)
 		{
+			print("attacked: " + targetObject.name);
 			targetObject.transform.root.GetComponent<Health>().Damage(damage);
 			Destroy(hitSphere);
 			hitSphere = null;
@@ -80,5 +81,6 @@ public class Tower : MonoBehaviour
 	private void OnDestroy()
 	{
 		if (attackTimer == null) attackTimer.Remove();
+		if(hitSphere) Destroy(hitSphere);
 	}
 }

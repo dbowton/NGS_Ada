@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerSize: 1
-  attackDistance: 0.25
+  attackSize: 8
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -155,7 +155,8 @@ MonoBehaviour:
   targetMode: 0
   towerIcon: {fileID: 0}
   attackRate: 1
-  damage: 2
+  damage: 200
+  spherePrefab: {fileID: 5038712164634377890, guid: 003d1e3457b51204e989c0e2cda573fb, type: 3}
 --- !u!1 &3379311669696250524
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4305181148674311041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 2}
+  m_LocalPosition: {x: 0, y: 1, z: 3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
