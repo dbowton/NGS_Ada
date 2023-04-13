@@ -54,6 +54,20 @@ public class SpawnManager : MonoBehaviour
 	{
 		if (this != instance) return;
 
+		UIGameManager.Instance.remainingEnemies.text = "Enemies Remaining: " + remainingEnemies;
+		UIGameManager.Instance.waveCounter.text = "Wave: " + completedWaves + "/" + spawners.Max(x => x.waveCount());
+
+
+		if (waveTimer == null || waveTimer.IsOver)
+		{
+			UIGameManager.Instance.timer.gameObject.SetActive(false);
+		}
+		else
+		{
+			UIGameManager.Instance.timer.gameObject.SetActive(true);
+			UIGameManager.Instance.timer.text = (waveTimer.GetTime() - waveTimer.GetElapsed * waveTimer.GetTime()).ToString("F2");
+		}
+
 		if (runningWave && remainingEnemies <= 0)
 			WaveComplete();
 

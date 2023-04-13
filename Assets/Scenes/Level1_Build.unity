@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14703749, g: 0.3639866, b: 0.57992274, a: 1}
+  m_IndirectSpecularColor: {r: 0.1470247, g: 0.36394262, b: 0.5799059, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -824,6 +824,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6915020781232085865, guid: 0f3413d69b4e3a048869018aed66e3d2, type: 3}
   m_PrefabInstance: {fileID: 185640163}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &190028650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4487993322837193714, guid: d869f4abd3ffdd2428af7f106e8255c5, type: 3}
+  m_PrefabInstance: {fileID: 1624105408}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &250160618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1569,7 +1580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: waves.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: waves.Array.data[1].wave.Array.size
@@ -1581,15 +1592,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: waves.Array.data[0].wave.Array.data[0].count
-      value: 4
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: waves.Array.data[1].wave.Array.data[0].count
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: waves.Array.data[2].wave.Array.data[0].count
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: waves.Array.data[1].wave.Array.data[0].EnemyPrefab
@@ -6338,6 +6349,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4487993323094263901, guid: d869f4abd3ffdd2428af7f106e8255c5, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 190028650}
     - target: {fileID: 4487993323494394827, guid: d869f4abd3ffdd2428af7f106e8255c5, type: 3}
       propertyPath: m_IsActive
       value: 0
