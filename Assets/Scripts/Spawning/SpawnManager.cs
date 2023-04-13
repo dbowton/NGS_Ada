@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawnManager : MonoBehaviour
 {
 	private static SpawnManager instance;
+	[SerializeField] UnityEvent onWavesComplete;
 
 	public static SpawnManager Instance
 	{
@@ -31,6 +33,8 @@ public class SpawnManager : MonoBehaviour
 	{
 		if (this != instance) return;
 
+		UIGameManager.Instance.waveCounter.text = "Wave: 1/" + spawners.Max(x => x.waveCount());
+
 		waveTimer = new Timer(60, () => 
 		{
 			runningWave = true;
@@ -55,8 +59,6 @@ public class SpawnManager : MonoBehaviour
 		if (this != instance) return;
 
 		UIGameManager.Instance.remainingEnemies.text = "Enemies Remaining: " + remainingEnemies;
-		UIGameManager.Instance.waveCounter.text = "Wave: " + completedWaves + "/" + spawners.Max(x => x.waveCount());
-
 
 		if (waveTimer == null || waveTimer.IsOver)
 		{
@@ -103,9 +105,14 @@ public class SpawnManager : MonoBehaviour
 		if (completedWaves >= spawners.Max(x => x.waveCount()))
 		{
 			print("All Waves Complete");
+
+			UIGameManager.Instance.waveCounter.text = "Wave: " + completedWaves + "/" + spawners.Max(x => x.waveCount());
+
+			onWavesComplete?.Invoke();
 		}
 		else
 		{
+			UIGameManager.Instance.waveCounter.text = "Wave: " + (completedWaves + 1) + "/" + spawners.Max(x => x.waveCount());
 			waveTimer = new Timer(60, () =>
 			{
 				runningWave = true;

@@ -9,11 +9,17 @@ public class GameOver : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+		EndGame();
+	}
+
+	public void EndGame()
+	{
 		UI.gameObject.SetActive(true);
 		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.Confined;
 		Time.timeScale = 0;
 	}
+
 
 	public void Restart()
 	{
