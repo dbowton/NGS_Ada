@@ -14,8 +14,6 @@ public class PatrolState : State
 		if (owner.path)
 		{
 			//owner.path.targetNode = owner.path.pathNodes.GetNearestNode(owner.transform.position);
-			Debug.Log(owner.path.targetNode);
-			//owner.path.targetNode = owner.path.pathNodes.GetNextNode(owner.path.targetNode);
 			if (owner.path.targetNode == null) owner.path.targetNode = owner.path.pathNodes.getStartNode();
 			owner.movement.Resume();
 		}
