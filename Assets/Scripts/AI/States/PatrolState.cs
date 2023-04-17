@@ -13,9 +13,11 @@ public class PatrolState : State
 	{
 		if (owner.path)
 		{
-			owner.path.targetNode = owner.path.pathNodes.GetNearestNode(owner.transform.position);
+			//owner.path.targetNode = owner.path.pathNodes.GetNearestNode(owner.transform.position);
+			Debug.Log(owner.path.targetNode);
+			//owner.path.targetNode = owner.path.pathNodes.GetNextNode(owner.path.targetNode);
+			if (owner.path.targetNode == null) owner.path.targetNode = owner.path.pathNodes.getStartNode();
 			owner.movement.Resume();
-			owner.timer.value = Random.Range(5, 10);
 		}
 	}
 
@@ -29,11 +31,6 @@ public class PatrolState : State
 		if(owner.path)
 		{
 			owner.path.Move(owner.movement);
-		}
-
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			owner.stateMachine.SetState(owner.stateMachine.StateFromName("idle"));
 		}
 	}
 }

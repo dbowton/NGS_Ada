@@ -39,17 +39,15 @@ public class Path : MonoBehaviour
 		return nearestNode;
 	}
 
-	public Node GetNextNode(Node currentNode)
+	/*public Node GetNextNode(Node currentNode)
 	{
 		if (currentNode == null)
 		{
-			currentNode = getStartNode();
+			return getStartNode();
 		}
 
-		Node nextNode = null;
-		Node[] nodes = GetComponentsInChildren<Node>();
-		
+		Node nextNode = currentNode.GetComponent<WaypointNode>().nextWayPointNode;		
 
 		return nextNode;
-	}
+	}*/
 }

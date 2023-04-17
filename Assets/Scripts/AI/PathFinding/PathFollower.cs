@@ -9,7 +9,6 @@ public class PathFollower : MonoBehaviour
 	public int lowerRange;
 	public int upperRange;
     public Node targetNode { get; set; }
-    public bool complete { get => targetNode == null; }
 
     public static Path GetPathByName(string name)
 	{
