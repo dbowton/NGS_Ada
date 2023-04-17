@@ -36,15 +36,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        animator.SetBool("IsGrounded", isGrounded);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        //if (attackTimer.IsOver) attackCount = 0;
+        if (isGrounded && velocity.y < 0)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            animator.SetTrigger("Jump");
+            velocity.y = -2f;
         }
 
-//        if (attackTimer.IsOver) attackCount = 0;
+        animator.SetBool("Jump", (Input.GetKeyDown(KeyCode.Space) && isGrounded));
 
     }
 
@@ -52,10 +51,14 @@ public class PlayerMovement : MonoBehaviour
     {
         
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, combinedLayerMask);
+        //isGrounded = controller.isGrounded;
+        animator.SetBool("IsGrounded", isGrounded);
 
-        if (isGrounded && velocity.y < 0)
+       
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = -2f;
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
         if (Input.GetKey("left shift"))
