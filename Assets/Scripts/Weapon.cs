@@ -20,6 +20,7 @@ public class Weapon : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (isAttacking && other.CompareTag(enemyTagName))
         {
             other.GetComponent<Health>().Damage(damage);
