@@ -17,6 +17,8 @@ public class playerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             Cursor.lockState = CursorLockMode.Confined;
@@ -47,4 +49,6 @@ public class playerInput : MonoBehaviour
     {
         weapon.isAttacking = isAttacking;
     }
+
+    
 }
