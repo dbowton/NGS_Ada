@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.5387, y: 0}
-  m_SizeDelta: {x: 163.0775, y: 37}
+  m_AnchoredPosition: {x: -0.76935, y: 0}
+  m_SizeDelta: {x: 251.54, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7868431224373917589
 CanvasRenderer:
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.8490566, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -191,7 +191,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -81.49048, y: 503.1521}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 250, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7868431225418747434
 MonoBehaviour:
@@ -208,9 +208,9 @@ MonoBehaviour:
   slider: {fileID: 7868431225418747435}
   gradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 1, b: 0, a: 1}
-    key2: {r: 0, g: 1, b: 0, a: 0}
+    key0: {r: 0.8867924, g: 0, b: 0, a: 1}
+    key1: {r: 0.9339623, g: 0.9339623, b: 0, a: 1}
+    key2: {r: 0, g: 0.8490566, b: 0, a: 0}
     key3: {r: 1, g: 0.9533411, b: 0, a: 0}
     key4: {r: 1, g: 0.9533411, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}

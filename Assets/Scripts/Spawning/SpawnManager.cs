@@ -58,7 +58,7 @@ public class SpawnManager : MonoBehaviour
 	{
 		if (this != instance) return;
 
-		UIGameManager.Instance.remainingEnemies.text = "Enemies Remaining: " + remainingEnemies;
+		UIGameManager.Instance.remainingEnemies.text = "Enemies Left: " + remainingEnemies;
 
 		if (waveTimer == null || waveTimer.IsOver)
 		{
