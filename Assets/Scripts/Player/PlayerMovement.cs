@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
-    bool attacking = false;
+    bool canAttack = true;
     int combinedLayerMask;
     int attackCount = 0;
 
@@ -36,15 +36,19 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        animator.SetBool("IsGrounded", isGrounded);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.G))
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            animator.SetTrigger("Jump");
+            DebugPause();
         }
 
-//        if (attackTimer.IsOver) attackCount = 0;
+        //if (attackTimer.IsOver) attackCount = 0;
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
+        //animator.SetBool("Jump", (Input.GetKeyDown(KeyCode.Space) && isGrounded));
 
     }
 
@@ -52,10 +56,15 @@ public class PlayerMovement : MonoBehaviour
     {
         
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, combinedLayerMask);
+        //isGrounded = controller.isGrounded;
+        animator.SetBool("IsGrounded", isGrounded);
 
-        if (isGrounded && velocity.y < 0)
+       
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = -2f;
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            animator.SetTrigger("Jump");
         }
 
         if (Input.GetKey("left shift"))
@@ -67,13 +76,26 @@ public class PlayerMovement : MonoBehaviour
             speed = 5;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && attackCount % 2 == 0 && !attacking)
+        /*if (Input.GetKeyDown(KeyCode.Mouse0) && !canAttack)
         {
             animator.SetTrigger("Attack");
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0) && attackCount % 2 == 1 && !attacking)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attackCount % 2 == 1 && !canAttack)
         {
             animator.SetTrigger("Attack 2");
+        }*/
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && canAttack)
+        {
+            switch (attackCount % 2)
+            {
+                case 0:
+                    animator.SetTrigger("Attack");
+                    break;
+                case 1:
+                    animator.SetTrigger("Attack 2");
+                    break;
+            }
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -93,19 +115,22 @@ public class PlayerMovement : MonoBehaviour
 
     public void AttackStart()
     {
+        Debug.Log("Attack start");
         gameObject.GetComponent<playerInput>().Attack(true);
     }
 
     public void AttackEnd()
     {
+        Debug.Log("Attack end");
         gameObject.GetComponent<playerInput>().Attack(false);
-        attacking = false;
+        canAttack = true;
 
     }
 
     public void AttackAnimationStart()
     {
-        attacking = true;
+        Debug.Log("Attack anim start");
+        canAttack = false;
         attackCount++;
         attackTimer.Reset();
     }
@@ -119,4 +144,14 @@ public class PlayerMovement : MonoBehaviour
     {
 
     }
+
+    public void DebugPause()
+    {
+        if (true)
+        {
+            return;
+        }
+
+    }
+
 }
