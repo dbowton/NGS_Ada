@@ -22,7 +22,7 @@ public class SphereCastPerception : Perception
 			Ray ray = new Ray(raycastTransform.position, direction);
 			if (Physics.SphereCast(ray, radius, out RaycastHit raycastHit, distance))
 			{
-				if (tagname == "" || raycastHit.collider.CompareTag(tagname))
+				if (tagname == "" || raycastHit.collider.transform.root.CompareTag(tagname))
 				{
 					Debug.DrawRay(ray.origin, ray.direction * raycastHit.distance, Color.red);
 					result.Add(raycastHit.collider.gameObject);

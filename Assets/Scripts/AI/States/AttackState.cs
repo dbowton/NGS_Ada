@@ -22,11 +22,12 @@ public class AttackState : State
 		owner.animator.SetTrigger("Attack");
 		owner.timer.value = 1;
 		owner.GetComponent<AgentDamage>().Damage();
+		owner.GetComponentInChildren<Weapon>().isAttacking = true;
 	}
 
 	public override void OnExit()
 	{
-		
+		owner.GetComponentInChildren<Weapon>().isAttacking = false;
 	}
 
 	public override void OnUpdate()

@@ -12,7 +12,7 @@ public class ChaseState : State
 	public override void OnEnter()
 	{
 		owner.movement.Resume();
-		owner.timer.value = 2;
+		//owner.timer.value = 2;
 	}
 
 	public override void OnExit()

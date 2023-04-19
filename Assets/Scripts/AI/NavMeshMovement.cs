@@ -34,6 +34,9 @@ public class NavMeshMovement : Movement
 
 	public override void MoveTowards(Vector3 target)
 	{
+
+		//navMeshAgent.CalculatePath(target, navMeshAgent.SetDestination(target));
+
 		navMeshAgent.SetDestination(target);
 		velocity = navMeshAgent.velocity;
 		//Debug.Log(velocity);
