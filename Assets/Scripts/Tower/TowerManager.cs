@@ -24,6 +24,7 @@ public class TowerManager : MonoBehaviour
 	{
 		cam = Camera.main.transform;
 
+		return;
 		List<Material> towerMats = new List<Material>();
 		foreach (var tower in towerPrefabs)
 			towerMats.Add(tower.GetComponent<Tower>().towerIcon);
@@ -52,7 +53,7 @@ public class TowerManager : MonoBehaviour
 				awaitingTower.transform.position = hitInfo.point;
 				awaitingTower.transform.localEulerAngles = Vector3.up * yRot;
 
-				List<Collider> collisions = Physics.OverlapSphere(hitInfo.point, awaitingTower.GetComponent<Tower>().towerSize).ToList();
+				List<Collider> collisions = Physics.OverlapSphere(hitInfo.point, awaitingTower.GetComponent<TowerRotation>().towerSize).ToList();
 				if (collisions.Any(x => x.CompareTag("Path")) || (collisions.Any(x => x.CompareTag("Tower") && x.transform.root.gameObject != awaitingTower)))
 				{
 					// set tower color to red
@@ -72,10 +73,10 @@ public class TowerManager : MonoBehaviour
 						awaitingTower = null;
 						awaitingPlacement = false;
 
-
 						GameObject placedTower = Instantiate(towerPrefabs[index]);
 						placedTower.transform.position = hitInfo.point;
 						placedTower.transform.localEulerAngles = Vector3.up * yRot;
+						placedTower.GetComponent<TowerRotation>().Placed = true;
 					}
 					else
 					{

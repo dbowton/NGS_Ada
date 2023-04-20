@@ -10,6 +10,8 @@ public class TowerRotation : MonoBehaviour
 	[SerializeField] float viewAngle = 180;
 	[SerializeField] int steps = 10;
 
+	public float towerSize = 1f;
+
 	[SerializeField] LineRenderer lineRenderer;
 	[SerializeField] LayerMask targetLayer;
 
