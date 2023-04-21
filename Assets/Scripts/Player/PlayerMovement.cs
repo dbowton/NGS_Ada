@@ -115,13 +115,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void AttackStart()
     {
-        Debug.Log("Attack start");
+        //Debug.Log("Attack start");
         gameObject.GetComponent<playerInput>().Attack(true);
     }
 
     public void AttackEnd()
     {
-        Debug.Log("Attack end");
+        //Debug.Log("Attack end");
         gameObject.GetComponent<playerInput>().Attack(false);
         canAttack = true;
 
@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void AttackAnimationStart()
     {
-        Debug.Log("Attack anim start");
+        //Debug.Log("Attack anim start");
         canAttack = false;
         attackCount++;
         attackTimer.Reset();

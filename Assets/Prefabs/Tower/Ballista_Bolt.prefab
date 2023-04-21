@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5323732503340090479}
+  - component: {fileID: -6571578325562473599}
   - component: {fileID: 5297983836428967475}
   - component: {fileID: 5305811355220017437}
   - component: {fileID: 3697705616698941444}
   - component: {fileID: 8808258525407759713}
-  - component: {fileID: -6571578325562473599}
   m_Layer: 0
   m_Name: Ballista_Bolt
   m_TagString: Untagged
@@ -36,6 +36,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6571578325562473599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5329419941944525613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0a4e853272800418378af49140429c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+  targetTag: Test_AI
 --- !u!33 &5297983836428967475
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -115,17 +129,3 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: -0.1}
---- !u!114 &-6571578325562473599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5329419941944525613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c0a4e853272800418378af49140429c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 2
-  targetTag: Test_AI
