@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
 
 			if (currentHealth <= 0)
 			{
-				Debug.Log("health");
+				//Debug.Log("health");
 				OnDeath.Invoke();
 			}
 		}

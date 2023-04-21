@@ -21,7 +21,7 @@ public class GameOver : MonoBehaviour
 	//on death invoke goes here
 	public void EndGame()
 	{
-		Debug.Log("gameover");
+		//Debug.Log("gameover");
 		player = GameObject.FindGameObjectWithTag("Player");
 		UI.gameObject.SetActive(true);
 		player.SetActive(false);

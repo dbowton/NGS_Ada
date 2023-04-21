@@ -48,7 +48,7 @@ public class TowerManager : MonoBehaviour
 
 			if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hitInfo, placementRange, targetLayer))
 			{
-				print("hit");
+				//print("hit");
 				if(awaitingTower == null) awaitingTower = Instantiate(towerPrefabs[index]);
 				awaitingTower.transform.position = hitInfo.point;
 				awaitingTower.transform.localEulerAngles = Vector3.up * yRot;
@@ -57,7 +57,7 @@ public class TowerManager : MonoBehaviour
 				if (collisions.Any(x => x.CompareTag("Path")) || (collisions.Any(x => x.transform.root.CompareTag("Tower") && x.transform.root.gameObject != awaitingTower)))
 				{
 					// set tower color to red
-					print("red");
+					//print("red");
 
 					foreach (var rend in awaitingTower.GetComponentsInChildren<Renderer>())
 						rend.material = invalidMat;
@@ -67,7 +67,7 @@ public class TowerManager : MonoBehaviour
 					if (Input.GetMouseButton(1))
 					{
 						// set tower color to default
-						print("default");
+						//print("default");
 
 						Destroy(awaitingTower);
 						awaitingTower = null;
@@ -81,7 +81,7 @@ public class TowerManager : MonoBehaviour
 					else
 					{
 						// set tower color to blue
-						print("blue");
+						//print("blue");
 						foreach (var rend in awaitingTower.GetComponentsInChildren<Renderer>())
 							rend.material = validMat;
 
@@ -90,7 +90,7 @@ public class TowerManager : MonoBehaviour
 			}
 			else
 			{
-				print("nothing");
+				//print("nothing");
 				Destroy(awaitingTower);
 			}
 		}

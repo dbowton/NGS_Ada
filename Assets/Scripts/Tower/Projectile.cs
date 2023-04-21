@@ -6,19 +6,19 @@ using UnityEngine.ProBuilder;
 
 public class Projectile : MonoBehaviour
 {
-	public float damage = 0f;
+	public float damage = 100f;
 	public string targetTag = "Enemy";
 
-	Timer destroyTimer;
-	private bool fired = false;
+	protected Timer destroyTimer;
+	protected bool fired = false;
 
-	public void Fired()
+	public virtual void Fired()
 	{
 		fired = true;
 		destroyTimer = new Timer(0.5f, () => Destroy(gameObject));
 	}
 
-	public void OnTriggerEnter(Collider other)
+	public virtual void OnTriggerEnter(Collider other)
 	{		
 		if (fired && other.transform.root.gameObject.CompareTag(targetTag) && other.transform.root.TryGetComponent<Health>(out Health health))
 		{
