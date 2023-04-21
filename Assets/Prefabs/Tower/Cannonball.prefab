@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4548399670254930}
+  - component: {fileID: 2429791884211741098}
   - component: {fileID: 33098470014172552}
   - component: {fileID: 23087414585146026}
   - component: {fileID: 135334045038175812}
   - component: {fileID: 2425761533653414474}
-  - component: {fileID: 8491013587626870914}
   m_Layer: 0
   m_Name: Cannonball
   m_TagString: Untagged
@@ -36,6 +36,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2429791884211741098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715476615087276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f55671c9cea3204cb29e95a4e0b21ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+  targetTag: Test_AI
 --- !u!33 &33098470014172552
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -115,17 +129,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8491013587626870914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715476615087276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2743069438f9e4e9da6a6eb630377e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
-  targetTag: Test_AI
