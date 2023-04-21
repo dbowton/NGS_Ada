@@ -364,6 +364,7 @@ namespace KinematicCharacterController.Examples
                                 {
                                     jumpDirection = Motor.GroundingStatus.GroundNormal;
                                     animator.SetTrigger("Jump");
+                                    animator.SetBool("IsGrounded", false);
                                 }
 
                                 // Makes the character skip ground probing/snapping on its next update. 
@@ -414,6 +415,7 @@ namespace KinematicCharacterController.Examples
                                 if (!_jumpedThisFrame)
                                 {
                                     _jumpConsumed = false;
+                                    animator.SetBool("IsGrounded", true);
                                 }
                                 _timeSinceLastAbleToJump = 0f;
                             }

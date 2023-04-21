@@ -106,8 +106,6 @@ namespace KinematicCharacterController.Examples
 
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
-
-            //if(Character.)
         }
     }
 }
