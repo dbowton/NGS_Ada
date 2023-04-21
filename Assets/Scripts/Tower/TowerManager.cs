@@ -54,7 +54,7 @@ public class TowerManager : MonoBehaviour
 				awaitingTower.transform.localEulerAngles = Vector3.up * yRot;
 
 				List<Collider> collisions = Physics.OverlapSphere(hitInfo.point, awaitingTower.GetComponent<TowerRotation>().towerSize).ToList();
-				if (collisions.Any(x => x.CompareTag("Path")) || (collisions.Any(x => x.CompareTag("Tower") && x.transform.root.gameObject != awaitingTower)))
+				if (collisions.Any(x => x.CompareTag("Path")) || (collisions.Any(x => x.transform.root.CompareTag("Tower") && x.transform.root.gameObject != awaitingTower)))
 				{
 					// set tower color to red
 					print("red");
