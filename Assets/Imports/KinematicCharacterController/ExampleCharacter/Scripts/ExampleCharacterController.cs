@@ -43,6 +43,7 @@ namespace KinematicCharacterController.Examples
     public class ExampleCharacterController : MonoBehaviour, ICharacterController
     {
         public KinematicCharacterMotor Motor;
+        public Animator animator;
 
         [Header("Stable Movement")]
         public float MaxStableMoveSpeed = 10f;
@@ -362,6 +363,7 @@ namespace KinematicCharacterController.Examples
                                 if (Motor.GroundingStatus.FoundAnyGround && !Motor.GroundingStatus.IsStableOnGround)
                                 {
                                     jumpDirection = Motor.GroundingStatus.GroundNormal;
+                                    animator.SetTrigger("Jump");
                                 }
 
                                 // Makes the character skip ground probing/snapping on its next update. 
