@@ -10,6 +10,7 @@ public class playerInput : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Health>().OnDeath.AddListener(() => movement.animator.SetTrigger("death"));
+        gameObject.GetComponent<Health>().OnDeath.AddListener(() => AudioManager.instance.Play("PlayerDeath"));
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -46,5 +47,7 @@ public class playerInput : MonoBehaviour
     public void Attack(bool isAttacking)
     {
         weapon.isAttacking = isAttacking;
+        AudioManager.instance.Play("SwordSwing");
+        //AudioManager.instance.Play("Test");
     }
 }

@@ -36,6 +36,9 @@ public class Spawner : MonoBehaviour
 
 	public void BeginWave()
 	{
+		AudioManager.instance.Stop("Theme");
+		AudioManager.instance.Play("Action");
+		
 		currentWave++;
 
 		if (currentWave < waves.Count)
