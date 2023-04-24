@@ -12,7 +12,7 @@ public class CannonProjectile : Projectile
 
 	public override void OnTriggerEnter(Collider other)
 	{
-		foreach(var collider in Physics.OverlapSphere(gameObject.transform.position, 100000))
+		foreach(var collider in Physics.OverlapSphere(gameObject.transform.position, 5))
 		{
 			if (collider.transform.root.gameObject.CompareTag(targetTag) && collider.transform.root.TryGetComponent<Health>(out Health health))
 			{
