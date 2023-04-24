@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 407750}
   - component: {fileID: 3369518}
   - component: {fileID: 2321662}
-  - component: {fileID: 64236928991998116}
-  - component: {fileID: 64362599211027232}
   m_Layer: 0
   m_Name: SM_Bld_House_Window_02
   m_TagString: Untagged
@@ -85,31 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64236928991998116
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129474}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43429809332740396, guid: 88de0f284b94aec419dcb50855cd2068, type: 2}
---- !u!64 &64362599211027232
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129474}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43027028563000328, guid: 88de0f284b94aec419dcb50855cd2068, type: 2}
