@@ -108,7 +108,7 @@ public class SpawnManager : MonoBehaviour
 
 			UIGameManager.Instance.waveCounter.text = "Wave: " + completedWaves + "/" + spawners.Max(x => x.waveCount());
 
-			onWavesComplete?.Invoke();
+			onWavesComplete.Invoke();
 		}
 		else
 		{
