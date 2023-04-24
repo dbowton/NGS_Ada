@@ -16,6 +16,7 @@ public class DeathState : State
 		owner.GetComponent<Rigidbody>().Sleep();
 
 		owner.animator.SetTrigger("death");
+		AudioManager.instance.Play("EnemyDeath");
 		GameObject.Destroy(owner.gameObject, 3);
 	}
 

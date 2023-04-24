@@ -20,6 +20,7 @@ public class AttackState : State
 		owner.transform.LookAt(owner.enemy.transform.position);
 
 		owner.animator.SetTrigger("Attack");
+		AudioManager.instance.Play("SwordSwing");
 		owner.timer.value = 1;
 		owner.GetComponent<AgentDamage>().Damage();
 		owner.GetComponentInChildren<Weapon>().isAttacking = true;
