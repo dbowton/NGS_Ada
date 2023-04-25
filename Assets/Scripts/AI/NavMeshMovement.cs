@@ -97,10 +97,11 @@ public class NavMeshMovement : Movement
 		//pathVectorList = PathFind
 	}
 
-	public float GetPathLength(NavMeshPath path)
+	public float GetPathLength()
 	{		
 		float length = navMeshAgent.remainingDistance;
 
+		Debug.Log(length);
 		return length;
 	}
 }

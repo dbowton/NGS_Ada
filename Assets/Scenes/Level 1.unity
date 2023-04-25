@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1470247, g: 0.36394262, b: 0.5799059, a: 1}
+  m_IndirectSpecularColor: {r: 0.14703749, g: 0.3639866, b: 0.57992274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -377,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: waves.Array.data[0].wave.Array.data[0].count
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: m_RootOrder
@@ -5439,7 +5439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f775bd3c6cb4f2d4db7372b55bb3f406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UI: {fileID: 925830895}
+  UI: {fileID: 8108534878983546284, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
 --- !u!1001 &887399311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5846,17 +5846,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8108534878983546286, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
   m_PrefabInstance: {fileID: 925830892}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925830895}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f775bd3c6cb4f2d4db7372b55bb3f406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &925830895 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8108534878983546284, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
-  m_PrefabInstance: {fileID: 925830892}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &933599206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7413,13 +7408,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1428653070431300165, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
+      propertyPath: towerPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1370931944378286, guid: 3498add3757c6dc428ca3f4ceb2ae03d, type: 3}
     - target: {fileID: 4367648212748625803, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0052121896
+      value: -0.005212155
       objectReference: {fileID: 0}
     - target: {fileID: 4367648212748625803, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00025265946
+      value: -0.0002526578
       objectReference: {fileID: 0}
     - target: {fileID: 4367648213152037546, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
       propertyPath: m_LocalRotation.y
