@@ -6,7 +6,6 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshMovement))]
 public class NavMeshMovement : Movement
 {
-
 	//needs reworked
 	public NavMeshAgent navMeshAgent;
 
@@ -96,5 +95,16 @@ public class NavMeshMovement : Movement
 	{
 		currentPathIndex = 0;
 		//pathVectorList = PathFind
+	}
+
+	public float GetPathLength(NavMeshPath path)
+	{
+		float length = 0;
+		for (int i = 1; i < path.corners.Length; i++)
+		{
+			length += Vector3.Distance(path.corners[i - 1], path.corners[i]);
+		}
+
+		return length;
 	}
 }

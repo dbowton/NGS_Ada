@@ -31,12 +31,18 @@ public class Cow : MonoBehaviour
     private Quaternion followRotation;
     private bool isMooing;
 
+    [SerializeField] Transform roamTransform;
+    public bool atDestination;
+
     // Use this for initialization
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         isMooing = false;
+        //followTarget = roamTransform;
+        //target = roamTransform;
+        //DoRoam();
     }
 
     // Update is called once per frame
@@ -75,6 +81,12 @@ public class Cow : MonoBehaviour
             mooTrigger = false;
             mooAudioSource.Play();
         }
+
+        if (Vector3.Distance(this.transform.position, roamTransform.position) <= 1.5)
+        {
+            StartMoo();
+            //DoRoam();
+        }
     }
 
     void CheckGroundStatus()
@@ -107,4 +119,12 @@ public class Cow : MonoBehaviour
         isMooing = false;
         animator.SetLayerWeight(LayerIndex.Head, ChewAmount);
     }
+
+    public void DoRoam()
+    {
+        walking = true;
+		this.transform.rotation = Quaternion.AngleAxis(Random.Range(-90, 90), Vector3.up);
+		Vector3 forward = this.transform.rotation * transform.forward;
+		target.transform.position = roamTransform.position + forward * Random.Range(5f, 10f);
+	}
 }
