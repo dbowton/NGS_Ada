@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class TowerRotation : MonoBehaviour
 {
+	public Sprite towerIconMaterial;
+
 	[SerializeField] float height = 0.5f;
 	[SerializeField] float range = 3.5f;
 	[SerializeField] float viewAngle = 180;

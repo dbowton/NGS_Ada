@@ -24,12 +24,11 @@ public class TowerManager : MonoBehaviour
 	{
 		cam = Camera.main.transform;
 
-		return;
-		List<Material> towerMats = new List<Material>();
+		List<Sprite> towerMats = new List<Sprite>();
 		foreach (var tower in towerPrefabs)
-			towerMats.Add(tower.GetComponent<Tower>().towerIcon);
+			towerMats.Add(tower.GetComponent<TowerRotation>().towerIconMaterial);
 
-//		UIGameManager.Instance.SetTowerIcons(towerMats);
+		UIGameManager.Instance.SetTowerIcons(towerMats);
 	}
 
 	private void Update()

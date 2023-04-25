@@ -27,11 +27,11 @@ public class UIGameManager : MonoBehaviour
 		if (Instance == null) Instance = this;
 	}
 
-	public void SetTowerIcons(List<Material> towerMaterials)
+	public void SetTowerIcons(List<Sprite> towerSprites)
 	{
-		for (int i = 0; i < towerIcons.Count && i < towerMaterials.Count; i++)
+		for (int i = 0; i < towerIcons.Count && i < towerSprites.Count; i++)
 		{
-			towerIcons[i].material = towerMaterials[i];
+			towerIcons[i].sprite = towerSprites[i];
 		}
 	}
 
