@@ -25,13 +25,13 @@ public class SphereCastPerception : Perception
 			{
 				if (tagname == "" || raycastHit.collider.transform.root.CompareTag(tagname))
 				{
-					if (navMeshMovement.GetPathLength() < maxPathLength)
+					/*if (navMeshMovement.GetPathLength() < maxPathLength)
 					{
 						Debug.DrawRay(ray.origin, ray.direction * raycastHit.distance, Color.red);
 						result.Add(raycastHit.collider.gameObject);
-					}
-					/*Debug.DrawRay(ray.origin, ray.direction * raycastHit.distance, Color.red);
-					result.Add(raycastHit.collider.gameObject);*/
+					}*/
+					Debug.DrawRay(ray.origin, ray.direction * raycastHit.distance, Color.red);
+					result.Add(raycastHit.collider.gameObject);
 				}
 			}
 
