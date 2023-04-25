@@ -136,12 +136,4 @@ public class Cow : MonoBehaviour
         isMooing = false;
         animator.SetLayerWeight(LayerIndex.Head, ChewAmount);
     }
-
-    public void DoRoam()
-    {
-        walking = true;
-		this.transform.rotation = Quaternion.AngleAxis(Random.Range(-90, 90), Vector3.up);
-		Vector3 forward = this.transform.rotation * transform.forward;
-		target.transform.position = roamTransform.position + forward * Random.Range(5f, 10f);
-	}
 }
