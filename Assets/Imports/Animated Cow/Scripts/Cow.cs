@@ -1,19 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Extension;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(NavMeshAgent))]
 public class Cow : MonoBehaviour
 {
+    NavMeshAgent agent;
+
+    public Transform center;
+    public Vector3 extents;
+    public float minDistanceToTarget = 0.5f;
+
     public float moveSpeed;
     public bool walking;
     public bool mooTrigger;
     public bool followTarget;
     public float followTurnSpeed = 0.05f;
-    public Transform target;
+    public Vector3 target;
     [Range(0f, 1f)]
     public float ChewAmount;
     [Range(0f, 1f)]
@@ -40,10 +46,12 @@ public class Cow : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         isMooing = false;
-        //followTarget = roamTransform;
-        //target = roamTransform;
-        //DoRoam();
-    }
+        agent = GetComponent<NavMeshAgent>();
+
+		target.x = center.position.x + Random.Range(0, extents.x);
+        target.y = transform.position.y;
+		target.z = center.position.z + Random.Range(0, extents.z);
+	}
 
     // Update is called once per frame
     void FixedUpdate()
@@ -55,9 +63,18 @@ public class Cow : MonoBehaviour
         else if (rigidbody.useGravity)
             rigidbody.velocity = Physics.gravity;
 
-        if (followTarget && target != null)
+        if (followTarget)
         {
-            followOffset = target.position - transform.position;
+			if (Vector3.Distance(transform.position, target) < moveSpeed)
+            {
+                target.x = center.position.x + Random.Range(-extents.x, extents.x);
+    			target.y = transform.position.y;
+                target.z = center.position.z + Random.Range(-extents.z, extents.z);
+    
+            }
+            agent.destination = target;
+
+            followOffset = target - transform.position;
             followRotation = Quaternion.LookRotation(followOffset);
             transform.rotation = Quaternion.Lerp(transform.rotation, followRotation, followTurnSpeed);
         }
