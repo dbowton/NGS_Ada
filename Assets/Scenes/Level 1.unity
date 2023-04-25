@@ -5451,7 +5451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 8108534878983546284, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
-  player: {fileID: 0}
 --- !u!1001 &887399311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7460,6 +7459,10 @@ PrefabInstance:
       propertyPath: towerPrefabs.Array.data[1]
       value: 
       objectReference: {fileID: 1370931944378286, guid: 3498add3757c6dc428ca3f4ceb2ae03d, type: 3}
+    - target: {fileID: 3527074125628411979, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4367648212748625803, guid: e00efd4259079d846a8d74467b6ed514, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0.0052121896
