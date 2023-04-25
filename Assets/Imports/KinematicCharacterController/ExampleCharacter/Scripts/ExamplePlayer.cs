@@ -8,9 +8,8 @@ namespace KinematicCharacterController.Examples
 {
     public class ExamplePlayer : MonoBehaviour
     {
-        public ExampleCharacterController Character;
+        public Player.CharacterController Character;
         public ExampleCharacterCamera CharacterCamera;
-        public Animator animator;
 
         private const string MouseXInput = "Mouse X";
         private const string MouseYInput = "Mouse Y";
@@ -32,10 +31,6 @@ namespace KinematicCharacterController.Examples
 
         private void Update()
         {
-            /*if (Input.GetMouseButtonDown(0))
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-            }*/
 
             if (Input.GetKeyDown(KeyCode.LeftAlt))
             {
@@ -86,23 +81,24 @@ namespace KinematicCharacterController.Examples
             CharacterCamera.UpdateWithInput(Time.deltaTime, scrollInput, lookInputVector);
 
             // Handle toggling zoom level
-            if (Input.GetMouseButtonDown(1))
+            /*if (Input.GetMouseButtonDown(1))
             {
                 CharacterCamera.TargetDistance = (CharacterCamera.TargetDistance == 0f) ? CharacterCamera.DefaultDistance : 0f;
-            }
+            }*/
         }
 
         private void HandleCharacterInput()
         {
-            PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
+            Player.PlayerCharacterInputs characterInputs = new Player.PlayerCharacterInputs();
 
             // Build the CharacterInputs struct
             characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
             characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
             characterInputs.CameraRotation = CharacterCamera.Transform.rotation;
             characterInputs.JumpDown = Input.GetKeyDown(KeyCode.Space);
-            characterInputs.CrouchDown = Input.GetKeyDown(KeyCode.C);
-            characterInputs.CrouchUp = Input.GetKeyUp(KeyCode.C);
+            characterInputs.attack = Input.GetKeyDown(KeyCode.Mouse0);
+            //characterInputs.CrouchDown = Input.GetKeyDown(KeyCode.C);
+            //characterInputs.CrouchUp = Input.GetKeyUp(KeyCode.C);
 
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
