@@ -98,12 +98,8 @@ public class NavMeshMovement : Movement
 	}
 
 	public float GetPathLength(NavMeshPath path)
-	{
-		float length = 0;
-		for (int i = 1; i < path.corners.Length; i++)
-		{
-			length += Vector3.Distance(path.corners[i - 1], path.corners[i]);
-		}
+	{		
+		float length = navMeshAgent.remainingDistance;
 
 		return length;
 	}
