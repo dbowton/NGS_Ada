@@ -15,7 +15,11 @@ public class GameOver : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		EndGame();
+		if (other.tag == "Test_AI")
+		{
+			EndGame();
+		}
+		
 	}
 
 	//on death invoke goes here
