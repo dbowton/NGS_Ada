@@ -216,11 +216,9 @@ namespace Player
             //handle attacking
             if (_attackRequested)
             {
-                Debug.Log("attack requested = true");
                 //can we attack
                 if (!attacking)
                 {
-                    Debug.Log("playing attack aniamtion");
                     animator.SetTrigger("Attack" + ((_attackCount % mainWeapon.maxAttackCount) + 1));
                     //_attackedThisFrame = true;
                 }
@@ -312,7 +310,6 @@ namespace Player
         {
             attacking = false;
             mainWeapon.isAttacking = false;
-            Debug.Log("attack end");
         }
 
 
