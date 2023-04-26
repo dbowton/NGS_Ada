@@ -7,10 +7,12 @@ public class GameOver : MonoBehaviour
 {
 	public GameObject UI;
 	GameObject player;
+	GameObject camera;
 
 	public void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
+		camera = GameObject.FindGameObjectWithTag("Camera");
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -27,7 +29,9 @@ public class GameOver : MonoBehaviour
 	{
 		//Debug.Log("gameover");
 		player = GameObject.FindGameObjectWithTag("Player");
+		camera = Camera.main.gameObject;
 		UI.gameObject.SetActive(true);
+		camera.transform.parent = null;
 		player.SetActive(false);
 		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.Confined;
