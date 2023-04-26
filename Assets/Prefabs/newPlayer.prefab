@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 2220890850012747308}
   m_Layer: 0
   m_Name: newPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -835,7 +835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefabs:
-  - {fileID: 2164639080217304375, guid: e5df80913944f0b4b9be2be6a6f199be, type: 3}
+  - {fileID: 3718488107972930700, guid: 09e2f47aec848144ea8316dff3039177, type: 3}
+  - {fileID: 1370931944378286, guid: 3498add3757c6dc428ca3f4ceb2ae03d, type: 3}
   placementRange: 16
   targetLayer:
     serializedVersion: 2
@@ -861,7 +862,7 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8108534878983546286, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
+      - m_Target: {fileID: 8108534878983546286, guid: 09325dc0d5689a94d96b12608637229c, type: 3}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: EndGame
         m_Mode: 1
