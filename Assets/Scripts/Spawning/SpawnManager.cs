@@ -62,12 +62,12 @@ public class SpawnManager : MonoBehaviour
 
 		if (waveTimer == null || waveTimer.IsOver)
 		{
-			UIGameManager.Instance.timer.gameObject.SetActive(false);
+			UIGameManager.Instance.timer.SetActive(false);
 		}
 		else
 		{
-			UIGameManager.Instance.timer.gameObject.SetActive(true);
-			UIGameManager.Instance.timer.text = (waveTimer.GetTime() - waveTimer.GetElapsed * waveTimer.GetTime()).ToString("F2");
+			UIGameManager.Instance.timer.SetActive(true);
+			UIGameManager.Instance.timer.GetComponentInChildren<TMPro.TMP_Text>().text = (waveTimer.GetTime() - waveTimer.GetElapsed * waveTimer.GetTime()).ToString("F2");
 		}
 
 		if (runningWave && remainingEnemies <= 0)

@@ -10,7 +10,7 @@ public class UIGameManager : MonoBehaviour
 	[SerializeField] List<Image> towerIcons = new List<Image>();
 	[SerializeField] Image miniMap;
 
-	public TMPro.TMP_Text timer;
+	public GameObject timer;
 	public TMPro.TMP_Text waveCounter;
 	public TMPro.TMP_Text remainingEnemies;
 	public TMPro.TMP_Text currency;
