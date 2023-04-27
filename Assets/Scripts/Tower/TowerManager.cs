@@ -71,13 +71,22 @@ public class TowerManager : MonoBehaviour
 			if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hitInfo, placementRange, targetLayer))
 			{
 				if(awaitingTower == null) awaitingTower = Instantiate(towerPrefabs[index]);
+
+				List<Collider> deleteColliders = awaitingTower.GetComponentsInChildren<Collider>().ToList();
+
+				for (int i = 0; i < deleteColliders.Count;)
+				{
+					Destroy(deleteColliders[i]);
+					deleteColliders.RemoveAt(i);
+				}
+
 				awaitingTower.transform.position = hitInfo.point;
 				awaitingTower.transform.localEulerAngles = Vector3.up * yRot;
 
 				List<Collider> collisions = Physics.OverlapSphere(hitInfo.point, awaitingTower.GetComponent<Tower>().towerSize).ToList();
 				if (collisions.Any(x => x.CompareTag("Path")) || 
-					(collisions.Any(x => x.transform.root.CompareTag("Tower") && x.transform.root.gameObject != awaitingTower) ||
-					awaitingTower.GetComponent<Tower>().cost > currency))
+					(collisions.Any(x => x.transform.root.CompareTag("Tower") && x.transform.root.gameObject != awaitingTower)) ||
+					awaitingTower.GetComponent<Tower>().cost > currency)
 				{
 					foreach (var rend in awaitingTower.GetComponentsInChildren<Renderer>())
 						rend.material = invalidMat;
