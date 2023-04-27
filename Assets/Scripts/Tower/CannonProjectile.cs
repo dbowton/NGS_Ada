@@ -25,7 +25,8 @@ public class CannonProjectile : Projectile
 
 		if (hit)
 		{
-			destroyTimer.Remove();
+			if(destroyTimer != null)
+				destroyTimer.Remove();
 			Destroy(gameObject);
 		}
 	}
