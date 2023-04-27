@@ -6,7 +6,6 @@ public class Temp : MonoBehaviour
 {
     [SerializeField] Health playerHealth;
 
-
     void Update()
     {
         if (playerHealth != null)

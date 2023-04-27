@@ -38,8 +38,14 @@ public class SpawnManager : MonoBehaviour
 		waveTimer = new Timer(60, () => 
 		{
 			runningWave = true;
+			AudioManager.instance.Stop("Theme");
+			AudioManager.instance.Play("Action");
+
 			foreach (var spawn in spawners) spawn.BeginWave(); 
 		}, true);
+
+		AudioManager.instance.Stop("Action");
+		AudioManager.instance.Play("Theme");
 	}
 
 	List<Spawner> spawners = new List<Spawner>();
@@ -79,6 +85,10 @@ public class SpawnManager : MonoBehaviour
 			{
 				waveTimer.Remove();
 				waveTimer = null;
+
+				AudioManager.instance.Stop("Theme");
+				AudioManager.instance.Play("Action");
+
 				runningWave = true;
 				foreach (var spawn in spawners) 
 					spawn.BeginWave();
@@ -98,6 +108,9 @@ public class SpawnManager : MonoBehaviour
 			Instance.WaveComplete();
 			return;
 		}
+
+		AudioManager.instance.Stop("Action");
+		AudioManager.instance.Play("Theme");
 
 		runningWave = false;
 		completedWaves++;
