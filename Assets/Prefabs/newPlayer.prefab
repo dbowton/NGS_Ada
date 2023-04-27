@@ -846,6 +846,7 @@ MonoBehaviour:
     m_Bits: 0
   validMat: {fileID: 2100000, guid: f58260126faeb84448a20500046b9534, type: 2}
   invalidMat: {fileID: 2100000, guid: b0d2be75edcf1cc448358564433b05dd, type: 2}
+  currency: 0
 --- !u!114 &6539204429706586000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,7 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fb87fe008d6364baa0367c32af2af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 10
   OnDeath:
     m_PersistentCalls:
       m_Calls:
