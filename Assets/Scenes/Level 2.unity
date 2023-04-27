@@ -25129,6 +25129,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1231635159210017148, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
+      propertyPath: currency
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231635159210017148, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
       propertyPath: towerPrefabs.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -38427,23 +38431,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 74.1
+      value: 71.39
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: 0.00000016391279
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: -0.0000001631334
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38451,15 +38455,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262225, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: orthographic size
-      value: 84.14
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262225, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -38471,6 +38475,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 615caf77e50ed2244973214b908e279d, type: 3}
+--- !u!1 &2023690731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4569392931977262227, guid: 615caf77e50ed2244973214b908e279d, type: 3}
+  m_PrefabInstance: {fileID: 2023690730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2023690732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023690731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ae2aafe5061df4e934d27aaeade9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 84
+  detections:
+  - objectType: AgentDamage
+    default_sprite: {fileID: 21300000, guid: f95f697d66d238446b1ab717def09945, type: 3}
+  - objectType: TowerManager
+    default_sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+  UISizeAdjustment: 0.075
+  UILimits: 2
+  UI: {fileID: 2127247988}
 --- !u!1001 &2027542568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39773,6 +39803,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 493156, guid: cd63e7ed2d501564ebcb6cd6729e699e, type: 3}
   m_PrefabInstance: {fileID: 2121701709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2127247988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5307035913636955488, guid: b0a447db0d986fa4a852c8d78c8a235a, type: 3}
+  m_PrefabInstance: {fileID: 804196506}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2132170294
 PrefabInstance:

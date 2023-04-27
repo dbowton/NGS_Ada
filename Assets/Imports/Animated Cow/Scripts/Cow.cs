@@ -36,8 +36,6 @@ public class Cow : MonoBehaviour
     private Vector3 followOffset;
     private Quaternion followRotation;
     private bool isMooing;
-
-    [SerializeField] Transform roamTransform;
     public bool atDestination;
 
     // Use this for initialization
@@ -97,12 +95,6 @@ public class Cow : MonoBehaviour
             animator.SetTrigger(Parameters.Moo);
             mooTrigger = false;
             mooAudioSource.Play();
-        }
-
-        if (Vector3.Distance(this.transform.position, roamTransform.position) <= 1.5)
-        {
-            StartMoo();
-            //DoRoam();
         }
     }
 

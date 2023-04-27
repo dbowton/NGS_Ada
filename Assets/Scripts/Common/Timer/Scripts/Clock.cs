@@ -24,7 +24,7 @@ public class Clock : MonoBehaviour
 		{
 			if (timers[i] != null)
 			{
-				timers[i].Update(Time.deltaTime);
+				timers[i].Update(Time.unscaledDeltaTime);
 				i++;
 			}
 			else
@@ -35,7 +35,7 @@ public class Clock : MonoBehaviour
 
 		for(int i = 0; i < stopwatches.Count; i++) 
 		{
-			stopwatches[i].Update(Time.deltaTime);
+			stopwatches[i].Update(Time.unscaledDeltaTime);
 		}
     }
 

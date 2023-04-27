@@ -55,7 +55,7 @@ public class MiniMapSensor : MonoBehaviour
 		{
 			foreach (var recordedType in detections)
 			{
-				if(collision.TryGetComponent(recordedType.searchType, out Component foundType) || collision.transform.root.TryGetComponent(recordedType.searchType, out foundType))
+				if(collision.TryGetComponent(recordedType.searchType, out Component foundType))// || collision.transform.root.TryGetComponent(recordedType.searchType, out foundType))
 				{
 					//	Create Blip
 					GameObject NewObj = new GameObject();

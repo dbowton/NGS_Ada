@@ -51,6 +51,7 @@ public class SceneManagement : MonoBehaviour
 
 			if (loading.progress >= 0.9f && ready)
 			{
+				Time.timeScale = 1;
 				loading.allowSceneActivation = true;
 				ready = false;
 			}
@@ -72,7 +73,7 @@ public class SceneManagement : MonoBehaviour
 				DontDestroyOnLoad(fadeScreen);
 			}
 
-			workingTime += Time.deltaTime;
+			workingTime += Time.unscaledDeltaTime;
 			if(fadeScreen)
 			foreach (var image in fadeScreen.GetComponentsInChildren<Image>())
 			{
@@ -106,7 +107,7 @@ public class SceneManagement : MonoBehaviour
 				fadeScreenPrefab = null;
 			}
 
-			workingTime += Time.deltaTime;
+			workingTime += Time.unscaledDeltaTime;
 			if (workingTime >= totalFadeInTime)
 			{
 				tempSceneName = "";

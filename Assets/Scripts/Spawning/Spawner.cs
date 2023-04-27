@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
 	public class EnemyWave
 	{
 		public GameObject EnemyPrefab;
+		public int enemyValue;
 		public int count;
 	}
 
@@ -55,7 +56,11 @@ public class Spawner : MonoBehaviour
 					EnemyWave selected = waves[currentWave].wave[Random.Range(0, waves[currentWave].wave.Count)];
 					GameObject spawnedEnemy = Instantiate(selected.EnemyPrefab, transform.position, Quaternion.identity);
 
-					spawnedEnemy.GetComponent<Health>().OnDeath.AddListener(() => SpawnManager.Instance.remainingEnemies--);
+					spawnedEnemy.GetComponent<Health>().OnDeath.AddListener(() =>
+						{
+							TowerManager.instance.currency += selected.enemyValue;
+							SpawnManager.Instance.remainingEnemies--;
+						});
 
 					spawnedEnemy.GetComponent<PathFollower>().Begin(pathName);
 					selected.count--;

@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
 	public string targetTag = "Enemy";
 
 	protected Timer destroyTimer;
-	protected bool fired = false;
+	public bool fired = false;
 
 	public virtual void Fired()
 	{
@@ -27,7 +27,6 @@ public class Projectile : MonoBehaviour
 			Destroy(gameObject.GetComponent<Rigidbody>());
 
 			destroyTimer.Remove();
-
 			Destroy(this);
 		}
 	}

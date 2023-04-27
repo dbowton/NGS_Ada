@@ -12,6 +12,8 @@ public class TowerRotation : MonoBehaviour
 	[SerializeField] float viewAngle = 180;
 	[SerializeField] int steps = 10;
 
+	public int cost = 50;
+
 	public float towerSize = 1f;
 
 	[SerializeField] LineRenderer lineRenderer;
@@ -61,8 +63,11 @@ public class TowerRotation : MonoBehaviour
 
 		reloadTimer = new Timer(attackRate / 2, () =>
 		{
-			projectile = Instantiate(projectilePrefab, projectileSpawn.transform);
-			attackTimer.Reset();
+			if (projectile == null || !projectile.TryGetComponent<Projectile>(out Projectile oldProjectile) || oldProjectile.fired)
+			{
+				projectile = Instantiate(projectilePrefab, projectileSpawn.transform);
+				attackTimer.Reset();
+			}
 		});
 
 		reloadTimer.End();
@@ -136,7 +141,7 @@ public class TowerRotation : MonoBehaviour
 
 			if (attackTimer.IsOver && reloadTimer.IsOver && target)
 			{
-				if(projectile)
+				if(projectile && projectile.TryGetComponent<Projectile>(out Projectile oldProjectile) && !oldProjectile.fired)
 				{
 					projectile.transform.parent = null;
 					projectile.GetComponent<Projectile>().Fired();

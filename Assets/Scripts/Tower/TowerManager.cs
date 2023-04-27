@@ -20,8 +20,31 @@ public class TowerManager : MonoBehaviour
 
 	float yRot = 0;
 
+	public int currency = 0;
+
+	public int Currency { get { return currency; } set 
+		{ 
+			currency = value;
+			UIGameManager.Instance.currency.text = "Currency: " + currency.ToString();
+		} 
+	}
+
+	public static TowerManager instance;
+
+	private void OnDestroy()
+	{
+		instance = null;
+	}
+
 	private void Start()
 	{
+		if(instance == null) 
+		{
+			instance = this;
+		}
+
+		Currency = currency;
+
 		cam = Camera.main.transform;
 
 		List<Sprite> towerMats = new List<Sprite>();
@@ -47,17 +70,15 @@ public class TowerManager : MonoBehaviour
 
 			if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hitInfo, placementRange, targetLayer))
 			{
-				//print("hit");
 				if(awaitingTower == null) awaitingTower = Instantiate(towerPrefabs[index]);
 				awaitingTower.transform.position = hitInfo.point;
 				awaitingTower.transform.localEulerAngles = Vector3.up * yRot;
 
 				List<Collider> collisions = Physics.OverlapSphere(hitInfo.point, awaitingTower.GetComponent<TowerRotation>().towerSize).ToList();
-				if (collisions.Any(x => x.CompareTag("Path")) || (collisions.Any(x => x.transform.root.CompareTag("Tower") && x.transform.root.gameObject != awaitingTower)))
+				if (collisions.Any(x => x.CompareTag("Path")) || 
+					(collisions.Any(x => x.transform.root.CompareTag("Tower") && x.transform.root.gameObject != awaitingTower) ||
+					awaitingTower.GetComponent<TowerRotation>().cost > currency))
 				{
-					// set tower color to red
-					//print("red");
-
 					foreach (var rend in awaitingTower.GetComponentsInChildren<Renderer>())
 						rend.material = invalidMat;
 				}
@@ -65,8 +86,7 @@ public class TowerManager : MonoBehaviour
 				{
 					if (Input.GetMouseButton(1))
 					{
-						// set tower color to default
-						//print("default");
+						Currency -= awaitingTower.GetComponent<TowerRotation>().cost;
 
 						Destroy(awaitingTower);
 						awaitingTower = null;
@@ -79,23 +99,21 @@ public class TowerManager : MonoBehaviour
 					}
 					else
 					{
-						// set tower color to blue
-						//print("blue");
 						foreach (var rend in awaitingTower.GetComponentsInChildren<Renderer>())
 							rend.material = validMat;
-
 					}
 				}
 			}
 			else
 			{
-				//print("nothing");
 				Destroy(awaitingTower);
 			}
 		}
 
 		CheckKey(KeyCode.Alpha1, 0);
 		CheckKey(KeyCode.Alpha2, 1);
+		CheckKey(KeyCode.Alpha3, 2);
+		CheckKey(KeyCode.Alpha4, 3);
 	}
 
 	private void CheckKey(KeyCode code, int num)
