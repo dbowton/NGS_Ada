@@ -7,6 +7,8 @@ public class UIGameManager : MonoBehaviour
 {
 	public static UIGameManager Instance;
 
+	public Slider healthBar;
+
 	[SerializeField] List<Image> towerIcons = new List<Image>();
 	[SerializeField] Image miniMap;
 

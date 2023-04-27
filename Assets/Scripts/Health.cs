@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
 	private float currentHealth;
 
 	public float CurrentHealth { get { return currentHealth; } }
+	public float GetMaxHealth { get { return maxHealth; } }
 
 	private void Start()
 	{
