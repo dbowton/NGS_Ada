@@ -48,8 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e9f2cef0f50cc4489aa5576d5423c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 25
   targetTag: Test_AI
+  fired: 0
 --- !u!33 &33098470014172552
 MeshFilter:
   m_ObjectHideFlags: 0

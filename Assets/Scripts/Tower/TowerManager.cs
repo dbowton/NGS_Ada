@@ -20,7 +20,7 @@ public class TowerManager : MonoBehaviour
 
 	float yRot = 0;
 
-	public int currency = 0;
+	[SerializeField] private int currency = 0;
 
 	public int Currency { get { return currency; } set 
 		{ 

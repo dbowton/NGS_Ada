@@ -58,7 +58,7 @@ public class Spawner : MonoBehaviour
 
 					spawnedEnemy.GetComponent<Health>().OnDeath.AddListener(() =>
 						{
-							TowerManager.instance.currency += selected.enemyValue;
+							TowerManager.instance.Currency += selected.enemyValue;
 							SpawnManager.Instance.remainingEnemies--;
 						});
 

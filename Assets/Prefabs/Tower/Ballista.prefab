@@ -49,8 +49,9 @@ MonoBehaviour:
   towerIconMaterial: {fileID: 21300000, guid: 579b6764dc62df042afad2fba200c690, type: 3}
   height: 0.5
   range: 100
-  viewAngle: 360
+  viewAngle: 120
   steps: 90
+  cost: 50
   towerSize: 1
   lineRenderer: {fileID: 3718488107972930699}
   targetLayer:
@@ -59,7 +60,7 @@ MonoBehaviour:
   xRotObj: {fileID: 3716976001520025330}
   yRotObj: {fileID: 3714019343909738760}
   attackRate: 1.5
-  damage: 100
+  damage: 34
   targetMode: 0
   projectileSpeed: 5000
   projectilePrefab: {fileID: 5329419941944525613, guid: 240518bb342bbc34fb607466749c2a71, type: 3}
