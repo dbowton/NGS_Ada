@@ -49,7 +49,7 @@ public class TowerManager : MonoBehaviour
 
 		List<Sprite> towerMats = new List<Sprite>();
 		foreach (var tower in towerPrefabs)
-			towerMats.Add(tower.GetComponent<TowerRotation>().towerIconMaterial);
+			towerMats.Add(tower.GetComponent<Tower>().towerIconMaterial);
 
 		UIGameManager.Instance.SetTowerIcons(towerMats);
 	}
@@ -74,10 +74,10 @@ public class TowerManager : MonoBehaviour
 				awaitingTower.transform.position = hitInfo.point;
 				awaitingTower.transform.localEulerAngles = Vector3.up * yRot;
 
-				List<Collider> collisions = Physics.OverlapSphere(hitInfo.point, awaitingTower.GetComponent<TowerRotation>().towerSize).ToList();
+				List<Collider> collisions = Physics.OverlapSphere(hitInfo.point, awaitingTower.GetComponent<Tower>().towerSize).ToList();
 				if (collisions.Any(x => x.CompareTag("Path")) || 
 					(collisions.Any(x => x.transform.root.CompareTag("Tower") && x.transform.root.gameObject != awaitingTower) ||
-					awaitingTower.GetComponent<TowerRotation>().cost > currency))
+					awaitingTower.GetComponent<Tower>().cost > currency))
 				{
 					foreach (var rend in awaitingTower.GetComponentsInChildren<Renderer>())
 						rend.material = invalidMat;
@@ -86,7 +86,7 @@ public class TowerManager : MonoBehaviour
 				{
 					if (Input.GetMouseButton(1))
 					{
-						Currency -= awaitingTower.GetComponent<TowerRotation>().cost;
+						Currency -= awaitingTower.GetComponent<Tower>().cost;
 
 						Destroy(awaitingTower);
 						awaitingTower = null;
@@ -95,7 +95,7 @@ public class TowerManager : MonoBehaviour
 						GameObject placedTower = Instantiate(towerPrefabs[index]);
 						placedTower.transform.position = hitInfo.point;
 						placedTower.transform.localEulerAngles = Vector3.up * yRot;
-						placedTower.GetComponent<TowerRotation>().Placed = true;
+						placedTower.GetComponent<Tower>().Placed = true;
 					}
 					else
 					{

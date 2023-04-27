@@ -5,14 +5,34 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public float towerSize;
-	[SerializeField] float attackSize = 1;
-	[SerializeField] LayerMask targetLayer;
-	[SerializeField] Transform hitCenter;
+	public Sprite towerIconMaterial;
 
+	[SerializeField] float height = 0.5f;
+	[SerializeField] float range = 3.5f;
+	[SerializeField] float viewAngle = 180;
+	[SerializeField] int steps = 10;
+
+	public int cost = 50;
+
+	public float towerSize = 1f;
+
+	[SerializeField] LineRenderer lineRenderer;
+	[SerializeField] LayerMask targetLayer;
+
+	[SerializeField] Transform xRotObj;
+	[SerializeField] Transform yRotObj;
+
+	Timer reloadTimer;
+	Timer attackTimer;
+	[SerializeField] float attackRate = 1f;
+	[SerializeField] float damage = 2f;
 
 	public TargetMode targetMode;
-	public Material towerIcon;
+
+	[SerializeField] float projectileSpeed = 10f;
+	[SerializeField] GameObject projectilePrefab;
+	[SerializeField] GameObject projectileSpawn;
+	GameObject projectile;
 
 	public enum TargetMode
 	{
@@ -22,65 +42,142 @@ public class Tower : MonoBehaviour
 		Last
 	}
 
-	Timer attackTimer;
-	[SerializeField] float attackRate = 1f;
-	[SerializeField] float damage = 2f;
+	private bool placed = false;
+	public bool Placed { get { return placed; } 
+		set 
+		{ 
+			placed = value; 
 
-	GameObject hitSphere = null;
+			if (placed)
+			{
+				lineRenderer.enabled = false;
+			}
+		} 
+	}
 
 	private void Start()
 	{
+		lineRenderer.positionCount = steps * 3 + 1;
 		attackTimer = new Timer(attackRate);
 		attackTimer.End();
+
+		reloadTimer = new Timer(attackRate / 2, () =>
+		{
+			if (projectile == null || !projectile.TryGetComponent<Projectile>(out Projectile oldProjectile) || oldProjectile.fired)
+			{
+				projectile = Instantiate(projectilePrefab, projectileSpawn.transform);
+				attackTimer.Reset();
+			}
+		});
+
+		reloadTimer.End();
+		projectile = Instantiate(projectilePrefab, projectileSpawn.transform);
 	}
 
-	[SerializeField] GameObject spherePrefab;
+
+	[SerializeField] bool trigger = false;
 
 	private void Update()
 	{
-		if (!attackTimer.IsOver) return;
-
-		if (hitSphere == null)
+		if (trigger)
 		{
-			hitSphere = Instantiate(spherePrefab);
-			hitSphere.transform.position = hitCenter.transform.position;
-			hitSphere.transform.localScale = Vector3.one * attackSize;
+			trigger = false;
+			Placed = true;
+			return;
 		}
 
-		List<Collider> hits = Physics.OverlapSphere(hitCenter.position, attackSize, targetLayer).ToList();
 
-		if (hits.Count == 0) return;
+		if(!placed) 
+		{ 
+			lineRenderer.SetPosition(0, transform.position + Vector3.up * height);
+			for (int i = 0, j = 1; i < steps; i++)
+			{
+				Vector3 angle = Vector3.RotateTowards(-transform.right, transform.right, -Mathf.Deg2Rad * ((viewAngle / steps * i) + (180 - viewAngle) / 2f), 0);
+				lineRenderer.SetPosition(j, transform.position + (angle * range) + Vector3.up * height);
+				j++;
 
-		GameObject targetObject = null;
-		switch (targetMode)
-		{
-			case TargetMode.Closest:
-				targetObject = hits.OrderBy(x => Vector3.Distance(transform.position, x.transform.position)).First().gameObject;
-				break;
-			case TargetMode.Healthiest:
-				targetObject = hits.OrderBy(x => x.transform.root.GetComponent<Health>().CurrentHealth).First().gameObject;
-				break;
-			case TargetMode.First:
-				break;
-			case TargetMode.Last:
-				break;
-			default:
-				break;
+				angle = Vector3.RotateTowards(-transform.right, transform.right, -Mathf.Deg2Rad * ((viewAngle / steps * (i + 1)) + (180 - viewAngle) / 2f), 0);
+				lineRenderer.SetPosition(j, transform.position + (angle * range) + Vector3.up * height);
+				j++;
+
+				lineRenderer.SetPosition(j, transform.position + Vector3.up * height);
+				j++;
+			}
 		}
 
-		if (targetObject != null)
+		if (placed)
 		{
-			print("attacked: " + targetObject.name);
-			targetObject.transform.root.GetComponent<Health>().Damage(damage);
-			Destroy(hitSphere);
-			hitSphere = null;
-			attackTimer.Reset();
+			List<Transform> detectedEnemies = new List<Transform>();
+
+			for(int i = 0; i < steps; i++) 
+			{
+				Vector3 angle = Vector3.RotateTowards(-transform.right, transform.right, -Mathf.Deg2Rad * ((viewAngle / steps * i) + (180 - viewAngle) / 2f), 0);
+
+				if (Physics.SphereCast(transform.position + Vector3.up * height, 0.5f, (angle * range), out RaycastHit hitInfo, range, targetLayer))
+				{
+					detectedEnemies.Add(hitInfo.collider.transform.root);
+				}
+			}
+
+			Transform target = null;
+			if(detectedEnemies.Count > 0)
+				switch (targetMode)
+				{
+					case TargetMode.Closest:
+						target = detectedEnemies.OrderBy(x => Vector3.Distance(transform.position, x.transform.position)).First();
+						break;
+					case TargetMode.Healthiest:
+						target = detectedEnemies.OrderBy(x => x.transform.root.GetComponent<Health>().CurrentHealth).First();
+						break;
+					case TargetMode.First:
+						break;
+					case TargetMode.Last:
+						break;
+					default:
+						break;
+				}
+
+			LookAt(target);
+
+			if (attackTimer.IsOver && reloadTimer.IsOver && target)
+			{
+				if(projectile && projectile.TryGetComponent<Projectile>(out Projectile oldProjectile) && !oldProjectile.fired)
+				{
+					projectile.transform.parent = null;
+					projectile.GetComponent<Projectile>().Fired();
+					projectile.GetComponent<Rigidbody>().isKinematic = false;
+					projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileSpeed, ForceMode.Acceleration);
+				}
+
+				reloadTimer.Reset();
+			}
 		}
 	}
 
-	private void OnDestroy()
+	public void LookAt(Transform target)
 	{
-		if (attackTimer == null) attackTimer.Remove();
-		if(hitSphere) Destroy(hitSphere);
+		Vector3 targetPos;
+		if (target)
+		{
+			targetPos = target.position;
+		}
+		else
+			targetPos = transform.position + transform.forward * 2f;
+
+		yRotObj.forward = Vector3.Lerp(yRotObj.forward, 
+			((targetPos - Vector3.up * targetPos.y) - (transform.position - Vector3.up * transform.position.y)).normalized, 
+			6 * Time.deltaTime);
+
+		Vector3 calcLook = xRotObj.forward;
+		calcLook.y = 0;
+		calcLook.Normalize();
+
+		calcLook *= Vector3.Distance(xRotObj.position, targetPos);
+		calcLook.y = targetPos.y;
+		calcLook.y -= xRotObj.position.y;
+
+		xRotObj.forward = Vector3.Lerp(xRotObj.forward, 
+			calcLook.normalized, 
+			6 * Time.deltaTime);
 	}
 }
