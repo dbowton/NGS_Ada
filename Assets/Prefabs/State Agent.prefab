@@ -116,8 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathNodes: {fileID: 0}
   pathName: PatrolPath
-  lowerRange: -4
-  upperRange: 4
+  lowerRange: 0
+  upperRange: 0
 --- !u!114 &4595046257672559243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagname: Player
-  distance: 15
+  distance: 5
   angle: 80
   raycastTransform: {fileID: 4595046257388748809}
   numRaycast: 50
@@ -180,6 +180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  OnHurt:
+    m_PersistentCalls:
+      m_Calls: []
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -420,6 +423,8 @@ MonoBehaviour:
   enemyTagName: Player
   damage: 1
   isAttacking: 0
+  attackDelay: 2
+  maxAttackCount: 2
 --- !u!1001 &763343191804684358
 PrefabInstance:
   m_ObjectHideFlags: 0
