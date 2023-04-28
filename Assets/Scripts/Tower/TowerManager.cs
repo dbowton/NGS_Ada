@@ -47,11 +47,13 @@ public class TowerManager : MonoBehaviour
 
 		cam = Camera.main.transform;
 
-		List<Sprite> towerMats = new List<Sprite>();
+		List<(Sprite, string)> towerInfo = new List<(Sprite, string)>();
 		foreach (var tower in towerPrefabs)
-			towerMats.Add(tower.GetComponent<Tower>().towerIconMaterial);
+		{
+			towerInfo.Add((tower.GetComponent<Tower>().towerIconMaterial, tower.GetComponent<Tower>().cost.ToString()));
+		}
 
-		UIGameManager.Instance.SetTowerIcons(towerMats);
+		UIGameManager.Instance.SetTowerIcons(towerInfo);
 	}
 
 	private void Update()

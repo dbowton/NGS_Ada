@@ -10,6 +10,7 @@ public class UIGameManager : MonoBehaviour
 	public Slider healthBar;
 
 	[SerializeField] List<Image> towerIcons = new List<Image>();
+	[SerializeField] List<TMPro.TMP_Text> towerCosts = new List<TMPro.TMP_Text>();
 	[SerializeField] Image miniMap;
 
 	public GameObject timer;
@@ -27,13 +28,17 @@ public class UIGameManager : MonoBehaviour
 	private void Awake()
 	{
 		if (Instance == null) Instance = this;
+
+		foreach(var cost in towerCosts)
+			cost.text = string.Empty;
 	}
 
-	public void SetTowerIcons(List<Sprite> towerSprites)
+	public void SetTowerIcons(List<(Sprite image, string cost)> towerInfo)
 	{
-		for (int i = 0; i < towerIcons.Count && i < towerSprites.Count; i++)
+		for (int i = 0; i < towerIcons.Count && i < towerInfo.Count; i++)
 		{
-			towerIcons[i].sprite = towerSprites[i];
+			towerIcons[i].sprite = towerInfo[i].image;
+			towerCosts[i].text = towerInfo[i].cost;
 		}
 	}
 
