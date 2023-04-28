@@ -57,7 +57,7 @@ public class Tower : MonoBehaviour
 
 	private void Start()
 	{
-		lineRenderer.positionCount = steps * 3 + 1;
+		lineRenderer.positionCount = (int)(viewAngle * 4 / 15) + 7;
 		attackTimer = new Timer(attackRate);
 		attackTimer.End();
 
@@ -88,31 +88,60 @@ public class Tower : MonoBehaviour
 
 
 		if(!placed) 
-		{ 
+		{
+			int j = 0;
+			Vector3 angle;
 			lineRenderer.SetPosition(0, transform.position + Vector3.up * height);
-			for (int i = 0, j = 1; i < steps; i++)
+			j++;
+			for (int i = 0; i < viewAngle / 20;)// steps / 2;)
 			{
-				Vector3 angle = Vector3.RotateTowards(-transform.right, transform.right, -Mathf.Deg2Rad * ((viewAngle / steps * i) + (180 - viewAngle) / 2f), 0);
+				angle = Vector3.RotateTowards(transform.forward, -transform.right, Mathf.Deg2Rad * 10 /* (viewAngle / steps) */ * i, 0);
 				lineRenderer.SetPosition(j, transform.position + (angle * range) + Vector3.up * height);
 				j++;
 
-				angle = Vector3.RotateTowards(-transform.right, transform.right, -Mathf.Deg2Rad * ((viewAngle / steps * (i + 1)) + (180 - viewAngle) / 2f), 0);
+				i++;
+				angle = Vector3.RotateTowards(transform.forward, -transform.right, Mathf.Deg2Rad * 10 /* (viewAngle / steps) */ * i, 0);
 				lineRenderer.SetPosition(j, transform.position + (angle * range) + Vector3.up * height);
 				j++;
 
 				lineRenderer.SetPosition(j, transform.position + Vector3.up * height);
 				j++;
 			}
+
+			for (int i = 0; i < viewAngle / 20;)// steps / 2;)
+			{
+				angle = Vector3.RotateTowards(transform.forward, transform.right, Mathf.Deg2Rad * 10 /* (viewAngle / steps) */ * i, 0);
+				lineRenderer.SetPosition(j, transform.position + (angle * range) + Vector3.up * height);
+				j++;
+
+				i++;
+				angle = Vector3.RotateTowards(transform.forward, transform.right, Mathf.Deg2Rad * 10 /* (viewAngle / steps) */ * i, 0);
+				lineRenderer.SetPosition(j, transform.position + (angle * range) + Vector3.up * height);
+				j++;
+
+				lineRenderer.SetPosition(j, transform.position + Vector3.up * height);
+				j++;
+			}
+
+			print(j);
 		}
 
 		if (placed)
 		{
 			List<Transform> detectedEnemies = new List<Transform>();
 
-			for(int i = 0; i < steps; i++) 
+			Vector3 angle;
+			for (int i = 0; i < steps / 2; i++)
 			{
-				Vector3 angle = Vector3.RotateTowards(-transform.right, transform.right, -Mathf.Deg2Rad * ((viewAngle / steps * i) + (180 - viewAngle) / 2f), 0);
-
+				angle = Vector3.RotateTowards(transform.forward, -transform.right, Mathf.Deg2Rad * (viewAngle / steps) * i, 0);
+				if (Physics.SphereCast(transform.position + Vector3.up * height, 0.5f, (angle * range), out RaycastHit hitInfo, range, targetLayer))
+				{
+					detectedEnemies.Add(hitInfo.collider.transform.root);
+				}
+			}
+			for (int i = 0; i < steps / 2; i++)
+			{
+				angle = Vector3.RotateTowards(transform.forward, transform.right, Mathf.Deg2Rad * (viewAngle / steps) * i, 0);
 				if (Physics.SphereCast(transform.position + Vector3.up * height, 0.5f, (angle * range), out RaycastHit hitInfo, range, targetLayer))
 				{
 					detectedEnemies.Add(hitInfo.collider.transform.root);
@@ -120,7 +149,8 @@ public class Tower : MonoBehaviour
 			}
 
 			Transform target = null;
-			if(detectedEnemies.Count > 0)
+			while (detectedEnemies.Count > 0 && target == null)
+			{
 				switch (targetMode)
 				{
 					case TargetMode.Closest:
@@ -136,6 +166,13 @@ public class Tower : MonoBehaviour
 					default:
 						break;
 				}
+
+				if (target.GetComponent<Health>().CurrentHealth <= 0)
+				{
+					detectedEnemies.Remove(target);
+					target = null;
+				}
+			}
 
 			LookAt(target);
 
@@ -162,7 +199,7 @@ public class Tower : MonoBehaviour
 			targetPos = target.position;
 		}
 		else
-			targetPos = transform.position + transform.forward * 2f;
+			targetPos = transform.position + Vector3.up * height + transform.forward * 2f;
 
 		yRotObj.forward = Vector3.Lerp(yRotObj.forward, 
 			((targetPos - Vector3.up * targetPos.y) - (transform.position - Vector3.up * transform.position.y)).normalized, 

@@ -147,10 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerIconMaterial: {fileID: 21300000, guid: 5a8197fae2c4ad2469c50ade35d0b560, type: 3}
-  height: 0.5
-  range: 35
-  viewAngle: 90
-  steps: 90
+  height: 2.25
+  range: 20
+  viewAngle: 45
+  steps: 120
   cost: 50
   towerSize: 1
   lineRenderer: {fileID: -2134846067236129092}
@@ -159,8 +159,8 @@ MonoBehaviour:
     m_Bits: 128
   xRotObj: {fileID: 4579829373147374}
   yRotObj: {fileID: 4645079822382838}
-  attackRate: 1
-  damage: 25
+  attackRate: 0.3
+  damage: 18
   targetMode: 0
   projectileSpeed: 5000
   projectilePrefab: {fileID: 1715476615087276, guid: 529b1ccccc944d84f8b0bd1b37005d13, type: 3}
@@ -174,8 +174,8 @@ LineRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370931944378286}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 0
