@@ -45,6 +45,12 @@ public class AudioManager : MonoBehaviour
             Debug.Log(name + " not found");
             return;
         }
+
+        if (PauseMenu.isPaused)
+		{
+            sound.source.pitch *= .5f;
+		}
+
         sound.source.Play();
 	}
 
