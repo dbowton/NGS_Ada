@@ -51,8 +51,8 @@ public class PathFollower : MonoBehaviour
 	{
 		if (targetNode != null)
 		{
-			movement.MoveTowards(targetNode.transform.position + new Vector3(Random.Range(lowerRange, upperRange), 0, Random.Range(lowerRange, upperRange)));
-			//movement.MoveTowards(targetNode.transform.position);
+			//movement.MoveTowards(targetNode.transform.position + new Vector3(Random.Range(lowerRange, upperRange), 0, Random.Range(lowerRange, upperRange)));
+			movement.MoveTowards(targetNode.transform.position);
 		}
 	}
 }
