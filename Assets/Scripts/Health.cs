@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
 	[SerializeField] float maxHealth = 10;
+	[SerializeField][Tooltip("Not Triggered On Lethal Damage")] public UnityEvent OnHurt;
 	public UnityEvent OnDeath;
 	private float currentHealth;
 
@@ -27,6 +28,10 @@ public class Health : MonoBehaviour
 			{
 				//Debug.Log("health");
 				OnDeath.Invoke();
+			}
+			else
+			{
+				OnHurt.Invoke();
 			}
 		}
 	}
