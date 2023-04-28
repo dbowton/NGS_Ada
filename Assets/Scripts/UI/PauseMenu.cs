@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
 	GameObject player;
 	GameObject camera;
 
+	public static PauseMenu instance;
+
 	void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
@@ -24,8 +26,6 @@ public class PauseMenu : MonoBehaviour
 			if (isPaused) Resume();
 			else Pause();
 		}
-
-
     }
 
     public void Resume()
@@ -34,10 +34,8 @@ public class PauseMenu : MonoBehaviour
 		Time.timeScale = 1;
 		isPaused = false;
 
-		camera.transform.parent = null; // 
-		player.SetActive(true);
+		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Confined; //
 
 	}
 
@@ -47,12 +45,8 @@ public class PauseMenu : MonoBehaviour
 		Time.timeScale = 0;
 		isPaused = true;
 
-
-		camera.transform.parent = null;
-		player.SetActive(false);
-		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.Confined;
-
+		Cursor.visible = true;
 	}
 
 	public void Menu()

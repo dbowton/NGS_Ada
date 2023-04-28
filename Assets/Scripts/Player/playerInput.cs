@@ -25,6 +25,7 @@ public class playerInput : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }
+
         if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
             Cursor.lockState = CursorLockMode.Locked;
