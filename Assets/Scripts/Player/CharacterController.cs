@@ -304,12 +304,14 @@ namespace Player
         public void AttackStart()
         {
             mainWeapon.isAttacking = true;
+            mainWeapon.PlayWeaponFX();
         }
 
         public void AttackEnd()
         {
             attacking = false;
             mainWeapon.isAttacking = false;
+            mainWeapon.StopWeaponFX();
         }
 
 

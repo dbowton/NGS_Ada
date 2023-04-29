@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField]ParticleSystem weaponTrail;
+
+    List<Collider> colliders = new List<Collider>();
     public string enemyTagName;
     public float damage;
     public bool isAttacking;
@@ -12,12 +15,15 @@ public class Weapon : MonoBehaviour
 
     void Start()
     {
-        
+        if (weaponTrail) weaponTrail.Stop();
     }
 
     void Update()
     {
-        
+        if (!isAttacking && colliders.Count > 0)
+        {
+            colliders.Clear();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,7 +31,22 @@ public class Weapon : MonoBehaviour
         
         if (isAttacking && other.CompareTag(enemyTagName))
         {
-            other.GetComponent<Health>().Damage(damage);
+            if (!colliders.Contains(other))
+            {
+                other.GetComponent<Health>().Damage(damage);
+                colliders.Add(other);
+            }
+            
         }
+    }
+
+    public void PlayWeaponFX()
+    {
+        if (weaponTrail) weaponTrail.Play();
+    }
+
+    public void StopWeaponFX()
+    {
+        if (weaponTrail) weaponTrail.Stop();
     }
 }
