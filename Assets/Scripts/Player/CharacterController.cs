@@ -71,7 +71,7 @@ namespace Player
             attackTimer = new Timer(mainWeapon.attackDelay, () => _attackCount = 0 );
             attackTimer.End();
 
-            gameObject.GetComponent<Health>().OnDeath.AddListener(() => animator.SetBool("death", true));
+            gameObject.GetComponent<Health>().OnDeath.AddListener(() => Die());
         }
 
         /// <summary>
@@ -296,9 +296,15 @@ namespace Player
 
         }
 
-        public void Respawned(bool respawned)
+        public void Respawned(bool isDead)
         {
-            animator.SetBool("death", respawned);
+            animator.SetBool("isDead", isDead);
+        }
+
+        public void Die()
+        {
+            animator.SetBool("isDead", true);
+            animator.SetTrigger("died");
         }
 
         public void AttackAnimationStart()
