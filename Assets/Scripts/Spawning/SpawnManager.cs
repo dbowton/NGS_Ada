@@ -134,7 +134,7 @@ public class SpawnManager : MonoBehaviour
 				AudioManager.instance.Play("Action");
 
 				foreach (var spawn in spawners) spawn.BeginWave();
-			}, true);
+			}, true, false, false);
 		}
 		
 	}

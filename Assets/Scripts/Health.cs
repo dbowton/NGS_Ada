@@ -40,4 +40,9 @@ public class Health : MonoBehaviour
 	{
 		currentHealth = Mathf.Min(currentHealth + value, maxHealth);
 	}
+
+	public void FullHeal()
+	{
+		Heal(maxHealth);
+	}
 }

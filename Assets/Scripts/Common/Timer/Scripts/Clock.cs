@@ -24,7 +24,7 @@ public class Clock : MonoBehaviour
 		{
 			if (timers[i] != null)
 			{
-				timers[i].Update(Time.unscaledDeltaTime);
+				timers[i].Update();
 				i++;
 			}
 			else

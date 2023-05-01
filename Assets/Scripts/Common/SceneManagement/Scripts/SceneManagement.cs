@@ -139,7 +139,7 @@ public class SceneManagement : MonoBehaviour
 		if (minTime == 0)
 			ready = true;
 		else
-			waitTimer = new Timer(minTime, () => ready = true, true);
+			waitTimer = new Timer(minTime, () => ready = true, true, false, false);
 
 
 		fadeScreenPrefab = fadescreen;

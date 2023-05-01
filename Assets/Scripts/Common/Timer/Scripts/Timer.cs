@@ -9,6 +9,7 @@ public class Timer
 	private bool paused = false;
 	private bool autoReset = false;
 	private bool oneTime = false;
+	private bool useScaledTime = false;
 
 	public bool IsOver { get { return timer <= 0; } }
 	public float GetElapsed { get { if (time <= 0) return -1; return 1 - (timer / time); } }
@@ -47,7 +48,7 @@ public class Timer
 	/// <param name="function">funciton to call when timer ends</param>
 	/// <param name="oneTime">whether or not to destroy timer when it ends</param>
 	/// <param name="autoReset">whether or not the timer will restart itself</param>
-	public Timer(float time, Action function = null, bool oneTime = false, bool autoReset = false)
+	public Timer(float time, Action function = null, bool oneTime = false, bool autoReset = false, bool useScaledTime = true)
 	{
 		this.time = time;
 		this.timer = time;
@@ -61,16 +62,17 @@ public class Timer
 		if (Clock.instance == null)
 			new GameObject().AddComponent<Clock>();
 
+		this.useScaledTime = useScaledTime;
 		Clock.instance.AddTimer(this);
 	}
 
-	public void Update(float timeStep)
+	public void Update()
 	{
 		if (paused) return;
 
 		if (timer > 0)
 		{
-			timer -= timeStep;
+			timer -= (useScaledTime) ? Time.deltaTime : Time.unscaledDeltaTime;
 
 			if (timer <= 0)
 			{

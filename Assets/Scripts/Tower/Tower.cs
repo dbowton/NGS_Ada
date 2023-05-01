@@ -174,9 +174,7 @@ public class Tower : MonoBehaviour
 				}
 			}
 
-			LookAt(target);
-
-			if (attackTimer.IsOver && reloadTimer.IsOver && target)
+			if (LookAt(target) && attackTimer.IsOver && reloadTimer.IsOver && target)
 			{
 				if(projectile && projectile.TryGetComponent<Projectile>(out Projectile oldProjectile) && !oldProjectile.fired)
 				{
@@ -191,7 +189,7 @@ public class Tower : MonoBehaviour
 		}
 	}
 
-	public void LookAt(Transform target)
+	public bool LookAt(Transform target)
 	{
 		Vector3 targetPos;
 		if (target)
@@ -201,8 +199,9 @@ public class Tower : MonoBehaviour
 		else
 			targetPos = transform.position + Vector3.up * height + transform.forward * 2f;
 
-		yRotObj.forward = Vector3.Lerp(yRotObj.forward, 
-			((targetPos - Vector3.up * targetPos.y) - (transform.position - Vector3.up * transform.position.y)).normalized, 
+		Vector3 targetYForward = ((targetPos - Vector3.up * targetPos.y) - (transform.position - Vector3.up * transform.position.y)).normalized;
+
+		yRotObj.forward = Vector3.Lerp(yRotObj.forward, targetYForward, 
 			6 * Time.deltaTime);
 
 		Vector3 calcLook = xRotObj.forward;
@@ -216,5 +215,7 @@ public class Tower : MonoBehaviour
 		xRotObj.forward = Vector3.Lerp(xRotObj.forward, 
 			calcLook.normalized, 
 			6 * Time.deltaTime);
+
+		return Vector3.Angle(yRotObj.forward, targetYForward) < 2f;
 	}
 }
