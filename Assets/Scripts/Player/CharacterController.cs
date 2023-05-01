@@ -296,6 +296,11 @@ namespace Player
 
         }
 
+        public void Respawned(bool respawned)
+        {
+            animator.SetBool("death", respawned);
+        }
+
         public void AttackAnimationStart()
         {
             attackTimer.Reset();
