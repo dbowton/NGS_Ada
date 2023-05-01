@@ -129,6 +129,10 @@ public class SpawnManager : MonoBehaviour
 			waveTimer = new Timer(60, () =>
 			{
 				runningWave = true;
+
+				AudioManager.instance.Stop("Theme");
+				AudioManager.instance.Play("Action");
+
 				foreach (var spawn in spawners) spawn.BeginWave();
 			}, true);
 		}
