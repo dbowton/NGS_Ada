@@ -70,6 +70,8 @@ namespace Player
             Motor.CharacterController = this;
             attackTimer = new Timer(mainWeapon.attackDelay, () => _attackCount = 0 );
             attackTimer.End();
+
+            gameObject.GetComponent<Health>().OnDeath.AddListener(() => animator.SetBool("death", true));
         }
 
         /// <summary>

@@ -96,7 +96,7 @@ namespace KinematicCharacterController.Examples
             characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
             characterInputs.CameraRotation = CharacterCamera.Transform.rotation;
             characterInputs.JumpDown = Input.GetKeyDown(KeyCode.Space);
-            characterInputs.attack = Input.GetKeyDown(KeyCode.Mouse0);
+            characterInputs.attack = Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKey(KeyCode.Mouse0);
             //characterInputs.CrouchDown = Input.GetKeyDown(KeyCode.C);
             //characterInputs.CrouchUp = Input.GetKeyUp(KeyCode.C);
 
