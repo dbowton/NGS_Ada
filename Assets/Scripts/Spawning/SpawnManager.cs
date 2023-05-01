@@ -81,7 +81,7 @@ public class SpawnManager : MonoBehaviour
 
 		if (waveTimer != null)
 		{
-			if (Input.GetKeyDown(KeyCode.P))
+			if (Input.GetKeyDown(KeyCode.G))
 			{
 				waveTimer.Remove();
 				waveTimer = null;
