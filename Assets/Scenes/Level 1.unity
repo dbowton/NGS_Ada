@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1470247, g: 0.36394262, b: 0.5799059, a: 1}
+  m_IndirectSpecularColor: {r: 0.14703749, g: 0.3639866, b: 0.57992274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3305,6 +3305,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 746671324}
     m_Modifications:
+    - target: {fileID: 4699339895118671706, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895118671706, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895118671706, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895118671706, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895328451475, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895328451475, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895328451475, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895328451475, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4699339895466665352, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
       propertyPath: m_Name
       value: UIPause
@@ -3391,6 +3423,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4699339895466665354, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895594402708, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339897121282401, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339897121282401, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339897121282401, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339897121282401, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
