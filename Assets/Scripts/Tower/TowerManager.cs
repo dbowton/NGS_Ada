@@ -7,8 +7,7 @@ public class TowerManager : MonoBehaviour
 	[SerializeField] List<GameObject> towerPrefabs;
 	[SerializeField] float placementRange;
 
-	bool awaitingPlacement = false;
-	int index = 0;
+	int index = -1;
 
 	GameObject awaitingTower;
 	[SerializeField] LayerMask targetLayer;
@@ -18,6 +17,7 @@ public class TowerManager : MonoBehaviour
 	[SerializeField] Material validMat;
 	[SerializeField] Material invalidMat;
 
+	bool hasYRot = false;
 	float yRot = 0;
 
 	[SerializeField] private int currency = 0;
@@ -58,21 +58,35 @@ public class TowerManager : MonoBehaviour
 
 	private void Update()
 	{
-		if (awaitingPlacement)
-		{
-			if(Input.GetKeyDown(KeyCode.Escape)) 
-			{
-				Destroy(awaitingTower);
-				awaitingPlacement = false;
-				return;
-			}
+		CheckKey(KeyCode.Alpha1, 0);
+		CheckKey(KeyCode.Alpha2, 1);
+		CheckKey(KeyCode.Alpha3, 2);
+		CheckKey(KeyCode.Alpha4, 3);
 
-			if (Input.GetKey(KeyCode.Q)) yRot -= Time.deltaTime * 180f;
-			if (Input.GetKey(KeyCode.E)) yRot += Time.deltaTime * 180f;
+		if (index >= 0 && index < towerPrefabs.Count)
+		{
+			if (Input.GetKey(KeyCode.Q))
+			{
+				yRot -= Time.deltaTime * 180f;
+				hasYRot = true;
+			}
+			if (Input.GetKey(KeyCode.E))
+			{
+				yRot += Time.deltaTime * 180f;
+				hasYRot = true;
+			}
 
 			if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hitInfo, placementRange, targetLayer))
 			{
-				if(awaitingTower == null) awaitingTower = Instantiate(towerPrefabs[index]);
+				if (awaitingTower == null)
+				{
+					awaitingTower = Instantiate(towerPrefabs[index]);
+
+					if (!hasYRot)
+					{
+						yRot = 360 - Vector3.SignedAngle(transform.forward, Vector3.forward, Vector3.up);
+					}
+				}
 
 				List<Collider> deleteColliders = awaitingTower.GetComponentsInChildren<Collider>().ToList();
 
@@ -97,11 +111,11 @@ public class TowerManager : MonoBehaviour
 				{
 					if (Input.GetMouseButton(1))
 					{
+						hasYRot = true;
 						Currency -= awaitingTower.GetComponent<Tower>().cost;
 
 						Destroy(awaitingTower);
 						awaitingTower = null;
-						awaitingPlacement = false;
 
 						GameObject placedTower = Instantiate(towerPrefabs[index]);
 						placedTower.transform.position = hitInfo.point;
@@ -120,21 +134,25 @@ public class TowerManager : MonoBehaviour
 				Destroy(awaitingTower);
 			}
 		}
-
-		CheckKey(KeyCode.Alpha1, 0);
-		CheckKey(KeyCode.Alpha2, 1);
-		CheckKey(KeyCode.Alpha3, 2);
-		CheckKey(KeyCode.Alpha4, 3);
 	}
 
 	private void CheckKey(KeyCode code, int num)
 	{
 		if (Input.GetKeyDown(code) && towerPrefabs.Count > num)
 		{
-			yRot = 0;
-			awaitingPlacement = true;
-			if (awaitingTower) Destroy(awaitingTower);
-			index = num;
+			if (num == index)
+			{
+				index = -1;
+				if (awaitingTower) Destroy(awaitingTower);
+			}
+			else
+			{
+				hasYRot = false;
+				yRot = 0;
+				index = num;
+				if (awaitingTower) Destroy(awaitingTower);
+				awaitingTower = null;
+			}
 		}
 	}
 }
