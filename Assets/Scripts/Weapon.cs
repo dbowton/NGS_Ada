@@ -13,6 +13,8 @@ public class Weapon : MonoBehaviour
     public float attackDelay = 2f;
     public int maxAttackCount = 2;
 
+    [SerializeField] bool isKillBox = false;
+
     void Start()
     {
         if (weaponTrail) weaponTrail.Stop();
@@ -20,7 +22,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        if (!isAttacking && colliders.Count > 0)
+        if ((isKillBox || !isAttacking) && colliders.Count > 0)
         {
             colliders.Clear();
         }

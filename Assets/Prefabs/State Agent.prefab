@@ -179,13 +179,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fb87fe008d6364baa0367c32af2af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 150
   OnHurt:
     m_PersistentCalls:
       m_Calls: []
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  currentHealth: 0
 --- !u!33 &4595046257672559242
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -420,11 +421,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1af523540bc6d4ba7264cf7b07ea4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponTrail: {fileID: 0}
   enemyTagName: Player
   damage: 1
   isAttacking: 0
   attackDelay: 2
   maxAttackCount: 2
+  isKillBox: 0
 --- !u!1001 &763343191804684358
 PrefabInstance:
   m_ObjectHideFlags: 0
