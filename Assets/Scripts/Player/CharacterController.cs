@@ -19,7 +19,11 @@ namespace Player
     {
         public KinematicCharacterMotor Motor;
         public Animator animator;
+
+        [Header("Weapons")]
         public Weapon mainWeapon;
+        public Weapon offWeapon;
+        public bool dualWield;
 
         [Header("Stable Movement")]
         public float SprintSpeed = 15f;
@@ -68,7 +72,7 @@ namespace Player
         {
             // Assign to motor
             Motor.CharacterController = this;
-            attackTimer = new Timer(mainWeapon.attackDelay, () => _attackCount = 0 );
+            attackTimer = new Timer(mainWeapon.attackDelay, () => _attackCount = 0);
             attackTimer.End();
 
             gameObject.GetComponent<Health>().OnDeath.AddListener(() => Die());
@@ -213,7 +217,7 @@ namespace Player
             animator.SetBool("IsGrounded", Motor.GroundingStatus.IsStableOnGround);
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             //handle attacking
             if (_attackRequested)
@@ -311,20 +315,46 @@ namespace Player
         {
             attackTimer.Reset();
             attacking = true;
+        }
+
+        public void AttackStart(string weaponSlot)
+        {
+
+            if (weaponSlot == "main" || weaponSlot == "")
+            {
+                mainWeapon.isAttacking = true;
+                mainWeapon.PlayWeaponFX();
+            }
+            else if(weaponSlot == "left")
+            {
+                offWeapon.isAttacking = true;
+                offWeapon.PlayWeaponFX();
+            }
+            else
+            {
+                Debug.Log("No weapon slot");
+            }
+        }
+
+        public void AttackEnd(string weaponSlot)
+        {
+
             _attackCount++;
-        }
-
-        public void AttackStart()
-        {
-            mainWeapon.isAttacking = true;
-            mainWeapon.PlayWeaponFX();
-        }
-
-        public void AttackEnd()
-        {
             attacking = false;
-            mainWeapon.isAttacking = false;
-            mainWeapon.StopWeaponFX();
+            if (weaponSlot == "main" || weaponSlot == "")
+            {
+                mainWeapon.isAttacking = false;
+                mainWeapon.StopWeaponFX();
+            }
+            else if (weaponSlot == "left")
+            {
+                offWeapon.isAttacking = false;
+                offWeapon.StopWeaponFX();
+            }
+            else
+            {
+                Debug.Log("No weapon slot");
+            }
         }
 
 
