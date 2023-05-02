@@ -2955,7 +2955,7 @@ GameObject:
   - component: {fileID: 414068818}
   - component: {fileID: 414068817}
   - component: {fileID: 414068816}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3876,10 +3876,6 @@ PrefabInstance:
       propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 785639954}
-    - target: {fileID: 4100685200791968575, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
-      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Trigger
-      objectReference: {fileID: 0}
     - target: {fileID: 6016282384351635493, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.588688

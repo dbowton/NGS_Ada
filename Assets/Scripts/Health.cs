@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
 	[SerializeField] float maxHealth = 10;
 	[SerializeField][Tooltip("Not Triggered On Lethal Damage")] public UnityEvent OnHurt;
 	public UnityEvent OnDeath;
-	private float currentHealth;
+	[SerializeField] private float currentHealth;
 
 	public float CurrentHealth { get { return currentHealth; } }
 	public float GetMaxHealth { get { return maxHealth; } }
@@ -43,6 +43,6 @@ public class Health : MonoBehaviour
 
 	public void FullHeal()
 	{
-		Heal(maxHealth);
+		Heal(Mathf.Abs(currentHealth) + maxHealth);
 	}
 }
