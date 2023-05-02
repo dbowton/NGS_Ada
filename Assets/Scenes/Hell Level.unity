@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 2
-    agentSlope: 45
-    agentClimb: 0.4
+    agentRadius: 0.3
+    agentHeight: 3
+    agentSlope: 50
+    agentClimb: 0.6
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.1
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: e03794ce29042c44797360edfd04f8d3, type: 2}
 --- !u!1001 &85597122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &93058894 stripped
@@ -261,9 +265,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1535212500}
     m_Modifications:
+    - target: {fileID: 100000, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_Name
       value: RunePillarMayaLo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_RootOrder
@@ -387,6 +399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &317376623 stripped
@@ -448,6 +464,10 @@ PrefabInstance:
     - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
       propertyPath: m_Name
       value: P_AncientRuins_Sword (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
@@ -589,6 +609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &554180194 stripped
@@ -603,9 +627,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1535212500}
     m_Modifications:
+    - target: {fileID: 100000, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_Name
       value: RunePillarMayaLo (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_RootOrder
@@ -729,6 +761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &671673357 stripped
@@ -790,6 +826,10 @@ PrefabInstance:
     - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
       propertyPath: m_Name
       value: P_AncientRuins_Sword (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
@@ -899,9 +939,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1535212500}
     m_Modifications:
+    - target: {fileID: 100000, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_Name
       value: RunePillarMayaLo (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_RootOrder
@@ -1025,6 +1073,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &832207870 stripped
@@ -1086,6 +1138,10 @@ PrefabInstance:
     - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
       propertyPath: m_Name
       value: P_AncientRuins_Sword (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
@@ -1233,6 +1289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &1002507194 stripped
@@ -1295,6 +1355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &1030095833 stripped
@@ -1356,6 +1420,10 @@ PrefabInstance:
     - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
       propertyPath: m_Name
       value: P_AncientRuins_Sword (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
@@ -1451,6 +1519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &1172473365 stripped
@@ -1513,6 +1585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &1281287349 stripped
@@ -1574,6 +1650,10 @@ PrefabInstance:
     - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
       propertyPath: m_Name
       value: P_AncientRuins_Sword (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
@@ -1642,6 +1722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &1481761248 stripped
@@ -1656,9 +1740,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1535212500}
     m_Modifications:
+    - target: {fileID: 100000, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_Name
       value: RunePillarMayaLo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_RootOrder
@@ -1741,7 +1833,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1535212500
 Transform:
@@ -1843,6 +1935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &1544805727 stripped
@@ -1904,6 +2000,10 @@ PrefabInstance:
     - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
       propertyPath: m_Name
       value: P_AncientRuins_Sword (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
@@ -1967,6 +2067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &1721490346 stripped
@@ -2029,6 +2133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &1741942357 stripped
@@ -2090,6 +2198,10 @@ PrefabInstance:
     - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
       propertyPath: m_Name
       value: P_AncientRuins_Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
@@ -2247,6 +2359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &1790125354 stripped
@@ -2261,9 +2377,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1535212500}
     m_Modifications:
+    - target: {fileID: 100000, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_Name
       value: RunePillarMayaLo (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_RootOrder
@@ -2387,6 +2511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &1977295048 stripped
@@ -2448,6 +2576,10 @@ PrefabInstance:
     - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
       propertyPath: m_Name
       value: P_AncientRuins_Sword (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
@@ -2511,6 +2643,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!4 &2039156032 stripped
@@ -2525,9 +2661,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1535212500}
     m_Modifications:
+    - target: {fileID: 100000, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_Name
       value: RunePillarMayaLo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: de302259cc8c39f40b3a83e738e05213, type: 3}
       propertyPath: m_RootOrder
