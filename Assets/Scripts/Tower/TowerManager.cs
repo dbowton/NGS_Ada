@@ -109,7 +109,7 @@ public class TowerManager : MonoBehaviour
 				}
 				else
 				{
-					if (Input.GetMouseButton(1))
+					if (Input.GetMouseButtonDown(1))
 					{
 						hasYRot = true;
 						Currency -= awaitingTower.GetComponent<Tower>().cost;
