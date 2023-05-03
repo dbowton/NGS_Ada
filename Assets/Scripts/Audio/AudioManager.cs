@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     public List<Sound> sounds;
 
     public static AudioManager instance;
+    public AudioMixerGroup audioMixerGroup;
 
     // Start is called before the first frame update
     void Awake()
@@ -25,10 +26,12 @@ public class AudioManager : MonoBehaviour
         foreach (var sound in sounds)
 		{
             sound.source = gameObject.AddComponent<AudioSource>();
+ 
             sound.source.clip = sound.clip;
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
+            sound.source.outputAudioMixerGroup = audioMixerGroup;
 		}
     }
 
