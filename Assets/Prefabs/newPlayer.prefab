@@ -440,6 +440,7 @@ MonoBehaviour:
   isAttacking: 0
   attackDelay: 1
   maxAttackCount: 3
+  isKillBox: 0
 --- !u!1 &963801806785050553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,7 +2947,7 @@ Animator:
   m_GameObject: {fileID: 2220890851416575997}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7e30eee73c241d5448ce0ac372cf6602, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3dcd739c6d29b6543a2bcf6525582881, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8727b96f962a55b4e83b3912b70e6b69, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2986,6 +2987,8 @@ MonoBehaviour:
   Motor: {fileID: 2220890851416575999}
   animator: {fileID: 2220890851416575990}
   mainWeapon: {fileID: 208918774289944916}
+  offWeapon: {fileID: 0}
+  dualWield: 0
   SprintSpeed: 15
   WalkSpeed: 8
   StableMovementSharpness: 15
@@ -3157,6 +3160,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  currentHealth: 0
 --- !u!114 &4100685200791968575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3351,7 +3355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2559676481495574449}
   m_LocalRotation: {x: -0.04734926, y: 0.012439724, z: 0.9986879, w: -0.015023751}
-  m_LocalPosition: {x: -0.152, y: 0.042, z: 0.748}
+  m_LocalPosition: {x: -0.122, y: 0.046, z: 0.445}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3376,7 +3380,8 @@ MonoBehaviour:
   damage: 100
   isAttacking: 0
   attackDelay: 2
-  maxAttackCount: 2
+  maxAttackCount: 3
+  isKillBox: 0
 --- !u!136 &983377013090767359
 CapsuleCollider:
   m_ObjectHideFlags: 0
