@@ -45,4 +45,9 @@ public class Health : MonoBehaviour
 	{
 		Heal(Mathf.Abs(currentHealth) + maxHealth);
 	}
+
+	public void ModifyMaxHealth(float multi)
+	{
+		maxHealth *= multi;
+	}
 }

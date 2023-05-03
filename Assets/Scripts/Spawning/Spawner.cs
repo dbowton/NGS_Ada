@@ -53,6 +53,9 @@ public class Spawner : MonoBehaviour
 					EnemyWave selected = waves[currentWave].wave[Random.Range(0, waves[currentWave].wave.Count)];
 					GameObject spawnedEnemy = Instantiate(selected.EnemyPrefab, transform.position, Quaternion.identity);
 
+					spawnedEnemy.GetComponent<Health>().ModifyMaxHealth(enemyHealthMulti);
+					spawnedEnemy.GetComponent<Health>().FullHeal();
+
 					spawnedEnemy.GetComponent<Health>().OnDeath.AddListener(() =>
 						{
 							TowerManager.instance.Currency += selected.enemyValue;
@@ -74,4 +77,28 @@ public class Spawner : MonoBehaviour
 				}
 			}, false, true);
 	}
+
+	public void Replay(float enemyCountMulti, float enemyHealthMulti)
+	{
+		this.enemyHealthMulti = enemyHealthMulti;
+
+		foreach (var wave in waves[1].wave)
+		{
+			EnemyWave newWave = new EnemyWave();
+			newWave.enemyValue = wave.enemyValue;
+			newWave.count = wave.count;
+			newWave.EnemyPrefab = wave.EnemyPrefab;
+
+			waves[0].wave.Add(newWave);
+		}
+
+		currentWave--;
+
+		foreach(var wave in waves[0].wave) 
+		{ 
+			wave.count = Mathf.RoundToInt(wave.count * enemyCountMulti);
+		}
+	}
+
+	float enemyHealthMulti = 1f;
 }

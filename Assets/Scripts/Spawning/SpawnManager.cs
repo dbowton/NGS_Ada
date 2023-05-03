@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,7 +7,9 @@ public class SpawnManager : MonoBehaviour
 {
 	private static SpawnManager instance;
 	[SerializeField] UnityEvent onWavesComplete;
+	[SerializeField] bool isEndlessMode = false;
 
+	List<Spawner> spawners = new List<Spawner>();
 	public static SpawnManager Instance
 	{
 		get
@@ -33,22 +35,17 @@ public class SpawnManager : MonoBehaviour
 	{
 		if (this != instance) return;
 
-		UIGameManager.Instance.waveCounter.text = "Wave: 1/" + spawners.Max(x => x.waveCount());
+		if (isEndlessMode)
+			UIGameManager.Instance.waveCounter.text = "∞/∞";
+		else
+			UIGameManager.Instance.waveCounter.text = "Wave: 1/" + spawners.Max(x => x.waveCount());
 
-		waveTimer = new Timer(60, () => 
-		{
-			runningWave = true;
-			AudioManager.instance.Stop("Theme");
-			AudioManager.instance.Play("Action");
-
-			foreach (var spawn in spawners) spawn.BeginWave(); 
-		}, true);
+		waveTimer = new Timer(60, () => StartWaves(), true);
 
 		AudioManager.instance.Stop("Action");
 		AudioManager.instance.Play("Theme");
 	}
 
-	List<Spawner> spawners = new List<Spawner>();
 	public void AddSpawner(Spawner spawner)
 	{
 		if (this != instance)
@@ -86,12 +83,7 @@ public class SpawnManager : MonoBehaviour
 				waveTimer.Remove();
 				waveTimer = null;
 
-				AudioManager.instance.Stop("Theme");
-				AudioManager.instance.Play("Action");
-
-				runningWave = true;
-				foreach (var spawn in spawners) 
-					spawn.BeginWave();
+				StartWaves();
 			}
 		}
 	}
@@ -119,23 +111,42 @@ public class SpawnManager : MonoBehaviour
 		{
 			print("All Waves Complete");
 
-			UIGameManager.Instance.waveCounter.text = "Wave: " + completedWaves + "/" + spawners.Max(x => x.waveCount());
+			if (isEndlessMode)
+				UIGameManager.Instance.waveCounter.text = "∞/∞";
+			else
+				UIGameManager.Instance.waveCounter.text = "Wave: " + completedWaves + "/" + spawners.Max(x => x.waveCount());
 
 			onWavesComplete.Invoke();
 		}
 		else
 		{
-			UIGameManager.Instance.waveCounter.text = "Wave: " + (completedWaves + 1) + "/" + spawners.Max(x => x.waveCount());
-			waveTimer = new Timer(60, () =>
+			if (isEndlessMode)
 			{
-				runningWave = true;
-
-				AudioManager.instance.Stop("Theme");
-				AudioManager.instance.Play("Action");
-
-				foreach (var spawn in spawners) spawn.BeginWave();
-			}, true, false, false);
+				UIGameManager.Instance.waveCounter.text = "∞/∞";
+				Replay();
+			}
+			else
+				UIGameManager.Instance.waveCounter.text = "Wave: " + (completedWaves + 1) + "/" + spawners.Max(x => x.waveCount());
+			waveTimer = new Timer(60, () => StartWaves(), true, false, false);
 		}
 		
+	}
+
+	[SerializeField] float enemyCountMulti = 1f;
+	[SerializeField] float enemyHealthMulti = 1f;
+
+	private void Replay()
+	{
+		foreach (var spawn in spawners) spawn.Replay(enemyCountMulti, enemyHealthMulti);
+	}
+
+	private void StartWaves()
+	{
+		runningWave = true;
+
+		AudioManager.instance.Stop("Theme");
+		AudioManager.instance.Play("Action");
+
+		foreach (var spawn in spawners) spawn.BeginWave();
 	}
 }
