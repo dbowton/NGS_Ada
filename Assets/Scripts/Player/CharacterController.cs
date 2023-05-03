@@ -223,10 +223,10 @@ namespace Player
             if (_attackRequested)
             {
                 //can we attack
-                if (!attacking)
+                if (!attacking && !_attackedThisFrame)
                 {
                     animator.SetTrigger("Attack" + ((_attackCount % mainWeapon.maxAttackCount) + 1));
-                    //_attackedThisFrame = true;
+                    _attackedThisFrame = true;
                 }
             }
         }
@@ -257,6 +257,8 @@ namespace Player
                     _timeSinceLastAbleToJump += deltaTime;
                 }
             }
+
+            if (attacking) _attackedThisFrame = false;
 
         }
 
@@ -313,8 +315,8 @@ namespace Player
 
         public void AttackAnimationStart()
         {
-            attackTimer.Reset();
             attacking = true;
+            attackTimer.Reset();
         }
 
         public void AttackStart(string weaponSlot)
