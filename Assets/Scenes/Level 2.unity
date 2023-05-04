@@ -6140,6 +6140,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 778974668}
     m_Modifications:
+    - target: {fileID: 2303341754299775780, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303341754299775780, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948511676811926100, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948511676811926100, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948511676811926100, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895118671706, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895118671706, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895118671706, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 107.24385
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895118671706, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -203.82784
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895328451475, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895328451475, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895328451475, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 107.24385
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895328451475, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -122.29671
+      objectReference: {fileID: 0}
     - target: {fileID: 4699339895466665352, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
       propertyPath: m_Name
       value: UIPause
@@ -6227,6 +6279,26 @@ PrefabInstance:
     - target: {fileID: 4699339895466665354, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339895594402708, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339897121282401, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339897121282401, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339897121282401, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 107.24385
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699339897121282401, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40.765568
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eba1f70c2dd40fb4ea3937ffbe4a818e, type: 3}
@@ -40817,7 +40889,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isEndlessMode: 0
   remainingEnemies: 0
+  enemyCountMulti: 1
+  enemyHealthMulti: 1
 --- !u!4 &1986091989
 Transform:
   m_ObjectHideFlags: 0
