@@ -9,6 +9,11 @@ public class SpawnManager : MonoBehaviour
 	[SerializeField] UnityEvent onWavesComplete;
 	[SerializeField] bool isEndlessMode = false;
 
+	bool runningWave = false;
+	int completedWaves = 0;
+	public int remainingEnemies = 0;
+	Timer waveTimer;
+
 	List<Spawner> spawners = new List<Spawner>();
 	public static SpawnManager Instance
 	{
@@ -33,6 +38,12 @@ public class SpawnManager : MonoBehaviour
 
 	private void Start()
 	{
+		if (isEndlessMode)
+		{
+			enemyCountMultiplier = enemyCountMulti;
+			enemyHealthMultiplier = enemyHealthMulti;
+		}
+
 		if (this != instance) return;
 
 		if (isEndlessMode)
@@ -88,11 +99,6 @@ public class SpawnManager : MonoBehaviour
 		}
 	}
 
-	bool runningWave = false;
-	int completedWaves = 0;
-	public int remainingEnemies = 0;
-	Timer waveTimer;
-
 	public void WaveComplete()
 	{
 		if (this != instance)
@@ -101,11 +107,15 @@ public class SpawnManager : MonoBehaviour
 			return;
 		}
 
+		print("Wave Complete");
+
 		AudioManager.instance.Stop("Action");
 		AudioManager.instance.Play("Theme");
 
 		runningWave = false;
-		completedWaves++;
+
+		if(!isEndlessMode)
+			completedWaves++;
 
 		if (completedWaves >= spawners.Max(x => x.waveCount()))
 		{
@@ -134,10 +144,14 @@ public class SpawnManager : MonoBehaviour
 
 	[SerializeField] float enemyCountMulti = 1f;
 	[SerializeField] float enemyHealthMulti = 1f;
+	float enemyCountMultiplier;
+	float enemyHealthMultiplier;
 
 	private void Replay()
 	{
-		foreach (var spawn in spawners) spawn.Replay(enemyCountMulti, enemyHealthMulti);
+		foreach (var spawn in spawners) spawn.Replay(enemyCountMultiplier, enemyHealthMultiplier);
+		enemyCountMultiplier *= enemyCountMulti;
+		enemyHealthMultiplier *= enemyHealthMulti;
 	}
 
 	private void StartWaves()

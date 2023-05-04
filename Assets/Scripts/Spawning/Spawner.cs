@@ -24,6 +24,7 @@ public class Spawner : MonoBehaviour
 	[SerializeField] string pathName;
 
 	Timer spawnTimer;
+	[SerializeField] float spawnTime = 0.25f;
 
 	public int waveCount()
 	{
@@ -45,7 +46,7 @@ public class Spawner : MonoBehaviour
 
 		if (currentWave < waves.Count && waves[currentWave].wave.Count > 0)
 		spawnTimer = new Timer(
-			0.25f,
+			spawnTime,
 			() =>
 			{
 				if (currentWave < waves.Count && waves[currentWave].wave.Count > 0)
