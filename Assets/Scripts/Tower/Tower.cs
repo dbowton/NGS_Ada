@@ -11,6 +11,7 @@ public class Tower : MonoBehaviour
 	[SerializeField] float range = 3.5f;
 	[SerializeField] float viewAngle = 180;
 	[SerializeField] int steps = 10;
+	[SerializeField] public bool onPath = false;
 
 	public int cost = 50;
 

@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
+    public AudioMixerGroup audioMixerGroup;
     public List<Sound> sounds;
 
     public static AudioManager instance;
-    public AudioMixerGroup audioMixerGroup;
 
     // Start is called before the first frame update
     void Awake()
@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
-            sound.source.outputAudioMixerGroup = audioMixerGroup;
+            sound.source.outputAudioMixerGroup = sound.audioMixerGroup;
 		}
     }
 

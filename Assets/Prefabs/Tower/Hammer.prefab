@@ -570,12 +570,12 @@ MonoBehaviour:
   weaponTrail: {fileID: 8705985658921307665}
   enemyTagName: Test_AI
   damage: 100
-  isAttacking: 0
+  isAttacking: 1
   attackDelay: 0
   maxAttackCount: 0
   isKillBox: 1
---- !u!64 &121637345292857647
-MeshCollider:
+--- !u!65 &4005374511005377849
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -584,10 +584,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.061828014, y: 0.034669694, z: 0.15532507}
+  m_Center: {x: 0.1412624, y: -0, z: -0.000000015894573}
 --- !u!4 &6821244731684401366 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}

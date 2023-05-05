@@ -44,40 +44,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c297de574a35fc248a23c6e4eb3b8d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixerGroup: {fileID: 0}
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: ac699d8cc40c8f644ab5330e41d96588, type: 3}
     volume: 1
     pitch: 1
     loop: 1
+    audioMixerGroup: {fileID: 4735492243788942839, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
     source: {fileID: 0}
   - name: Action
     clip: {fileID: 8300000, guid: 75809951836972743baf521ade23dca0, type: 3}
     volume: 0.85
     pitch: 1
     loop: 1
+    audioMixerGroup: {fileID: 4735492243788942839, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
     source: {fileID: 0}
   - name: PlayerHurt
     clip: {fileID: 8300000, guid: 391908c29f8d4c84fbfa996c53992b63, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
     source: {fileID: 0}
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: 35ce408210dfa9843ba14da86f8efb4e, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
     source: {fileID: 0}
   - name: SwordSwing
     clip: {fileID: 8300000, guid: 6afc7b7713ff65d4d8436dce7bd3d7cd, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
     source: {fileID: 0}
   - name: EnemyDeath
     clip: {fileID: 8300000, guid: c5f9fab649098214692da64241b18cff, type: 3}
     volume: 0.1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
     source: {fileID: 0}

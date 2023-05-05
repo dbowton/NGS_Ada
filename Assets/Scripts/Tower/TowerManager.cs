@@ -100,7 +100,7 @@ public class TowerManager : MonoBehaviour
 				awaitingTower.transform.localEulerAngles = Vector3.up * yRot;
 
 				List<Collider> collisions = Physics.OverlapSphere(hitInfo.point, awaitingTower.GetComponent<Tower>().towerSize).ToList();
-				if (collisions.Any(x => x.CompareTag("Path")) || 
+				if (collisions.Any(x => x.CompareTag("Path") && awaitingTower.GetComponent<Tower>().onPath == false) || 
 					(collisions.Any(x => x.transform.root.CompareTag("Tower") && x.transform.root.gameObject != awaitingTower)) ||
 					awaitingTower.GetComponent<Tower>().cost > currency)
 				{
