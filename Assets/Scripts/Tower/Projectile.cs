@@ -6,7 +6,7 @@ using UnityEngine.ProBuilder;
 
 public class Projectile : MonoBehaviour
 {
-	public float damage = 100f;
+	[HideInInspector] public float damage = 100f;
 	public string targetTag = "Enemy";
 
 	protected Timer destroyTimer;
