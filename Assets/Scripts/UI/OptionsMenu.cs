@@ -35,10 +35,20 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
 	}
 
-	public void SetVolume(float volume)
+	public void SetMainVolume(float volume)
     {
-        audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
+        audioMixer.SetFloat("mainVolume", Mathf.Log10(volume) * 20);
     }
+    public void SetMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("musicVolume", Mathf.Log10(volume) * 20);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
+    }
+
 
     public void SetFullscreen()
     {
