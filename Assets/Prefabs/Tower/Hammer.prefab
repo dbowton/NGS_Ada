@@ -49,25 +49,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerIconMaterial: {fileID: 21300000, guid: 579b6764dc62df042afad2fba200c690, type: 3}
-  height: 2
-  range: 10
-  viewAngle: 180
-  steps: 270
+  onPath: 0
   cost: 35
   towerSize: 1
-  lineRenderer: {fileID: 3718488107972930699}
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
-  xRotObj: {fileID: 0}
-  yRotObj: {fileID: 6329540510044601270}
-  attackRate: 0.2
   damage: 100
   targetMode: 0
-  projectileSpeed: 5000
-  projectilePrefab: {fileID: 6821244731684170998}
-  projectileSpawn: {fileID: 6821244731684170998}
-  trigger: 0
 --- !u!120 &3718488107972930699
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -555,6 +544,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}
   m_PrefabInstance: {fileID: 6821244731684268630}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &4005374511005377849
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6821244731684170998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.061828014, y: 0.034669694, z: 0.15532507}
+  m_Center: {x: 0.1412624, y: -0, z: -0.000000015894573}
 --- !u!114 &5302715939806048897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,19 +576,6 @@ MonoBehaviour:
   attackDelay: 0
   maxAttackCount: 0
   isKillBox: 1
---- !u!65 &4005374511005377849
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6821244731684170998}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.061828014, y: 0.034669694, z: 0.15532507}
-  m_Center: {x: 0.1412624, y: -0, z: -0.000000015894573}
 --- !u!4 &6821244731684401366 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7b3373950dc50ee4b94e5731f725de85, type: 3}

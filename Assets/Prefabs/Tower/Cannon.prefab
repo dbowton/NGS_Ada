@@ -108,7 +108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4472432370405222}
-  - component: {fileID: -5365592463640125755}
+  - component: {fileID: -1654958592047466099}
   - component: {fileID: -2134846067236129092}
   - component: {fileID: 8247390909468222134}
   m_Layer: 0
@@ -134,7 +134,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5365592463640125755
+--- !u!114 &-1654958592047466099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,29 +143,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1370931944378286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46459fca41012ac41bc61340e7b20557, type: 3}
+  m_Script: {fileID: 11500000, guid: ff9859ff1798b6b4bb8a3e52a247ce5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   towerIconMaterial: {fileID: 21300000, guid: 5a8197fae2c4ad2469c50ade35d0b560, type: 3}
+  onPath: 0
+  cost: 50
+  towerSize: 1
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  damage: 18
+  targetMode: 0
   height: 2.25
   range: 20
   viewAngle: 45
   steps: 120
-  cost: 50
-  towerSize: 1
   lineRenderer: {fileID: -2134846067236129092}
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 128
   xRotObj: {fileID: 4579829373147374}
   yRotObj: {fileID: 4645079822382838}
   attackRate: 0.35
-  damage: 18
-  targetMode: 0
   projectileSpeed: 5000
   projectilePrefab: {fileID: 1715476615087276, guid: 529b1ccccc944d84f8b0bd1b37005d13, type: 3}
   projectileSpawn: {fileID: 1490360019188389061}
-  trigger: 0
 --- !u!120 &-2134846067236129092
 LineRenderer:
   m_ObjectHideFlags: 0
