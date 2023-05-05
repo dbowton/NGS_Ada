@@ -13,7 +13,9 @@ public class DeathState : State
 	{
 		owner.movement.Stop();
 		owner.movement.velocity = Vector3.zero;
-		owner.GetComponent<Rigidbody>().Sleep();
+		Object.Destroy(owner.GetComponent<Rigidbody>());
+		Object.Destroy(owner.GetComponent<CapsuleCollider>());
+
 
 		owner.animator.SetTrigger("death");
 		AudioManager.instance.Play("EnemyDeath");
