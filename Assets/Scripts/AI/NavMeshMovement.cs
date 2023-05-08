@@ -36,7 +36,7 @@ public class NavMeshMovement : Movement
 		//navMeshAgent.CalculatePath(target, navMeshAgent.SetDestination(target));
 
 		navMeshAgent.SetDestination(target);
-		Debug.Log(navMeshAgent.SetDestination(target));
+		//Debug.Log(navMeshAgent.SetDestination(target));
 		velocity = navMeshAgent.velocity;
 		//Debug.Log(velocity);
 	}
