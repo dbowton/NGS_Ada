@@ -166,6 +166,7 @@ MonoBehaviour:
   projectileSpeed: 5000
   projectilePrefab: {fileID: 1715476615087276, guid: 529b1ccccc944d84f8b0bd1b37005d13, type: 3}
   projectileSpawn: {fileID: 1490360019188389061}
+  particleSystem: {fileID: 7571642498460797867}
   trigger: 0
 --- !u!120 &-2134846067236129092
 LineRenderer:
@@ -499,7 +500,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:

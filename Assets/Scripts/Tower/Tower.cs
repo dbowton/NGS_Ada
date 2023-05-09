@@ -34,6 +34,7 @@ public class Tower : MonoBehaviour
 	[SerializeField] GameObject projectilePrefab;
 	[SerializeField] GameObject projectileSpawn;
 	GameObject projectile;
+	[SerializeField] ParticleSystem particleSystem;
 
 	public enum TargetMode
 	{
@@ -183,6 +184,11 @@ public class Tower : MonoBehaviour
 					projectile.GetComponent<Projectile>().Fired();
 					projectile.GetComponent<Rigidbody>().isKinematic = false;
 					projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileSpeed, ForceMode.Acceleration);
+					if (particleSystem != null)
+					{
+						particleSystem.Play();
+					}
+
 				}
 
 				reloadTimer.Reset();
