@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CannonProjectile : Projectile
 {
+	[SerializeField] ParticleSystem _particleSystem;
 	public override void Fired()
 	{
 		fired = true;
@@ -25,9 +26,12 @@ public class CannonProjectile : Projectile
 
 		if (hit)
 		{
+			GetComponent<Rigidbody>().velocity = Vector3.zero;
+			_particleSystem.Play();
 			if(destroyTimer != null)
 				destroyTimer.Remove();
-			Destroy(gameObject);
+			Destroy(this);
+			Destroy(gameObject, 2);
 		}
 	}
 }
