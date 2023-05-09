@@ -24,6 +24,7 @@ public class ProjectileTower : Tower
 	[SerializeField] float projectileSpeed = 10f;
 	[SerializeField] GameObject projectilePrefab;
 	[SerializeField] GameObject projectileSpawn;
+	[SerializeField] ParticleSystem particleSystem;
 	GameObject projectile;
 
 	public override bool Placed
@@ -157,6 +158,10 @@ public class ProjectileTower : Tower
 					projectile.GetComponent<Projectile>().Fired();
 					projectile.GetComponent<Rigidbody>().isKinematic = false;
 					projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileSpeed, ForceMode.Acceleration);
+					if(particleSystem != null)
+					{
+						particleSystem.Play();
+					}
 				}
 
 				reloadTimer.Reset();
