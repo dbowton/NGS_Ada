@@ -9,7 +9,7 @@ public class SphereCastPerception : Perception
 	[SerializeField][Range(2, 50)] public int numRaycast = 2;
 	[SerializeField][Range(0, 5)] public float radius = 2;
 	public NavMeshMovement navMeshMovement;
-	public float maxPathLength;
+	public float maxPathLength = 10;
 
 	public override GameObject[] GetGameObjects()
 	{
@@ -25,13 +25,14 @@ public class SphereCastPerception : Perception
 			{
 				if (tagname == "" || raycastHit.collider.transform.root.CompareTag(tagname))
 				{
-					/*if (navMeshMovement.GetPathLength() < maxPathLength)
+					if (navMeshMovement.pathToPlayer(raycastHit.collider.transform) < maxPathLength)
 					{
 						Debug.DrawRay(ray.origin, ray.direction * raycastHit.distance, Color.red);
+						//Debug.Log(navMeshMovement.pathToPlayer(raycastHit.collider.transform));
 						result.Add(raycastHit.collider.gameObject);
-					}*/
-					Debug.DrawRay(ray.origin, ray.direction * raycastHit.distance, Color.red);
-					result.Add(raycastHit.collider.gameObject);
+					}
+					//Debug.DrawRay(ray.origin, ray.direction * raycastHit.distance, Color.red);
+					//result.Add(raycastHit.collider.gameObject);
 				}
 			}
 

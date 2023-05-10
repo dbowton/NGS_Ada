@@ -80,4 +80,18 @@ public class NavMeshMovement : Movement
 		Debug.Log(length);
 		return length;
 	}
+
+	public float pathToPlayer(Transform playerTransform)
+	{
+		float length = 0;
+		NavMeshPath path = new NavMeshPath();
+		navMeshAgent.CalculatePath(playerTransform.position, path);
+
+		for (int i = 0; i < path.corners.Length - 1; i++)
+		{
+			length += Vector3.Distance(path.corners[i], path.corners[i + 1]);
+		}
+
+		return length;
+	}
 }
