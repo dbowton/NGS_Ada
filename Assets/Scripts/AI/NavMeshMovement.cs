@@ -22,7 +22,6 @@ public class NavMeshMovement : Movement
 		navMeshAgent.speed = movementData.maxSpeed;
 		navMeshAgent.acceleration = movementData.maxForce;
 		navMeshAgent.angularSpeed = movementData.turnRate;
-
 	}
 
 	public override void ApplyForce(Vector3 force)
