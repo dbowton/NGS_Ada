@@ -27,7 +27,7 @@ public class CannonProjectile : Projectile
 		if (hit)
 		{
             GetComponent<Rigidbody>().velocity = Vector3.zero;
-            GetComponent<ParticleSystem>().Play();
+			_particleSystem.Play();
             if (destroyTimer != null)
                 destroyTimer.Remove();
             Destroy(this);
