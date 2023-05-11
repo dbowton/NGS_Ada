@@ -3093,8 +3093,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefabs:
-  - {fileID: 3718488107972930700, guid: 09e2f47aec848144ea8316dff3039177, type: 3}
+  - {fileID: 3718488107972930700, guid: 52c6d4ba7e7dbd442802176221a6983e, type: 3}
   - {fileID: 1370931944378286, guid: 3498add3757c6dc428ca3f4ceb2ae03d, type: 3}
+  - {fileID: 3718488107972930700, guid: 09e2f47aec848144ea8316dff3039177, type: 3}
+  - {fileID: 4230249110839630767, guid: 533a4bfab6f40ef4f8072d5457092382, type: 3}
   placementRange: 16
   targetLayer:
     serializedVersion: 2
@@ -3104,7 +3106,7 @@ MonoBehaviour:
     m_Bits: 0
   validMat: {fileID: 2100000, guid: f58260126faeb84448a20500046b9534, type: 2}
   invalidMat: {fileID: 2100000, guid: b0d2be75edcf1cc448358564433b05dd, type: 2}
-  currency: 0
+  currency: 250
 --- !u!114 &6539204429706586000
 MonoBehaviour:
   m_ObjectHideFlags: 0
