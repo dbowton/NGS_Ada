@@ -4,6 +4,7 @@ public class Tower : MonoBehaviour
 {
 	public Sprite towerIconMaterial;
 	[SerializeField] public bool onPath = false;
+	[SerializeField] public bool offPath = false;
 	public int cost = 50;
 
 	public float towerSize = 1f;
@@ -30,8 +31,5 @@ public class Tower : MonoBehaviour
 		}
 	}
 
-	protected virtual void Update()
-	{
-
-	}
+	protected virtual void Update() {}
 }

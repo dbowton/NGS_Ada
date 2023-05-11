@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 60
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -133,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_Name
       value: ruins_wall_004 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_RootOrder
@@ -212,6 +216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -285,6 +293,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -569,6 +581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -743,7 +759,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &134921066
 Transform:
@@ -839,7 +855,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &151826479
 Transform:
@@ -873,6 +889,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_Name
       value: ruins_wall_002 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_RootOrder
@@ -937,6 +957,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
   m_PrefabInstance: {fileID: 155536459}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &155619654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7915160405205764885, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
+  m_PrefabInstance: {fileID: 1172024928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &166551316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -947,6 +972,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -1022,6 +1051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_001 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1095,6 +1128,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -1282,6 +1319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 57
@@ -1355,6 +1396,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -1432,7 +1477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8433132833752311335, guid: 244a7d8a145841a4bb6c5f3b2b47274a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8433132833752311335, guid: 244a7d8a145841a4bb6c5f3b2b47274a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1486,6 +1531,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cec74b0d46eb39246bc72ff22e9cb2ad, type: 3}
       propertyPath: m_Name
       value: ruins_wall_small_003
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cec74b0d46eb39246bc72ff22e9cb2ad, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cec74b0d46eb39246bc72ff22e9cb2ad, type: 3}
       propertyPath: m_RootOrder
@@ -1565,6 +1614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1638,6 +1691,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -1713,6 +1770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_step_001 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1786,6 +1847,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -1861,6 +1926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 49
@@ -1934,6 +2003,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -2087,6 +2160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2160,6 +2237,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_Name
       value: ruins_wall_002 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_RootOrder
@@ -2235,6 +2316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_pillar_001 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2308,6 +2393,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -2389,7 +2478,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &394431590
 MeshRenderer:
@@ -2449,8 +2538,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394431588}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.70236, y: 292.59244, z: 410.86298}
-  m_LocalScale: {x: 15, y: 1, z: 1}
+  m_LocalPosition: {x: 36.70236, y: 292.59244, z: 407.5}
+  m_LocalScale: {x: 15, y: 1, z: 1.6261}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 568666438}
@@ -2624,8 +2713,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399265164}
   m_LocalRotation: {x: 0.07732368, y: 0.54228, z: -0.068978176, w: 0.83378386}
-  m_LocalPosition: {x: 34.76, y: 28.6, z: 44.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 34.76, y: 28.600006, z: 44.110016}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2641,6 +2730,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
       propertyPath: m_Name
       value: ruins_step_001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
       propertyPath: m_RootOrder
@@ -2716,6 +2809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2789,6 +2886,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d8680f6204a21f54797fb126ff0a49fd, type: 3}
       propertyPath: m_Name
       value: ruins_wall_small_002 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d8680f6204a21f54797fb126ff0a49fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d8680f6204a21f54797fb126ff0a49fd, type: 3}
       propertyPath: m_RootOrder
@@ -2961,6 +3062,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RunePillar 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1742858173413876, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943464383403852, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4038656602646670, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3029,6 +3138,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -3109,6 +3222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3182,6 +3299,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
       propertyPath: m_Name
       value: ruins_step_001 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
       propertyPath: m_RootOrder
@@ -3435,7 +3556,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 42.698, y: -101.514, z: -9.668}
 --- !u!1001 &516408816
 PrefabInstance:
@@ -3447,6 +3568,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -3527,6 +3652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -3604,7 +3733,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &558564015
 Transform:
@@ -3773,7 +3902,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &568666438
 Transform:
@@ -3796,7 +3925,7 @@ Transform:
   - {fileID: 1443344643}
   - {fileID: 2079778726}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &570126712
 GameObject:
@@ -3921,6 +4050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_003
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3994,6 +4127,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8420a8f94dbb62a48a9cb7cb095f0250, type: 3}
       propertyPath: m_Name
       value: ruins_wall_small_001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8420a8f94dbb62a48a9cb7cb095f0250, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8420a8f94dbb62a48a9cb7cb095f0250, type: 3}
       propertyPath: m_RootOrder
@@ -4146,6 +4283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_small_003 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cec74b0d46eb39246bc72ff22e9cb2ad, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cec74b0d46eb39246bc72ff22e9cb2ad, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -4224,6 +4365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 52
@@ -4297,6 +4442,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
       propertyPath: m_Name
       value: ruins_wall_003 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
       propertyPath: m_RootOrder
@@ -4502,9 +4651,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 533388134}
-  - {fileID: 1360743154}
+  - {fileID: 1195392565}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &683233419
 PrefabInstance:
@@ -4516,6 +4665,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -4591,6 +4744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -4664,6 +4821,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
       propertyPath: m_Name
       value: ruins_wall_003 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
       propertyPath: m_RootOrder
@@ -4825,6 +4986,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711486069}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &729852796
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 102.41445
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.268634
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 96.21935
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1172024930}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOver, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943573, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: m_Name
+      value: SpawnManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
 --- !u!1001 &732015490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4835,6 +5073,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -4909,6 +5151,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_Name
       value: ruins_wall_pillar_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_RootOrder
@@ -5178,6 +5424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5331,6 +5581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_column_004
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 537d1b0381714b64994024c868bd9ba6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 537d1b0381714b64994024c868bd9ba6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5404,6 +5658,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -5591,6 +5849,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_002 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -5709,6 +5971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_AncientRuins_Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 8285238759245771718, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c30be702f1b236d4da5c71ec8c8d61c3, type: 3}
 --- !u!1001 &825851709
@@ -5721,6 +5987,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -6019,7 +6289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 209.7
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6052,6 +6322,10 @@ PrefabInstance:
     - target: {fileID: 4569392931977262224, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569392931977262225, guid: 615caf77e50ed2244973214b908e279d, type: 3}
+      propertyPath: m_ClearFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4569392931977262225, guid: 615caf77e50ed2244973214b908e279d, type: 3}
       propertyPath: far clip plane
@@ -6116,7 +6390,7 @@ Transform:
   - {fileID: 878508113}
   - {fileID: 1483930172}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &854520864
 MonoBehaviour:
@@ -6141,6 +6415,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -6216,6 +6494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 53
@@ -6289,6 +6571,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_Name
       value: ruins_wall_004 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_RootOrder
@@ -6367,6 +6653,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -6554,6 +6844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 48
@@ -6627,6 +6921,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_Name
       value: ruins_wall_004 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_RootOrder
@@ -6705,6 +7003,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_Name
       value: ruins_wall_004 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_RootOrder
@@ -6896,6 +7198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_step_001 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -6969,6 +7275,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_Name
       value: ruins_wall_pillar_001 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_RootOrder
@@ -7055,6 +7365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_step_001 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -7128,6 +7442,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -7203,6 +7521,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -7276,6 +7598,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -7435,7 +7761,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1027409394
 Transform:
@@ -7526,6 +7852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -7600,6 +7930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_column_003 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c4d274468929b6340a95beacfa3b8e4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c4d274468929b6340a95beacfa3b8e4b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7673,6 +8007,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -7844,6 +8182,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -8113,6 +8455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -8265,6 +8611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_step_001 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -8361,7 +8711,7 @@ Transform:
   - {fileID: 1062010468}
   - {fileID: 1086431495}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1168170251
 PrefabInstance:
@@ -8373,6 +8723,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -8458,7 +8812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2116412484788862069, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2116412484788862069, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8532,8 +8886,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7915160405205764885, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915160405205764887, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 155619654}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
+--- !u!114 &1172024930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7915160404833738857, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
+  m_PrefabInstance: {fileID: 1172024928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f775bd3c6cb4f2d4db7372b55bb3f406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1182134127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8544,6 +8917,14 @@ PrefabInstance:
     - target: {fileID: 1742858173413876, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
       propertyPath: m_Name
       value: RunePillar 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742858173413876, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943464383403852, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4038656602646670, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
       propertyPath: m_RootOrder
@@ -8627,6 +9008,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
+--- !u!4 &1195392565 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+  m_PrefabInstance: {fileID: 1686104452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1211461464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8637,6 +9023,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_Name
       value: ruins_wall_002 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_RootOrder
@@ -8711,6 +9101,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: c4d274468929b6340a95beacfa3b8e4b, type: 3}
       propertyPath: m_Name
       value: ruins_column_003
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c4d274468929b6340a95beacfa3b8e4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c4d274468929b6340a95beacfa3b8e4b, type: 3}
       propertyPath: m_RootOrder
@@ -8883,6 +9277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_001
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -8956,6 +9354,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_Name
       value: ruins_wall_pillar_001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_RootOrder
@@ -9031,6 +9433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_002 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9104,6 +9510,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_Name
       value: ruins_wall_pillar_001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_RootOrder
@@ -9276,6 +9686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_column_004 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 537d1b0381714b64994024c868bd9ba6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 537d1b0381714b64994024c868bd9ba6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9349,6 +9763,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -9521,6 +9939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 51
@@ -9595,6 +10017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -9658,11 +10084,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
   m_PrefabInstance: {fileID: 1357483932}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1360743154 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-  m_PrefabInstance: {fileID: 1788493586}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1365764742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9673,6 +10094,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
       propertyPath: m_Name
       value: ruins_wall_001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
       propertyPath: m_RootOrder
@@ -9751,7 +10176,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1378026453
 Transform:
@@ -9783,6 +10208,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -9931,7 +10360,7 @@ Transform:
   - {fileID: 770736135}
   - {fileID: 1121132453}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1418755654
 PrefabInstance:
@@ -9943,6 +10372,14 @@ PrefabInstance:
     - target: {fileID: 1742858173413876, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
       propertyPath: m_Name
       value: RunePillar 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742858173413876, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943464383403852, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4038656602646670, guid: d29e24bc93cb56444b399ec69af86d12, type: 3}
       propertyPath: m_RootOrder
@@ -10012,6 +10449,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -10087,6 +10528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 42
@@ -10160,6 +10605,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -10257,7 +10706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 402560, guid: a0cb2c321fdf00a4ba429209e735b448, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.6167805
+      value: 3.0843992
       objectReference: {fileID: 0}
     - target: {fileID: 402560, guid: a0cb2c321fdf00a4ba429209e735b448, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10265,7 +10714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 402560, guid: a0cb2c321fdf00a4ba429209e735b448, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 294.40915
+      value: 294.31
       objectReference: {fileID: 0}
     - target: {fileID: 402560, guid: a0cb2c321fdf00a4ba429209e735b448, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10316,6 +10765,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -10391,6 +10844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_column_004 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 537d1b0381714b64994024c868bd9ba6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 537d1b0381714b64994024c868bd9ba6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10464,6 +10921,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -10539,6 +11000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_pillar_001 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10612,6 +11077,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -10801,7 +11270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f775bd3c6cb4f2d4db7372b55bb3f406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UI: {fileID: 8108534878983546284, guid: 09325dc0d5689a94d96b12608637229c, type: 3}
+  UI: {fileID: 155619654}
 --- !u!1001 &1518011938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10812,6 +11281,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_Name
       value: ruins_wall_002 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_RootOrder
@@ -10886,6 +11359,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -10967,7 +11444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11016,6 +11493,10 @@ PrefabInstance:
     - target: {fileID: 8251464425433677464, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
       propertyPath: m_Name
       value: SpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677464, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
@@ -11127,6 +11608,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_pillar_001 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -11200,6 +11685,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_Name
       value: ruins_wall_002 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_RootOrder
@@ -11352,6 +11841,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
       propertyPath: m_Name
       value: ruins_wall_001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
       propertyPath: m_RootOrder
@@ -11736,7 +12229,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1648634019
 Transform:
@@ -11772,6 +12265,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
       propertyPath: m_Name
       value: ruins_step_001 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 877c5cdbfb33bba42a72e6a3cbdc61b0, type: 3}
       propertyPath: m_RootOrder
@@ -11847,6 +12344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -11921,6 +12422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_small_001
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8420a8f94dbb62a48a9cb7cb095f0250, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8420a8f94dbb62a48a9cb7cb095f0250, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -11984,6 +12489,175 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8420a8f94dbb62a48a9cb7cb095f0250, type: 3}
   m_PrefabInstance: {fileID: 1669012668}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1686104452
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 668189229}
+    m_Modifications:
+    - target: {fileID: 5498300245401679448, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 5498300245401679448, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_RenderMode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679448, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_RenderAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679449, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_Name
+      value: Fog System
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.7438128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 99.93843
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 253.37143
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 515.7548
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: VelocityModule.x.minScalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: RotationModule.curve.scalar
+      value: 0.17453292
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: VelocityModule.x.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: VelocityModule.y.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: VelocityModule.z.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 32382
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime3
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key3.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key3.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key3.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
 --- !u!1001 &1694315037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11994,6 +12668,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -12135,7 +12813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5307035914616194494, guid: b0a447db0d986fa4a852c8d78c8a235a, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5307035914616194494, guid: b0a447db0d986fa4a852c8d78c8a235a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -12238,6 +12916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_003 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -12301,6 +12983,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
   m_PrefabInstance: {fileID: 1729669620}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1735374381
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: pathName
+      value: MainPath
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: waves.Array.data[0].wave.Array.data[0].count
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 148.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 174.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677463, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677464, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251464425433677464, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
 --- !u!1001 &1744807913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12311,6 +13066,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d8680f6204a21f54797fb126ff0a49fd, type: 3}
       propertyPath: m_Name
       value: ruins_wall_small_002
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d8680f6204a21f54797fb126ff0a49fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d8680f6204a21f54797fb126ff0a49fd, type: 3}
       propertyPath: m_RootOrder
@@ -12385,6 +13144,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_Name
       value: ruins_wall_004 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_RootOrder
@@ -12463,6 +13226,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_Name
       value: ruins_wall_pillar_001 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99ecdea58c7e7704b9885a8ff44e1ed9, type: 3}
       propertyPath: m_RootOrder
@@ -12670,7 +13437,7 @@ Transform:
   - {fileID: 1275899669}
   - {fileID: 827587641}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1782550903
 PrefabInstance:
@@ -12682,6 +13449,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_Name
       value: ruins_wall_002 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_RootOrder
@@ -12757,6 +13528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_003 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -12820,75 +13595,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
   m_PrefabInstance: {fileID: 1787016898}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1788493586
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 668189229}
-    m_Modifications:
-    - target: {fileID: 5498300245401679449, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_Name
-      value: Fog System
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679449, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 107.77271
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 254.65811
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 483.09604
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679454, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: ShapeModule.m_Scale.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498300245401679455, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.4392157
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6a0181bcfe16e9b47a42084e8912626c, type: 3}
 --- !u!1001 &1798394209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12899,6 +13605,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_Name
       value: ruins_wall_004
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20b4507685ab35e4e9e60bc072e32ba4, type: 3}
       propertyPath: m_RootOrder
@@ -12978,6 +13688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_monument_001
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a2d6bc4b217f7a144bf33ba2f725d281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a2d6bc4b217f7a144bf33ba2f725d281, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -13056,6 +13770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -13129,6 +13847,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -13305,75 +14027,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextWaypoints:
   - {fileID: 832948293}
---- !u!1001 &1838521719
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: pathName
-      value: MainPath
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677460, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: waves.Array.data[0].wave.Array.data[0].count
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 148.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 174.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677461, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677463, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251464425433677464, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
-      propertyPath: m_Name
-      value: SpawnPoint (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 47c652d1b577a2f4d8371849108e609c, type: 3}
 --- !u!1 &1848664711
 GameObject:
   m_ObjectHideFlags: 0
@@ -13482,6 +14135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_002 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2484939aaaf797e43ae1d8c413b69693, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -13555,6 +14212,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -14151,6 +14812,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 45
@@ -14224,6 +14889,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -14377,6 +15046,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_wall_001 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59bbe74a5a1eee4418f65a0709edf95b, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -14450,6 +15123,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
       propertyPath: m_Name
       value: ruins_wall_003 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68b7828cd69b4ea429d349799c293329, type: 3}
       propertyPath: m_RootOrder
@@ -14594,7 +15271,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2079778726
 Transform:
@@ -14823,6 +15500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ruins_floor_001 (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
       value: 47
@@ -14896,6 +15577,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -15026,7 +15711,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2139116854 stripped
 Transform:
@@ -15043,6 +15728,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder
@@ -15117,6 +15806,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_Name
       value: ruins_floor_001 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7f78a72dc8d73a1418b91a5727e8faf9, type: 3}
       propertyPath: m_RootOrder

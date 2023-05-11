@@ -22,7 +22,6 @@ public class NavMeshMovement : Movement
 		navMeshAgent.speed = movementData.maxSpeed;
 		navMeshAgent.acceleration = movementData.maxForce;
 		navMeshAgent.angularSpeed = movementData.turnRate;
-
 	}
 
 	public override void ApplyForce(Vector3 force)
@@ -78,6 +77,20 @@ public class NavMeshMovement : Movement
 		float length = navMeshAgent.remainingDistance;
 
 		Debug.Log(length);
+		return length;
+	}
+
+	public float pathToPlayer(Transform playerTransform)
+	{
+		float length = 0;
+		NavMeshPath path = new NavMeshPath();
+		navMeshAgent.CalculatePath(playerTransform.position, path);
+
+		for (int i = 0; i < path.corners.Length - 1; i++)
+		{
+			length += Vector3.Distance(path.corners[i], path.corners[i + 1]);
+		}
+
 		return length;
 	}
 }
