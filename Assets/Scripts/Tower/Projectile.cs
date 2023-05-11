@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Serialization;
 using UnityEngine;
-using UnityEngine.ProBuilder;
 
 public class Projectile : MonoBehaviour
 {
@@ -11,6 +7,8 @@ public class Projectile : MonoBehaviour
 
 	protected Timer destroyTimer;
 	public bool fired = false;
+
+	[SerializeField] GameObject trail;
 
 	public virtual void Fired()
 	{
@@ -27,6 +25,7 @@ public class Projectile : MonoBehaviour
 			Destroy(gameObject.GetComponent<Rigidbody>());
 
 			destroyTimer.Remove();
+			if (trail) Destroy(trail);
 			Destroy(this);
 		}
 	}
