@@ -18,6 +18,7 @@ public class StateAgent : Agent
 
 	private void Start()
 	{
+
         stateMachine.AddState(new IdleState(this, typeof(IdleState).Name));
         stateMachine.AddState(new PatrolState(this, typeof(PatrolState).Name));
         stateMachine.AddState(new ChaseState(this, typeof(ChaseState).Name));

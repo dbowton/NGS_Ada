@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioMixerGroup audioMixerGroup;
     public List<Sound> sounds;
 
     public static AudioManager instance;
@@ -37,18 +36,19 @@ public class AudioManager : MonoBehaviour
 
 	void Start()
 	{
-        Play("Theme");
-	}
+        Play("MainMenuTheme");
+    }
 
 	public void Play(string name)
 	{
         Sound sound = sounds.Find(sound => sound.name == name);
-        if (sound == null)
+        if (sound == null || sound.source == null)
         {
             Debug.Log(name + " not found");
             return;
         }
         sound.source.Play();
+        Debug.Log(sound.name + "START");
 	}
 
     public void Stop(string name)
@@ -60,5 +60,14 @@ public class AudioManager : MonoBehaviour
             return;
         }
         sound.source.Stop();
+        Debug.Log(sound.name + "STOP");
     }
+
+    public void StopAll()
+	{
+        foreach (var sound in sounds)
+		{
+            sound.source.Stop();
+		}
+	}
 }

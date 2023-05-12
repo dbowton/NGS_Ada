@@ -55,6 +55,7 @@ public class Spawner : MonoBehaviour
 					GameObject spawnedEnemy = Instantiate(selected.EnemyPrefab, transform.position, Quaternion.identity);
 
 					spawnedEnemy.GetComponent<Health>().ModifyMaxHealth(enemyHealthMulti);
+					spawnedEnemy.GetComponent<Health>().OnHurt.AddListener(() => AudioManager.instance.Play("EnemyHurt"));
 					spawnedEnemy.GetComponent<Health>().FullHeal();
 
 					spawnedEnemy.GetComponent<Health>().OnDeath.AddListener(() =>

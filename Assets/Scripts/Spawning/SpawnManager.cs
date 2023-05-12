@@ -8,11 +8,14 @@ public class SpawnManager : MonoBehaviour
 	private static SpawnManager instance;
 	[SerializeField] UnityEvent onWavesComplete;
 	[SerializeField] bool isEndlessMode = false;
+	[SerializeField] string ambientSong;
+	[SerializeField] string actionSong;
 
 	bool runningWave = false;
 	int completedWaves = 0;
 	public int remainingEnemies = 0;
 	Timer waveTimer;
+	
 
 	List<Spawner> spawners = new List<Spawner>();
 	public static SpawnManager Instance
@@ -53,8 +56,10 @@ public class SpawnManager : MonoBehaviour
 
 		waveTimer = new Timer(60, () => StartWaves(), true);
 
-		AudioManager.instance.Stop("Action");
-		AudioManager.instance.Play("Theme");
+		AudioManager.instance.Stop(actionSong);
+		AudioManager.instance.Stop("MainMenuTheme");
+		//AudioManager.instance.StopAll();
+		AudioManager.instance.Play(ambientSong);
 	}
 
 	public void AddSpawner(Spawner spawner)
@@ -109,8 +114,8 @@ public class SpawnManager : MonoBehaviour
 
 		print("Wave Complete");
 
-		AudioManager.instance.Stop("Action");
-		AudioManager.instance.Play("Theme");
+		AudioManager.instance.Stop(actionSong);
+		AudioManager.instance.Play(ambientSong);
 
 		runningWave = false;
 
@@ -158,8 +163,8 @@ public class SpawnManager : MonoBehaviour
 	{
 		runningWave = true;
 
-		AudioManager.instance.Stop("Theme");
-		AudioManager.instance.Play("Action");
+		AudioManager.instance.Stop(ambientSong);
+		AudioManager.instance.Play(actionSong);
 
 		foreach (var spawn in spawners) spawn.BeginWave();
 	}
