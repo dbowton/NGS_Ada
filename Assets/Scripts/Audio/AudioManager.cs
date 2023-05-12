@@ -18,7 +18,6 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject); 
             return;
         }
-            
 
         DontDestroyOnLoad(gameObject);
 
@@ -48,7 +47,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
         sound.source.Play();
-        Debug.Log(sound.name + "START");
 	}
 
     public void Stop(string name)
@@ -60,7 +58,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
         sound.source.Stop();
-        Debug.Log(sound.name + "STOP");
     }
 
     public void StopAll()
