@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4038656602646670}
+  - component: {fileID: 4007794725316737678}
   m_Layer: 0
   m_Name: RunePillar 1
   m_TagString: Untagged
@@ -32,6 +33,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -30.374, z: 0}
+--- !u!65 &4007794725316737678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742858173413876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9520394, y: 4.8761706, z: 1.6934996}
+  m_Center: {x: 0.10628241, y: 1.1687787, z: -0.0430865}
 --- !u!1 &1943464383403852
 GameObject:
   m_ObjectHideFlags: 0
