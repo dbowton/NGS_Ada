@@ -262,6 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7962391335428833161}
   - component: {fileID: 2943673084578400504}
+  - component: {fileID: 6212858168058397141}
   m_Layer: 0
   m_Name: PT_Fruit_Tree_01_apples
   m_TagString: Untagged
@@ -314,3 +315,16 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7232249559389445805}
   m_Enabled: 1
+--- !u!65 &6212858168058397141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7335176420224820531}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.672804, z: 0.96614504}
+  m_Center: {x: 0, y: 0.83640206, z: -0.01692748}
