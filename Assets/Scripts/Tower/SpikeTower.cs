@@ -13,6 +13,7 @@ public class SpikeTower : Tower
 	[SerializeField] float cooldownTime = 2.5f;
 
 	[SerializeField] Animator animator;
+	[SerializeField] ParticleSystem sparks;
 
 	protected override void Update()
 	{
@@ -28,6 +29,7 @@ public class SpikeTower : Tower
 
 				hitObjects.Clear();
 				animator.SetBool("active", false);
+				sparks.Stop();
 			}
 		}
 		else
@@ -39,8 +41,9 @@ public class SpikeTower : Tower
 				isActive = true;
 				timeAccumulator = 0;
 				hitCount= 0;
-
+				
 				animator.SetBool("active", true);
+				sparks.Play();
 			}
 		}
 	}

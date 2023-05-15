@@ -12,6 +12,8 @@ public class HammerTower : Tower
 	[SerializeField] float radius = 1.5f;
 	[SerializeField] Animator animator;
 
+	[SerializeField] ParticleSystem impact;
+
 	[SerializeField] bool hit = false;
 
 	private void Start()
@@ -36,6 +38,7 @@ public class HammerTower : Tower
 				timeAccumulator -= cooldownTime;
 
 				animator.SetTrigger("Hit");
+				impact.Play();
 			}
 		}
 	}
