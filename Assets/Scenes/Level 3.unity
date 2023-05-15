@@ -6083,7 +6083,15 @@ PrefabInstance:
       value: Ambient3
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
@@ -6091,16 +6099,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1172024930}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 729852798}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EndGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Save
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameOver, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SaveLevel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943573, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: m_Name
@@ -6108,6 +6140,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+--- !u!1 &729852797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3428273146420943573, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+  m_PrefabInstance: {fileID: 729852796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &729852798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729852797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a530ef387637649b8414c44fddf813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: ruins
 --- !u!1001 &732015490
 PrefabInstance:
   m_ObjectHideFlags: 0
