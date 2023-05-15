@@ -18,7 +18,7 @@ public class UIPauseMenu : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.P))
+		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			if (isPaused) Resume();
 			else Pause();
