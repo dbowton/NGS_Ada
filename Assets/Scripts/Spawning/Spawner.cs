@@ -15,11 +15,18 @@ public class Spawner : MonoBehaviour
 	[System.Serializable]
 	public class Wave
 	{
+		public bool allowClusterSpawning = false;
+		public int countBetweenClusters;
+		public int minClusterEnemyCount;
+		public int maxClusterEnemyCount;
+		[Range(0,1)] public float spawnChance = 0.5f;
+
 		public List<EnemyWave> wave = new List<EnemyWave>();
 	}
 
 	[SerializeField] List<Wave> waves = new List<Wave>();
 
+	float enemyHealthMulti = 1f;
 	int currentWave = -1;
 	[SerializeField] string pathName;
 
@@ -36,6 +43,8 @@ public class Spawner : MonoBehaviour
 		SpawnManager.Instance.AddSpawner(this);
 	}
 
+	int spawnCount = 0;
+
 	public void BeginWave()
 	{		
 		currentWave++;
@@ -49,34 +58,7 @@ public class Spawner : MonoBehaviour
 			spawnTime,
 			() =>
 			{
-				if (currentWave < waves.Count && waves[currentWave].wave.Count > 0)
-				{
-					EnemyWave selected = waves[currentWave].wave[Random.Range(0, waves[currentWave].wave.Count)];
-					GameObject spawnedEnemy = Instantiate(selected.EnemyPrefab, transform.position, Quaternion.identity);
-
-					spawnedEnemy.GetComponent<Health>().ModifyMaxHealth(enemyHealthMulti);
-					spawnedEnemy.GetComponent<Health>().OnHurt.AddListener(() => AudioManager.instance.Play("EnemyHurt"));
-					spawnedEnemy.GetComponent<Health>().FullHeal();
-
-					spawnedEnemy.GetComponent<Health>().OnDeath.AddListener(() =>
-						{
-							TowerManager.instance.Currency += selected.enemyValue;
-							SpawnManager.Instance.remainingEnemies--;
-						});
-
-					spawnedEnemy.GetComponent<PathFollower>().Begin(pathName);
-					selected.count--;
-
-					if (selected.count <= 0)
-					{
-						waves[currentWave].wave.Remove(selected);
-						if (waves[currentWave].wave.Count <= 0)
-						{
-							spawnTimer.Remove();
-							spawnTimer = null;
-						}
-					}
-				}
+				SpawnEnemy();
 			}, false, true);
 	}
 
@@ -102,5 +84,54 @@ public class Spawner : MonoBehaviour
 		}
 	}
 
-	float enemyHealthMulti = 1f;
+	public void SpawnEnemy()
+	{
+
+		if (currentWave < waves.Count && waves[currentWave].wave.Count > 0)
+		{
+			spawnCount++;
+
+			int count = 1;
+			if(waves[currentWave].allowClusterSpawning && spawnCount >= waves[currentWave].countBetweenClusters && 
+				Random.Range(0,1) <= waves[currentWave].spawnChance)
+			{
+				spawnCount = 0;
+				count = Random.Range(waves[currentWave].minClusterEnemyCount, waves[currentWave].maxClusterEnemyCount);
+
+			}
+
+			for (int i = 0; i < count; i++)
+			{
+				if (waves[currentWave].wave.Count == 0) break;
+				EnemyWave selected = waves[currentWave].wave[Random.Range(0, waves[currentWave].wave.Count)];
+
+				Vector3 ranPos = new Vector3(Random.Range(0, 0.5f), Random.Range(0, 0.5f), 0);
+				GameObject spawnedEnemy = Instantiate(selected.EnemyPrefab, transform.position + ranPos, Quaternion.identity);
+
+				spawnedEnemy.GetComponent<Health>().ModifyMaxHealth(enemyHealthMulti);
+				spawnedEnemy.GetComponent<Health>().OnHurt.AddListener(() => AudioManager.instance.Play("EnemyHurt"));
+				spawnedEnemy.GetComponent<Health>().FullHeal();
+
+				spawnedEnemy.GetComponent<Health>().OnDeath.AddListener(() =>
+				{
+					TowerManager.instance.Currency += selected.enemyValue;
+					SpawnManager.Instance.remainingEnemies--;
+				});
+
+				spawnedEnemy.GetComponent<PathFollower>().Begin(pathName);
+			
+				selected.count--;
+				if (selected.count <= 0)
+				{
+					waves[currentWave].wave.Remove(selected);
+					if (waves[currentWave].wave.Count <= 0)
+					{
+						spawnTimer.Remove();
+						spawnTimer = null;
+					}
+				}
+			}
+
+		}
+	}
 }
