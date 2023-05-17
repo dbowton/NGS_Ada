@@ -26,8 +26,8 @@ public class SceneManagement : MonoBehaviour
 
 	string preppedScene = null;
 
-	public UnityAction onSceneChange;
-	public UnityAction onSceneLoad;
+	public UnityEvent onSceneChange;
+	public UnityEvent onSceneLoad;
 
 	private void Awake()
 	{

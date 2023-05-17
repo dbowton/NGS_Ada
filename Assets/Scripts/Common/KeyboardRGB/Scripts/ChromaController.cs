@@ -23,16 +23,20 @@ public class ChromaController : RGBController
 		if (!ChromaAnimationAPI.IsChromaSDKAvailable()) return false;
 
 		ChromaSDK.APPINFOTYPE appInfo = new APPINFOTYPE();
-		appInfo.Title = "Razer Chroma Unity Game Loop Sample Application";
-		appInfo.Description = "A sample application using Razer Chroma SDK";
+		appInfo.Title = "Rags To Liches";
+		appInfo.Description =
+			"Rags To Liches is a small third-person action tower defense game " +
+			"where you play as a peasant who gets tired of adventurers breaking " +
+			"into his house. Place down towers and fight off waves and waves of " +
+			"\"Enemies\". Progress through the story and see just how far one man " +
+			"will go to protect his llama.";
 
-		appInfo.Author_Name = "Razer";
+		appInfo.Author_Name = "Neumont Game Studios";
 		appInfo.Author_Contact = "https://developer.razer.com/chroma";
 
 		appInfo.SupportedDevice = (0x01 | 0x02);
-		appInfo.Category = 1;
+		appInfo.Category = 2;
 		_mResult = ChromaAnimationAPI.InitSDK(ref appInfo);
-
 		if (_mResult != RazerErrors.RZRESULT_SUCCESS) return false;
 
 		int sizeKeyboard = GetColorArraySize2D(Device2D.Keyboard);
@@ -73,6 +77,7 @@ public class ChromaController : RGBController
 			ChromaAnimationAPI.StopAll();
 			ChromaAnimationAPI.CloseAll();
 			int result = ChromaAnimationAPI.Uninit();
+//			ChromaAnimationAPI.UnloadLibrarySDK();
 
 #if !UNITY_EDITOR
             ChromaAnimationAPI.UninitAPI();
@@ -223,5 +228,5 @@ public class ChromaController : RGBController
 		int index = ChromaAnimationAPI.GetMaxColumn(Device2D.Keyboard) * row + column;
 
 		colors[index] = ChromaAnimationAPI.GetRGB(red, green, blue);
-	}
+	}	
 }

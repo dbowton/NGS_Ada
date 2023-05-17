@@ -40,6 +40,16 @@ public class RGBPlayer : MonoBehaviour
 	}
 	public Dictionary<string, List<KeyCode>> registeredKeys = new Dictionary<string, List<KeyCode>>();
 
+	private void Start()
+	{
+		SceneManagement.instance.onSceneChange.AddListener(() =>
+		{
+			KeyboardAnimations.StopAnimation();
+			controller.ClearAnimationColors();
+			controller.ClearColors();
+		});
+	}
+
 	private void LateUpdate()
 	{
 		controller.Update();
@@ -47,6 +57,17 @@ public class RGBPlayer : MonoBehaviour
 
 	private void OnDisable()
 	{
+		controller.Shutdown();
+	}
+
+	private void OnApplicationQuit()
+	{
+		KeyboardAnimations.StopAnimation();
+		controller.ClearAnimationColors();
+		controller.ClearColors();
+
+		controller.Update();
+
 		controller.Shutdown();
 	}
 }
