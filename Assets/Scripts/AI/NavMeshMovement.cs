@@ -31,7 +31,7 @@ public class NavMeshMovement : Movement
 
 	public override void MoveTowards(Vector3 target)
 	{
-		Debug.DrawRay(transform.position, (navMeshAgent.destination - transform.position).normalized * navMeshAgent.velocity.magnitude, Color.red);
+		//Debug.DrawRay(transform.position, (navMeshAgent.destination - transform.position).normalized * navMeshAgent.velocity.magnitude, Color.red);
 		//navMeshAgent.CalculatePath(target, navMeshAgent.SetDestination(target));
 
 		navMeshAgent.SetDestination(target);
