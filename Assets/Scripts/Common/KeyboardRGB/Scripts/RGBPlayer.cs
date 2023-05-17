@@ -7,19 +7,28 @@ public class RGBPlayer : MonoBehaviour
 	public RGBController controller = new EmptyController();
 	private static RGBPlayer instance = null;
 
-	public static RGBPlayer Instance 
+	public static RGBPlayer Instance
 	{
-		get 
-		{ 
+		get
+		{
 			if (instance == null)
 			{
 				GameObject ob = new GameObject();
-				ob.name = "RGB Player";
+				ob.name = "RGB_Player";
 				instance = ob.AddComponent<RGBPlayer>();
 
-				if (ChromaAnimationAPI.IsChromaSDKAvailable()) instance.controller = new ChromaController();
-				else if (CUE.NET.CueSDK.IsSDKAvailable()) instance.controller = new CUEController();
-				else instance.controller = new EmptyController();
+				if (PlayerPrefs.HasKey("RGBControllerSelection"))
+				{
+					if (PlayerPrefs.GetInt("RGBControllerSelection") == 1 && ChromaAnimationAPI.IsChromaSDKAvailable())
+						instance.controller = new ChromaController();
+					else if (false && PlayerPrefs.GetInt("RGBControllerSelection") == 2 && CUE.NET.CueSDK.IsSDKAvailable())
+						instance.controller = new CUEController();
+				}
+				else
+				{
+					PlayerPrefs.SetInt("RGBControllerSelection", 0);
+					instance.controller = new EmptyController();
+				}
 
 				instance.controller.Init();
 
@@ -27,7 +36,7 @@ public class RGBPlayer : MonoBehaviour
 			}
 
 			return instance;
-		} 
+		}
 	}
 	public Dictionary<string, List<KeyCode>> registeredKeys = new Dictionary<string, List<KeyCode>>();
 

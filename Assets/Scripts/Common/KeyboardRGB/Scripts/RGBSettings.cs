@@ -18,7 +18,7 @@ public class RGBSettings : MonoBehaviour
 		{
 			new TMPro.TMP_Dropdown.OptionData("None"),
 			new TMPro.TMP_Dropdown.OptionData("Razer Chroma SDK"),
-			new TMPro.TMP_Dropdown.OptionData("Corsair CUE SDK")
+//			new TMPro.TMP_Dropdown.OptionData("Corsair CUE SDK")
 		};
 
 		dropdown.AddOptions(options);
@@ -33,7 +33,7 @@ public class RGBSettings : MonoBehaviour
 			dropdown.value = 1;
 			debugText.text = "ChromaSDK Prepped";
 		}
-		else if (RGBPlayer.Instance.controller.GetType().IsAssignableFrom(typeof(CUEController)))
+		else if (false && RGBPlayer.Instance.controller.GetType().IsAssignableFrom(typeof(CUEController)))
 		{
 			dropdown.value = 2;
 			debugText.text = "CUESDK Prepped";
@@ -53,6 +53,7 @@ public class RGBSettings : MonoBehaviour
 		}
 		timers.Clear();
 
+		PlayerPrefs.SetInt("RGBControllerSelection", val);
 		if (val == 0)
 		{
 			RGBPlayer.Instance.controller = new EmptyController();
@@ -89,15 +90,15 @@ public class RGBSettings : MonoBehaviour
 	{
 		RGBPlayer.Instance.controller.SetButtonColor(Colors.charcoal);
 
-		if (RGBPlayer.Instance.controller != null && Input.GetKeyDown(KeyCode.RightArrow))
+		if (Input.GetKeyDown(KeyCode.RightArrow))
 			KeyboardAnimations.PlayAnimation(RGBPlayer.Instance.controller, KeyboardAnimations.Random, Color.green);
-		if (RGBPlayer.Instance.controller != null && Input.GetKeyDown(KeyCode.UpArrow))
+		if (Input.GetKeyDown(KeyCode.UpArrow))
 			KeyboardAnimations.PlayAnimation(RGBPlayer.Instance.controller, KeyboardAnimations.Burst, Color.blue);
-		if (RGBPlayer.Instance.controller != null && Input.GetKeyDown(KeyCode.DownArrow))
+		if (Input.GetKeyDown(KeyCode.DownArrow))
 			KeyboardAnimations.PlayAnimation(RGBPlayer.Instance.controller, KeyboardAnimations.Drop, Color.red);
-		if (RGBPlayer.Instance.controller != null && Input.GetKeyDown(KeyCode.LeftArrow))
+		if (Input.GetKeyDown(KeyCode.LeftArrow))
 			KeyboardAnimations.PlayAnimation(RGBPlayer.Instance.controller, KeyboardAnimations.Wave, Color.yellow);
-		if (RGBPlayer.Instance.controller != null && Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space))
 			KeyboardAnimations.StopAnimation();
 
 		foreach (KeyCode vKey in Enum.GetValues(typeof(KeyCode)))
