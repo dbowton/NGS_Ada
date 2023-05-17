@@ -54,7 +54,7 @@ public class SpawnManager : MonoBehaviour
 		else
 			UIGameManager.Instance.waveCounter.text = "Wave: 1/" + spawners.Max(x => x.waveCount());
 
-		waveTimer = new Timer(60, () => StartWaves(), true);
+		waveTimer = new Timer();// 60, () => StartWaves(), true);
 
 		AudioManager.instance.Stop(actionSong);
 		AudioManager.instance.Stop("MainMenuTheme");

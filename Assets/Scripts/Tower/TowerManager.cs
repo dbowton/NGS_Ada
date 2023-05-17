@@ -23,8 +23,9 @@ public class TowerManager : MonoBehaviour
 	[SerializeField] private int currency = 0;
 
 	public int Currency { get { return currency; } set 
-		{ 
+		{
 			currency = value;
+			UpdateTowerColors();
 			UIGameManager.Instance.currency.text = "Currency: " + currency.ToString();
 		} 
 	}
@@ -53,7 +54,34 @@ public class TowerManager : MonoBehaviour
 			towerInfo.Add((tower.GetComponent<Tower>().towerIconMaterial, tower.GetComponent<Tower>().cost.ToString()));
 		}
 
+		UpdateTowerColors();
+
 		UIGameManager.Instance.SetTowerIcons(towerInfo);
+	}
+
+
+	public void UpdateTowerColors()
+	{
+		if (towerPrefabs.Count > 0 && Currency >= towerPrefabs[0].GetComponent<Tower>().cost)
+			RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Alpha1, (index == 0) ? Color.blue : Color.green);
+		else
+			RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Alpha1, (index == 0) ? Colors.orange : Color.red);
+
+		if (towerPrefabs.Count > 1 && Currency >= towerPrefabs[1].GetComponent<Tower>().cost)
+			RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Alpha2, (index == 1) ? Color.blue : Color.green);
+		else
+			RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Alpha2, (index == 1) ? Colors.orange : Color.red);
+
+		if (towerPrefabs.Count > 2 && Currency >= towerPrefabs[2].GetComponent<Tower>().cost)
+			RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Alpha3, (index == 2) ? Color.blue : Color.green);
+		else
+			RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Alpha3, (index == 2) ? Colors.orange : Color.red);
+
+		if (towerPrefabs.Count > 3 && Currency >= towerPrefabs[3].GetComponent<Tower>().cost)
+			RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Alpha4, (index == 3) ? Color.blue : Color.green);
+		else
+			RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Alpha4, (index == 3) ? Colors.orange : Color.red);
+
 	}
 
 	private void Update()
@@ -67,14 +95,22 @@ public class TowerManager : MonoBehaviour
 		{
 			if (Input.GetKey(KeyCode.Q))
 			{
+				RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Q, Color.blue);
 				yRot -= Time.deltaTime * 180f;
 				hasYRot = true;
 			}
+			else
+				RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Q, Color.green);
+
 			if (Input.GetKey(KeyCode.E))
 			{
+				RGBPlayer.Instance.controller.SetKeyColor(KeyCode.E, Color.blue);
 				yRot += Time.deltaTime * 180f;
 				hasYRot = true;
 			}
+			else
+				RGBPlayer.Instance.controller.SetKeyColor(KeyCode.E, Color.green);
+
 
 			if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hitInfo, placementRange, targetLayer))
 			{
@@ -142,6 +178,9 @@ public class TowerManager : MonoBehaviour
 		{
 			if (num == index)
 			{
+				RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Q, Color.black);
+				RGBPlayer.Instance.controller.SetKeyColor(KeyCode.E, Color.black);
+
 				index = -1;
 				if (awaitingTower) Destroy(awaitingTower);
 			}
@@ -153,6 +192,7 @@ public class TowerManager : MonoBehaviour
 				if (awaitingTower) Destroy(awaitingTower);
 				awaitingTower = null;
 			}
+			UpdateTowerColors();
 		}
 	}
 }
