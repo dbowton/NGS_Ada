@@ -5449,6 +5449,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultFadeScreenPrefab: {fileID: 5575599850304842056, guid: 7d771d67bfe51eb439a77ee98ade7674, type: 3}
+  onSceneChange:
+    m_PersistentCalls:
+      m_Calls: []
+  onSceneLoad:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &883568782
 Transform:
   m_ObjectHideFlags: 0
@@ -9289,7 +9295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76645462052b7cf4196c1826ec12c7b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlockAllLevels: 1
+  unlockAllLevels: 0
   startingLevelName: farm
   data:
   - levelName: farm

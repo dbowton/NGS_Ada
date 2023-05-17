@@ -6,4 +6,5 @@ public static class Colors
 	public static Color lightBlue = new Color(0.68f, 0.99f, 0.98f);
 	public static Color charcoal = new Color(57 / 255f, 64 / 255f, 83 / 255f);
 	public static Color federalBlue = new Color(20 / 255f, 1 / 255f, 82 / 255f);
+	public static Color CarlosPurple = new Color(102 / 255f, 51 / 255f, 153 / 255f);
 }

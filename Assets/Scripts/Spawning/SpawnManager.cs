@@ -94,6 +94,7 @@ public class SpawnManager : MonoBehaviour
 
 		if (waveTimer != null)
 		{
+			RGBPlayer.Instance.controller.SetKeyColor(KeyCode.G, Color.green);
 			if (Input.GetKeyDown(KeyCode.G))
 			{
 				waveTimer.Remove();
@@ -161,6 +162,7 @@ public class SpawnManager : MonoBehaviour
 
 	private void StartWaves()
 	{
+		RGBPlayer.Instance.controller.SetKeyColor(KeyCode.G, Color.black);
 		runningWave = true;
 
 		AudioManager.instance.Stop(ambientSong);

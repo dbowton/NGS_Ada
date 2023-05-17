@@ -88,7 +88,7 @@ public class RGBSettings : MonoBehaviour
 
 	private void Update()
 	{
-		RGBPlayer.Instance.controller.SetButtonColor(Colors.charcoal);
+		RGBPlayer.Instance.controller.SetButtonColor(Colors.CarlosPurple);
 
 		if (Input.GetKeyDown(KeyCode.RightArrow))
 			KeyboardAnimations.PlayAnimation(RGBPlayer.Instance.controller, KeyboardAnimations.Random, Color.green);

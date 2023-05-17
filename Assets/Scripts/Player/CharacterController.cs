@@ -130,12 +130,14 @@ namespace Player
             Vector3 targetMovementVelocity = Vector3.zero;
             if (Input.GetKey(KeyCode.LeftShift))
             {
+                RGBPlayer.Instance.controller.SetKeyColor(KeyCode.LeftShift, Color.blue);
                 MaxStableMoveSpeed = SprintSpeed;
                 MaxAirMoveSpeed = SprintSpeed;
             }
             else
             {
-                MaxStableMoveSpeed = WalkSpeed;
+				RGBPlayer.Instance.controller.SetKeyColor(KeyCode.LeftShift, Color.green);
+				MaxStableMoveSpeed = WalkSpeed;
                 MaxAirMoveSpeed = WalkSpeed;
             }
 
@@ -215,6 +217,7 @@ namespace Player
                 }
             }
             animator.SetBool("IsGrounded", Motor.GroundingStatus.IsStableOnGround);
+            RGBPlayer.Instance.controller.SetKeyColor(KeyCode.Space, (Motor.GroundingStatus.IsStableOnGround) ? Color.blue : Color.red);
         }
 
         private void FixedUpdate()

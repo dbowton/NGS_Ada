@@ -94,6 +94,13 @@ namespace KinematicCharacterController.Examples
             // Build the CharacterInputs struct
             characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
             characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
+
+            RGBPlayer.Instance.controller.SetKeyColor(KeyCode.W, (characterInputs.MoveAxisForward > 0) ? Color.blue : Color.green);
+            RGBPlayer.Instance.controller.SetKeyColor(KeyCode.S, (characterInputs.MoveAxisForward < 0) ? Color.blue : Color.green);
+            RGBPlayer.Instance.controller.SetKeyColor(KeyCode.D, (characterInputs.MoveAxisRight > 0) ? Color.blue : Color.green);
+            RGBPlayer.Instance.controller.SetKeyColor(KeyCode.A, (characterInputs.MoveAxisRight < 0) ? Color.blue : Color.green);
+
+
             characterInputs.CameraRotation = CharacterCamera.Transform.rotation;
             characterInputs.JumpDown = Input.GetKeyDown(KeyCode.Space);
             characterInputs.attack = Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKey(KeyCode.Mouse0);
