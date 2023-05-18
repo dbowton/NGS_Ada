@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 408632}
   - component: {fileID: 3316470}
   - component: {fileID: 2315836}
-  - component: {fileID: 64720079275147040}
   m_Layer: 0
   m_Name: SM_Bld_Church_Tower_03
   m_TagString: Untagged
@@ -84,17 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64720079275147040
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145682}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43829567262769938, guid: 853c4d68248acee45b4eb668f4eb2b44, type: 2}

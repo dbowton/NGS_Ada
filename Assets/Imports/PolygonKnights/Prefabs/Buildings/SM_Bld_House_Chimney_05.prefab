@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 480182}
   - component: {fileID: 3398682}
   - component: {fileID: 2373370}
-  - component: {fileID: 64018420523113304}
   m_Layer: 0
   m_Name: SM_Bld_House_Chimney_05
   m_TagString: Untagged
@@ -84,17 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64018420523113304
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129510}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43877310532994846, guid: 2855fb67607def44b90535ad0b95cd8b, type: 2}
