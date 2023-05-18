@@ -42,7 +42,7 @@ public class RGBPlayer : MonoBehaviour
 
 	private void Start()
 	{
-		SceneManagement.instance.onSceneChange.AddListener(() =>
+		SceneManagement.instance?.onSceneChange.AddListener(() =>
 		{
 			KeyboardAnimations.StopAnimation();
 			controller.ClearAnimationColors();
