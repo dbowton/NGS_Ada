@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 477962}
   - component: {fileID: 3397418}
   - component: {fileID: 2378044}
-  - component: {fileID: 5306975272943051095}
+  - component: {fileID: 4615965551078342760}
   m_Layer: 0
   m_Name: pillar_small9
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5306975272943051095
-MeshCollider:
+--- !u!65 &4615965551078342760
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,10 +94,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300072, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.8105342, y: 9.999999, z: 0.5}
+  m_Center: {x: 0.000030517578, y: 4.9999995, z: 0.4900785}
 --- !u!1 &110292
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +193,7 @@ GameObject:
   - component: {fileID: 494378}
   - component: {fileID: 3341548}
   - component: {fileID: 2366698}
-  - component: {fileID: 3407207925921107980}
+  - component: {fileID: 8241808438564607900}
   m_Layer: 0
   m_Name: pillar_small10
   m_TagString: Untagged
@@ -267,8 +266,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3407207925921107980
-MeshCollider:
+--- !u!65 &8241808438564607900
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -277,10 +276,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300072, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.8105342, y: 9.999999, z: 0.5}
+  m_Center: {x: 0.000030517578, y: 4.9999995, z: 0.4900785}
 --- !u!1 &115068
 GameObject:
   m_ObjectHideFlags: 0
@@ -10011,8 +10009,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155480}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 3.6, z: 0.598}
+  m_LocalRotation: {x: -0, y: -0.7071069, z: -0, w: 0.70710677}
+  m_LocalPosition: {x: 0, y: 3.6000004, z: 5.5979924}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10084,7 +10082,7 @@ GameObject:
   - component: {fileID: 453212}
   - component: {fileID: 3391144}
   - component: {fileID: 2340832}
-  - component: {fileID: 4581691994485929198}
+  - component: {fileID: 7863772821268164487}
   m_Layer: 0
   m_Name: pillar_small4
   m_TagString: Untagged
@@ -10157,8 +10155,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4581691994485929198
-MeshCollider:
+--- !u!65 &7863772821268164487
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10167,10 +10165,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300072, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.810535, y: 9.999999, z: 0.5}
+  m_Center: {x: 0, y: 4.9999995, z: 0.49007863}
 --- !u!1 &166504
 GameObject:
   m_ObjectHideFlags: 0
@@ -10182,7 +10179,7 @@ GameObject:
   - component: {fileID: 428886}
   - component: {fileID: 3317416}
   - component: {fileID: 2346138}
-  - component: {fileID: 816395781931109523}
+  - component: {fileID: 5337051697996047260}
   m_Layer: 0
   m_Name: pillar_small7
   m_TagString: Untagged
@@ -10255,8 +10252,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &816395781931109523
-MeshCollider:
+--- !u!65 &5337051697996047260
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10265,10 +10262,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300072, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.8105342, y: 9.999999, z: 0.5}
+  m_Center: {x: 0, y: 4.9999995, z: 0.4900785}
 --- !u!1 &169618
 GameObject:
   m_ObjectHideFlags: 0
@@ -10280,7 +10276,7 @@ GameObject:
   - component: {fileID: 402130}
   - component: {fileID: 3309594}
   - component: {fileID: 2359314}
-  - component: {fileID: 1317403778291249058}
+  - component: {fileID: 3061671561597751183}
   m_Layer: 0
   m_Name: pillar_small6
   m_TagString: Untagged
@@ -10353,8 +10349,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1317403778291249058
-MeshCollider:
+--- !u!65 &3061671561597751183
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10363,10 +10359,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300072, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.810535, y: 9.999999, z: 0.5}
+  m_Center: {x: 0, y: 4.9999995, z: 0.49007863}
 --- !u!1 &171340
 GameObject:
   m_ObjectHideFlags: 0
@@ -15142,7 +15137,7 @@ GameObject:
   - component: {fileID: 485822}
   - component: {fileID: 3324202}
   - component: {fileID: 2334518}
-  - component: {fileID: 6989648145314292388}
+  - component: {fileID: 1247422688401185964}
   m_Layer: 0
   m_Name: pillar_small2
   m_TagString: Untagged
@@ -15215,8 +15210,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6989648145314292388
-MeshCollider:
+--- !u!65 &1247422688401185964
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15225,10 +15220,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300072, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.810535, y: 9.999999, z: 0.5}
+  m_Center: {x: 0, y: 4.9999995, z: 0.49007863}
 --- !u!1 &183840
 GameObject:
   m_ObjectHideFlags: 0
@@ -15240,7 +15234,7 @@ GameObject:
   - component: {fileID: 452020}
   - component: {fileID: 3320064}
   - component: {fileID: 2311334}
-  - component: {fileID: 3667976587955359492}
+  - component: {fileID: 5565624421999042739}
   m_Layer: 0
   m_Name: pillar_small8
   m_TagString: Untagged
@@ -15313,8 +15307,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3667976587955359492
-MeshCollider:
+--- !u!65 &5565624421999042739
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15323,10 +15317,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300072, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.8105342, y: 9.999999, z: 0.5}
+  m_Center: {x: 0, y: 4.9999995, z: 0.4900785}
 --- !u!1 &187744
 GameObject:
   m_ObjectHideFlags: 0
@@ -15338,7 +15331,7 @@ GameObject:
   - component: {fileID: 416314}
   - component: {fileID: 3397236}
   - component: {fileID: 2319194}
-  - component: {fileID: 7334271896726921147}
+  - component: {fileID: 3524600995799948361}
   m_Layer: 0
   m_Name: wall7
   m_TagString: Untagged
@@ -15420,8 +15413,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7334271896726921147
-MeshCollider:
+--- !u!65 &3524600995799948361
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15430,10 +15423,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300094, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8.000002, y: 9.999999, z: 8.000002}
+  m_Center: {x: 0.00000023841864, y: 4.9999995, z: -0.0000014305118}
 --- !u!1 &188718
 GameObject:
   m_ObjectHideFlags: 0
@@ -15445,7 +15437,7 @@ GameObject:
   - component: {fileID: 474104}
   - component: {fileID: 3387544}
   - component: {fileID: 2369128}
-  - component: {fileID: 8739973671815080496}
+  - component: {fileID: 7696359506940385528}
   m_Layer: 0
   m_Name: pillar_small5
   m_TagString: Untagged
@@ -15518,8 +15510,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8739973671815080496
-MeshCollider:
+--- !u!65 &7696359506940385528
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15528,7 +15520,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300072, guid: a7cc7f41ce50a474aa1df610be0b810f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.810535, y: 9.999999, z: 0.5}
+  m_Center: {x: 0, y: 4.9999995, z: 0.49007863}
