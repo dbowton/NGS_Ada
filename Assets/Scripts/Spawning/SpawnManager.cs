@@ -15,7 +15,8 @@ public class SpawnManager : MonoBehaviour
 	int completedWaves = 0;
 	public int remainingEnemies = 0;
 	Timer waveTimer;
-	
+
+	public UnityEvent onWaveComplete;
 
 	List<Spawner> spawners = new List<Spawner>();
 	public static SpawnManager Instance
@@ -112,6 +113,8 @@ public class SpawnManager : MonoBehaviour
 			Instance.WaveComplete();
 			return;
 		}
+
+		onWaveComplete.Invoke();
 
 		print("Wave Complete");
 
