@@ -1561,6 +1561,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8374574898290796116, guid: 6403e0d4ecf2270498a31c836bb9929c, type: 3}
   m_PrefabInstance: {fileID: 68231831}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &72200885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8433132833752311332, guid: 244a7d8a145841a4bb6c5f3b2b47274a, type: 3}
+  m_PrefabInstance: {fileID: 1763753927}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c297de574a35fc248a23c6e4eb3b8d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &72222847
 GameObject:
   m_ObjectHideFlags: 0
@@ -27709,6 +27720,22 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6539204429706586000, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
+      propertyPath: OnHurt.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 72200885}
+    - target: {fileID: 6539204429706586000, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 72200885}
+    - target: {fileID: 6539204429706586000, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
+      propertyPath: OnHurt.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539204429706586000, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Stop
+      objectReference: {fileID: 0}
     - target: {fileID: 8682688359255103812, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -40923,6 +40950,9 @@ MonoBehaviour:
   ambientSong: Ambient2
   actionSong: Action2
   remainingEnemies: 0
+  onWaveComplete:
+    m_PersistentCalls:
+      m_Calls: []
   enemyCountMulti: 1
   enemyHealthMulti: 1
 --- !u!4 &1986091989
