@@ -49,13 +49,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerIconMaterial: {fileID: 21300000, guid: 579b6764dc62df042afad2fba200c690, type: 3}
   onPath: 0
+  offPath: 0
   cost: 35
   towerSize: 1
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
   damage: 100
-  targetMode: 0
+  targetMode: 1
   height: 2.25
   range: 10
   viewAngle: 180
@@ -67,6 +68,7 @@ MonoBehaviour:
   projectileSpeed: 5000
   projectilePrefab: {fileID: 5329419941944525613, guid: 240518bb342bbc34fb607466749c2a71, type: 3}
   projectileSpawn: {fileID: 3718488109604678341}
+  particleSystem: {fileID: 0}
 --- !u!120 &3718488107972930699
 LineRenderer:
   m_ObjectHideFlags: 0
