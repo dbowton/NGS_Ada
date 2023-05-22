@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fb87fe008d6364baa0367c32af2af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 150
+  maxHealth: 250
   OnHurt:
     m_PersistentCalls:
       m_Calls: []
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponTrail: {fileID: 0}
   enemyTagName: Player
-  damage: 15
+  damage: 10
   isAttacking: 0
   attackDelay: 2
   maxAttackCount: 2
