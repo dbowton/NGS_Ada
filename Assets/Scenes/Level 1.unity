@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1470247, g: 0.36394262, b: 0.5799059, a: 1}
+  m_IndirectSpecularColor: {r: 0.14703749, g: 0.3639866, b: 0.57992274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6702,6 +6702,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8433132833752311332, guid: 244a7d8a145841a4bb6c5f3b2b47274a, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433132833752311332, guid: 244a7d8a145841a4bb6c5f3b2b47274a, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433132833752311332, guid: 244a7d8a145841a4bb6c5f3b2b47274a, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433132833752311332, guid: 244a7d8a145841a4bb6c5f3b2b47274a, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.671
+      objectReference: {fileID: 0}
     - target: {fileID: 8433132833752311332, guid: 244a7d8a145841a4bb6c5f3b2b47274a, type: 3}
       propertyPath: sounds.Array.data[6].volume
       value: 0.935
