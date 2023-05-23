@@ -13,5 +13,11 @@ public class ScenePlayer : MonoBehaviour
 	public void loadScene()
 	{
 		SceneManagement.instance.LoadScene(sceneName, fadeOut, fadeIn, fadescreen, minTime);
+		AudioManager.instance.StopAll();
+
+		if (sceneName == "Title")
+		{
+			AudioManager.instance.Play("MainMenuTheme");
+		}
 	}
 }

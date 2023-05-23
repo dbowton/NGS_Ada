@@ -1177,6 +1177,7 @@ GameObject:
   - component: {fileID: 4699339895328451478}
   - component: {fileID: 4699339895328451477}
   - component: {fileID: 4699339895328451476}
+  - component: {fileID: 3753477867120736434}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -1287,9 +1288,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4699339895466665353}
-        m_TargetAssemblyTypeName: UIPauseMenu, Assembly-CSharp
-        m_MethodName: Menu
+      - m_Target: {fileID: 3753477867120736434}
+        m_TargetAssemblyTypeName: ScenePlayer, Assembly-CSharp
+        m_MethodName: loadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1299,6 +1300,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3753477867120736434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4699339895328451474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b0086ef3577b945b85c247b1c3ffb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Title
+  fadeOut: 3
+  fadeIn: 3
+  fadescreen: {fileID: 0}
+  minTime: 0
 --- !u!1 &4699339895466665352
 GameObject:
   m_ObjectHideFlags: 0
