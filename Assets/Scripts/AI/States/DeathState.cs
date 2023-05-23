@@ -18,7 +18,7 @@ public class DeathState : State
 
 
 		owner.animator.SetTrigger("death");
-		AudioManager.instance.Play("EnemyDeath");
+		//AudioManager.instance.Play("EnemyDeath");
 		GameObject.Destroy(owner.gameObject, 3);
 	}
 
