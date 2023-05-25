@@ -13,8 +13,8 @@ public class Interactable : MonoBehaviour
 
 	private void Start()
 	{
-		if (PlayerPrefs.HasKey("LookedAt")) bitMap = PlayerPrefs.GetInt("LookedAt");
-		if (PlayerPrefs.HasKey("Hell") && PlayerPrefs.GetInt("Hell") == 1) Destroy(this);
+		if (PlayerPrefs.HasKey("lookedAt")) bitMap = PlayerPrefs.GetInt("lookedAt");
+		if (PlayerPrefs.HasKey("hell") && PlayerPrefs.GetInt("hell") == 1) Destroy(this);
 	}
 
 	private void Save()
@@ -30,7 +30,7 @@ public class Interactable : MonoBehaviour
 
 		AudioSource.PlayClipAtPoint(completedSound, transform.position);
 
-		PlayerPrefs.SetInt("Hell", 1);
+		PlayerPrefs.SetInt("hell", 1);
 		Destroy(this);
 
 
@@ -38,6 +38,6 @@ public class Interactable : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		PlayerPrefs.SetInt("LookedAt", bitMap);
+		PlayerPrefs.SetInt("lookedAt", bitMap);
 	}
 }
