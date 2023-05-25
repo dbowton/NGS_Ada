@@ -168,7 +168,8 @@ public class SpawnManager : MonoBehaviour
 		RGBPlayer.Instance.controller.SetKeyColor(KeyCode.G, Color.black);
 		runningWave = true;
 
-		AudioManager.instance.Stop(ambientSong);
+		//AudioManager.instance.Stop(ambientSong);
+		AudioManager.instance.StopAll();
 		AudioManager.instance.Play(actionSong);
 
 		foreach (var spawn in spawners) spawn.BeginWave();
