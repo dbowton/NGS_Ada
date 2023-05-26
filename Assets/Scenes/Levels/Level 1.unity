@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1470247, g: 0.36394262, b: 0.5799059, a: 1}
+  m_IndirectSpecularColor: {r: 0.14703749, g: 0.3639866, b: 0.57992274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1344,6 +1344,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 801832186}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
+      propertyPath: followTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
       value: 
       objectReference: {fileID: 0}
@@ -2289,6 +2293,10 @@ PrefabInstance:
       propertyPath: center
       value: 
       objectReference: {fileID: 801832186}
+    - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
+      propertyPath: followTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
       value: 
@@ -3324,6 +3332,10 @@ PrefabInstance:
       propertyPath: center
       value: 
       objectReference: {fileID: 801832186}
+    - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
+      propertyPath: followTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
       value: 
@@ -5687,6 +5699,10 @@ PrefabInstance:
       propertyPath: center
       value: 
       objectReference: {fileID: 801832186}
+    - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
+      propertyPath: followTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
       value: 
@@ -8504,6 +8520,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 801832186}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
+      propertyPath: followTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
       value: 
       objectReference: {fileID: 0}
@@ -8692,7 +8712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: followTarget
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
@@ -8859,6 +8879,10 @@ PrefabInstance:
       propertyPath: center
       value: 
       objectReference: {fileID: 801832186}
+    - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
+      propertyPath: followTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
       value: 
@@ -9988,6 +10012,10 @@ PrefabInstance:
       propertyPath: center
       value: 
       objectReference: {fileID: 801832186}
+    - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
+      propertyPath: followTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
       value: 
@@ -11309,6 +11337,10 @@ PrefabInstance:
       propertyPath: center
       value: 
       objectReference: {fileID: 801832186}
+    - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
+      propertyPath: followTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
       value: 
@@ -12912,6 +12944,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 801832186}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
+      propertyPath: followTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
       value: 
       objectReference: {fileID: 0}
@@ -13079,6 +13115,10 @@ PrefabInstance:
       propertyPath: center
       value: 
       objectReference: {fileID: 801832186}
+    - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
+      propertyPath: followTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114518969365274630, guid: d54b36ae97957c94d860ed7e29dc8edf, type: 3}
       propertyPath: roamTransform
       value: 
