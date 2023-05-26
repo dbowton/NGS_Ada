@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour
 	private static SpawnManager instance;
 	[SerializeField] UnityEvent onWavesComplete;
 	[SerializeField] bool isEndlessMode = false;
+	[SerializeField] string endlessWaveKey = "";
 	[SerializeField] string ambientSong;
 	[SerializeField] string actionSong;
 
@@ -46,16 +47,18 @@ public class SpawnManager : MonoBehaviour
 		{
 			enemyCountMultiplier = enemyCountMulti;
 			enemyHealthMultiplier = enemyHealthMulti;
+
+			if (!PlayerPrefs.HasKey(endlessWaveKey)) PlayerPrefs.SetInt(endlessWaveKey, 1);
 		}
 
 		if (this != instance) return;
 
 		if (isEndlessMode)
-			UIGameManager.Instance.waveCounter.text = "∞/∞";
+			UIGameManager.Instance.waveCounter.text = "1/" + PlayerPrefs.GetInt(endlessWaveKey);
 		else
 			UIGameManager.Instance.waveCounter.text = "Wave: 1/" + spawners.Max(x => x.waveCount());
 
-		waveTimer = new Timer();// 60, () => StartWaves(), true);
+		waveTimer = new Timer();
 
 		AudioManager.instance.Stop(actionSong);
 		AudioManager.instance.Stop("MainMenuTheme");
@@ -116,22 +119,22 @@ public class SpawnManager : MonoBehaviour
 
 		onWaveComplete.Invoke();
 
-		print("Wave Complete");
-
 		AudioManager.instance.Stop(actionSong);
 		AudioManager.instance.Play(ambientSong);
 
 		runningWave = false;
 
-		if(!isEndlessMode)
-			completedWaves++;
+		completedWaves++;
 
-		if (completedWaves >= spawners.Max(x => x.waveCount()))
+		PlayerPrefs.SetInt(endlessWaveKey, Mathf.Max(PlayerPrefs.GetInt(endlessWaveKey), completedWaves + 1));
+
+
+		if ((!isEndlessMode && completedWaves >= spawners.Max(x => x.waveCount())) || (isEndlessMode && 0 >= spawners.Max(x => x.waveCount())))
 		{
 			print("All Waves Complete");
 
 			if (isEndlessMode)
-				UIGameManager.Instance.waveCounter.text = "∞/∞";
+				UIGameManager.Instance.waveCounter.text = (completedWaves + 1) + "/" + PlayerPrefs.GetInt(endlessWaveKey);
 			else
 				UIGameManager.Instance.waveCounter.text = "Wave: " + completedWaves + "/" + spawners.Max(x => x.waveCount());
 
@@ -141,11 +144,12 @@ public class SpawnManager : MonoBehaviour
 		{
 			if (isEndlessMode)
 			{
-				UIGameManager.Instance.waveCounter.text = "∞/∞";
+				UIGameManager.Instance.waveCounter.text = (completedWaves + 1) + "/" + PlayerPrefs.GetInt(endlessWaveKey);
 				Replay();
 			}
 			else
 				UIGameManager.Instance.waveCounter.text = "Wave: " + (completedWaves + 1) + "/" + spawners.Max(x => x.waveCount());
+			
 			waveTimer = new Timer(60, () => StartWaves(), true, false, false);
 		}
 		
