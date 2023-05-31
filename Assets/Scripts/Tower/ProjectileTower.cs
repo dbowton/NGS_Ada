@@ -11,6 +11,8 @@ public class ProjectileTower : Tower
 	[SerializeField] float viewAngle = 180;
 	[SerializeField] int steps = 10;
 
+	[SerializeField] float turnRate = 6f;
+
 	[SerializeField] LineRenderer lineRenderer;
 
 	[SerializeField] Transform xRotObj;
@@ -194,7 +196,7 @@ public class ProjectileTower : Tower
 
 		xRotObj.forward = Vector3.Lerp(xRotObj.forward,
 			calcLook.normalized,
-			6 * Time.deltaTime);
+			turnRate * Time.deltaTime);
 
 		return Vector3.Angle(yRotObj.forward, targetYForward) < 2f;
 	}
