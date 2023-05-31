@@ -4329,7 +4329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponTrail: {fileID: 0}
   enemyTagName: Player
-  damage: 1
+  damage: 8
   isAttacking: 0
   attackDelay: 2
   maxAttackCount: 2
@@ -4485,7 +4485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25a79a76786c354aa627625823bce03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementData: {fileID: 11400000, guid: e88d76f6947ac8a448c1c35c2d920127, type: 2}
+  movementData: {fileID: 11400000, guid: ae4026d695bf0cb4cbeb8473022fdcd9, type: 2}
   navMeshAgent: {fileID: 2631374963673858779}
 --- !u!114 &2631374963673858725
 MonoBehaviour:
@@ -4534,7 +4534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fb87fe008d6364baa0367c32af2af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 150
+  maxHealth: 75
   OnHurt:
     m_PersistentCalls:
       m_Calls: []

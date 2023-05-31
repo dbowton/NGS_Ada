@@ -127,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 1370931944378286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2126399823813133706}
@@ -154,7 +154,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
-  damage: 18
+  damage: 20
   targetMode: 0
   height: 2.25
   range: 20
@@ -163,7 +163,7 @@ MonoBehaviour:
   lineRenderer: {fileID: -2134846067236129092}
   xRotObj: {fileID: 4579829373147374}
   yRotObj: {fileID: 4645079822382838}
-  attackRate: 0.35
+  attackRate: 0.65
   projectileSpeed: 5000
   projectilePrefab: {fileID: 1715476615087276, guid: 529b1ccccc944d84f8b0bd1b37005d13, type: 3}
   projectileSpawn: {fileID: 1490360019188389061}
