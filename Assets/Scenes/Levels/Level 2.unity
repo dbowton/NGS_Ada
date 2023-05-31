@@ -10306,6 +10306,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 778974668}
     m_Modifications:
+    - target: {fileID: 6294745687071649955, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 445148314}
+    - target: {fileID: 6294745687071649955, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: loadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294745687071649955, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ScenePlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8108534878983546284, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
       propertyPath: m_Name
       value: UIVictory
@@ -10410,7 +10422,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4578407235308579286, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
 --- !u!114 &445148311 stripped
 MonoBehaviour:
@@ -10428,6 +10441,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8108534878983546287, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
   m_PrefabInstance: {fileID: 445148310}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &445148313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4112880321646300194, guid: 1ae9a3edf0f958f45a6b0f178567be8d, type: 3}
+  m_PrefabInstance: {fileID: 445148310}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &445148314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445148313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b0086ef3577b945b85c247b1c3ffb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Level 3
+  fadeOut: 2
+  fadeIn: 1
+  fadescreen: {fileID: 5575599850304842056, guid: 7d771d67bfe51eb439a77ee98ade7674, type: 3}
+  minTime: 1.5
 --- !u!1001 &449860182
 PrefabInstance:
   m_ObjectHideFlags: 0

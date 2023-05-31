@@ -33400,6 +33400,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1714748972919986588, guid: 877b08f512178384dadca8cf28e31a7e, type: 3}
   m_PrefabInstance: {fileID: 1041625816}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1065122395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7915160404833738857, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
+  m_PrefabInstance: {fileID: 1433481196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f775bd3c6cb4f2d4db7372b55bb3f406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1102776457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34512,6 +34523,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3195028413310659483, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: levelName
+      value: castle
+      objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -34563,6 +34578,22 @@ PrefabInstance:
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: ambientSong
       value: Ambient4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWaveComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 409237985}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1065122395}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWaveComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FullHeal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndGame
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943573, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: m_Name
@@ -34891,7 +34922,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2116412485978801627, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
+      propertyPath: sceneName
+      value: Level 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333506780681221476, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: loadScene
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2510410372432964625, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: edf324cd66307bc4fb22031555814a0a, type: 3}
 --- !u!1 &1460723715
 GameObject:

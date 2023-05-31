@@ -12,6 +12,7 @@ public class ScenePlayer : MonoBehaviour
 
 	public void loadScene()
 	{
+		Debug.Log(sceneName);
 		SceneManagement.instance.LoadScene(sceneName, fadeOut, fadeIn, fadescreen, minTime);
 		AudioManager.instance.StopAll();
 
