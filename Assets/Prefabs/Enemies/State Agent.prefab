@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4595046257672559253}
   - component: {fileID: 4595046257672559250}
   m_Layer: 7
-  m_Name: TankEnemy
+  m_Name: State Agent
   m_TagString: Test_AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25a79a76786c354aa627625823bce03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementData: {fileID: 11400000, guid: 7934b160b86f0244a8e4810c12fc0553, type: 2}
+  movementData: {fileID: 11400000, guid: e88d76f6947ac8a448c1c35c2d920127, type: 2}
   navMeshAgent: {fileID: 4595046257672559252}
 --- !u!114 &4595046257672559255
 MonoBehaviour:
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponTrail: {fileID: 0}
   enemyTagName: Player
-  damage: 12
+  damage: 20
   isAttacking: 0
   attackDelay: 2
   maxAttackCount: 2

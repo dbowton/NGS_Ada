@@ -148,13 +148,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerIconMaterial: {fileID: 21300000, guid: 5a8197fae2c4ad2469c50ade35d0b560, type: 3}
   onPath: 0
-  offPath: 0
   cost: 50
   towerSize: 1
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
-  damage: 20
+  damage: 18
   targetMode: 0
   height: 2.25
   range: 20
@@ -163,7 +162,7 @@ MonoBehaviour:
   lineRenderer: {fileID: -2134846067236129092}
   xRotObj: {fileID: 4579829373147374}
   yRotObj: {fileID: 4645079822382838}
-  attackRate: 0.65
+  attackRate: 0.35
   projectileSpeed: 5000
   projectilePrefab: {fileID: 1715476615087276, guid: 529b1ccccc944d84f8b0bd1b37005d13, type: 3}
   projectileSpawn: {fileID: 1490360019188389061}
