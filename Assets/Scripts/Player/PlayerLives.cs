@@ -9,9 +9,14 @@ public class PlayerLives : MonoBehaviour
 	public int playerLives = 3;
 	public GameObject gameOverUI;
 
+	[SerializeField] List<GameObject> livesUI = new List<GameObject>();
+
     public void OnDeath()
 	{
 		playerLives--;
+
+		livesUI[playerLives].SetActive(false);
+
 		GetSpawner(spawner1, spawner2);
 		if (playerLives == 0)
 		{
