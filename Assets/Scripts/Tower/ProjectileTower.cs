@@ -109,19 +109,19 @@ public class ProjectileTower : Tower
 
 			Vector3 angle;
 			// Detect Right Enemies
-			for (int i = 0; i < steps / 2; i++)
+			for (int i = 0; i < steps / 4; i++)
 			{
 				angle = Vector3.RotateTowards(transform.forward, -transform.right, Mathf.Deg2Rad * (viewAngle / steps) * i, 0);
 
-				foreach (var enemy in Physics.SphereCastAll(transform.position + Vector3.up * height, 0.5f, (angle * range), range, targetLayer))
+				foreach (var enemy in Physics.SphereCastAll(transform.position + Vector3.up * height, 1f, (angle * range), range, targetLayer))
 					if(!detectedEnemies.Contains(enemy.collider.transform.root))
 						detectedEnemies.Add(enemy.collider.transform.root);
 			}
 			// Detect Left Enemies
-			for (int i = 0; i < steps / 2; i++)
+			for (int i = 0; i < steps / 4; i++)
 			{
 				angle = Vector3.RotateTowards(transform.forward, transform.right, Mathf.Deg2Rad * (viewAngle / steps) * i, 0);
-				foreach (var enemy in Physics.SphereCastAll(transform.position + Vector3.up * height, 0.5f, (angle * range), range, targetLayer))
+				foreach (var enemy in Physics.SphereCastAll(transform.position + Vector3.up * height, 1f, (angle * range), range, targetLayer))
 					if (!detectedEnemies.Contains(enemy.collider.transform.root))
 						detectedEnemies.Add(enemy.collider.transform.root);
 			}
@@ -184,7 +184,7 @@ public class ProjectileTower : Tower
 		Vector3 targetYForward = ((targetPos - Vector3.up * targetPos.y) - (transform.position - Vector3.up * transform.position.y)).normalized;
 
 		yRotObj.forward = Vector3.Lerp(yRotObj.forward, targetYForward,
-			6 * Time.deltaTime);
+			turnRate * Time.deltaTime);
 
 		Vector3 calcLook = xRotObj.forward;
 		calcLook.y = 0;
