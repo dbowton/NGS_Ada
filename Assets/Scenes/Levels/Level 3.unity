@@ -6883,6 +6883,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3195028413310659483, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: levelName
+      value: ruins
+      objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943571, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -6949,7 +6953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -6962,11 +6966,11 @@ PrefabInstance:
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1172024930}
+      objectReference: {fileID: 729852798}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 729852798}
+      objectReference: {fileID: 729852797}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWaveComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -6981,7 +6985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndGame
+      value: Trigger
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -6993,7 +6997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameOver, Assembly-CSharp
+      value: DelayedEvent, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -7019,26 +7023,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9107355720160260368, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1172024930}
+    - target: {fileID: 9107355720160260368, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
---- !u!1 &729852797 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3428273146420943573, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+--- !u!114 &729852797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3195028413310659483, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
   m_PrefabInstance: {fileID: 729852796}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &729852798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729852797}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52a530ef387637649b8414c44fddf813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: ruins
+--- !u!114 &729852798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9107355720160260368, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+  m_PrefabInstance: {fileID: 729852796}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63061c6971fcebe47967020566fe0ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &732015490
 PrefabInstance:
   m_ObjectHideFlags: 0
