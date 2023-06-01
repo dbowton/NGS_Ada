@@ -21185,14 +21185,14 @@ PrefabInstance:
       propertyPath: onWaveComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1167966770}
-    - target: {fileID: 3428273146420943572, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
-      propertyPath: onWavesComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1719416176}
     - target: {fileID: 3428273146420943573, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
       propertyPath: m_Name
       value: SpawnManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9107355720160260368, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1719416176}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec5f77bc9da873b4b9befde2d11a69d8, type: 3}
 --- !u!1001 &5256411189844308917
