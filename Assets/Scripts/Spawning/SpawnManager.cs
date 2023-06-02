@@ -99,6 +99,7 @@ public class SpawnManager : MonoBehaviour
 		if (waveTimer != null)
 		{
 			RGBPlayer.Instance.controller.SetKeyColor(KeyCode.G, Color.green);
+			UIGameManager.Instance.timer.SetActive(true);
 			if (Input.GetKeyDown(KeyCode.G))
 			{
 				waveTimer.Remove();
