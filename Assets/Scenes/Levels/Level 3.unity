@@ -4184,6 +4184,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2220890851389843290, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2220890851416575989, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
       propertyPath: mainWeapon
       value: 
@@ -4241,6 +4245,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fb87fe008d6364baa0367c32af2af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &380285948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2220890851389843290, guid: 0aa85c05cc173df4ba666331d9487923, type: 3}
+  m_PrefabInstance: {fileID: 380285946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &381010027
 GameObject:
   m_ObjectHideFlags: 0
@@ -10264,7 +10273,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 380285948}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
