@@ -26,7 +26,7 @@ public class HammerTower : Tower
 		if (!placed) return;
 		animator.SetBool("forcedDown", false);
 
-		if (hit) Hit();
+//		if (hit) Hit();
 		if(timeAccumulator < cooldownTime) timeAccumulator += Time.deltaTime;
 	}
 	private void OnTriggerEnter(Collider other)
@@ -35,8 +35,6 @@ public class HammerTower : Tower
 		{ 
 			if(targetLayer == (targetLayer | (1 << other.transform.root.gameObject.layer)))
 			{
-				timeAccumulator -= cooldownTime;
-
 				animator.SetTrigger("Hit");
 				impact.Play();
 			}
@@ -45,6 +43,9 @@ public class HammerTower : Tower
 
 	public void Hit()
 	{
+		if (!placed) return;
+		if (timeAccumulator < cooldownTime) return;
+		timeAccumulator -= cooldownTime;
 		print("Hit");
 		hit = false;
 		List<Health> healths = new List<Health>();
