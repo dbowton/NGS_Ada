@@ -50,6 +50,8 @@ public class HammerTower : Tower
 		hit = false;
 		List<Health> healths = new List<Health>();
 
+		AudioManager.instance.Play("HammerFire");
+
 		foreach (var c in Physics.OverlapSphere(hammerHitPos.position, radius, targetLayer))
 		{
 			if (c.transform.root.TryGetComponent<Health>(out Health enemyHealth))

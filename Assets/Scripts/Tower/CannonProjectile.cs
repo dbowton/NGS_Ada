@@ -9,6 +9,7 @@ public class CannonProjectile : Projectile
 	public override void Fired()
 	{
 		fired = true;
+		AudioManager.instance.Play("CannonFire");
 		destroyTimer = new Timer(0.5f, () => Destroy(gameObject));
 	}
 
@@ -28,6 +29,7 @@ public class CannonProjectile : Projectile
 		{
             GetComponent<Rigidbody>().velocity = Vector3.zero;
 			_particleSystem.Play();
+			AudioManager.instance.Play("CannonImpact");
             if (destroyTimer != null)
                 destroyTimer.Remove();
             Destroy(this);

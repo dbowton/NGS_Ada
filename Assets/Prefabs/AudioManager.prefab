@@ -47,7 +47,7 @@ MonoBehaviour:
   sounds:
   - name: PlayerHurt
     clip: {fileID: 8300000, guid: 391908c29f8d4c84fbfa996c53992b63, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 0
     audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
@@ -61,7 +61,14 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SwordSwing
     clip: {fileID: 8300000, guid: 6afc7b7713ff65d4d8436dce7bd3d7cd, type: 3}
-    volume: 1
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
+    source: {fileID: 0}
+  - name: SwordHit
+    clip: {fileID: 8300000, guid: ccc2337638043a4498edfdd6d6fa13cf, type: 3}
+    volume: 0.55
     pitch: 1
     loop: 0
     audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
@@ -75,27 +82,34 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EnemyHurt
     clip: {fileID: 8300000, guid: c5f9fab649098214692da64241b18cff, type: 3}
-    volume: 0.1
+    volume: 0.3
     pitch: 1
     loop: 0
     audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
     source: {fileID: 0}
   - name: CannonFire
-    clip: {fileID: 8300000, guid: c7865fd595be8a046a018f3e24771dd6, type: 3}
+    clip: {fileID: 8300000, guid: ac8a31f0b50cb83438e7060994f82ac4, type: 3}
     volume: 0.1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
+    source: {fileID: 0}
+  - name: CannonImpact
+    clip: {fileID: 8300000, guid: 5ff823f546b52574a931e1d9b44290a6, type: 3}
+    volume: 0.06
     pitch: 1
     loop: 0
     audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
     source: {fileID: 0}
   - name: BallistaFire
-    clip: {fileID: 8300000, guid: 83f2cfac68448244aaf7fab45d357819, type: 3}
-    volume: 0.1
+    clip: {fileID: 8300000, guid: 706d2e6c8a9e79640a7968cffc73dd36, type: 3}
+    volume: 0.3
     pitch: 1
     loop: 0
     audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
     source: {fileID: 0}
   - name: HammerFire
-    clip: {fileID: 8300000, guid: 83f2cfac68448244aaf7fab45d357819, type: 3}
+    clip: {fileID: 8300000, guid: 60d29fbb964f44f41a00ffc726464148, type: 3}
     volume: 0.1
     pitch: 1
     loop: 0
@@ -103,7 +117,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SpikeFire
     clip: {fileID: 8300000, guid: 85e890e800369403ea5af9b10adecb94, type: 3}
-    volume: 0.1
+    volume: 0.08
     pitch: 1
     loop: 0
     audioMixerGroup: {fileID: 1687941215804045888, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}
@@ -145,7 +159,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Action1
     clip: {fileID: 8300000, guid: 5a1944aa7c9b294499f993b3c5b484f5, type: 3}
-    volume: 0.85
+    volume: 0.5
     pitch: 1
     loop: 1
     audioMixerGroup: {fileID: 4735492243788942839, guid: 101726503d6190a43bab1979ac40a5cf, type: 2}

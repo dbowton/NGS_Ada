@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour
 	public virtual void Fired()
 	{
 		fired = true;
+		AudioManager.instance.Play("BallistaFire");
 		destroyTimer = new Timer(0.5f, () => Destroy(gameObject));
 	}
 

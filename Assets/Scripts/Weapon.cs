@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Weapon : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Weapon : MonoBehaviour
     public int maxAttackCount = 2;
 
     [SerializeField] bool isKillBox = false;
+
+    public UnityEvent OnHitSFX;
 
     void Start()
     {
@@ -37,6 +40,7 @@ public class Weapon : MonoBehaviour
             {
                 other.GetComponent<Health>().Damage(damage);
                 colliders.Add(other);
+                OnHitSFX.Invoke();
             }
             
         }

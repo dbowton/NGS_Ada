@@ -43,6 +43,7 @@ public class SpikeTower : Tower
 				hitCount= 0;
 				
 				animator.SetBool("active", true);
+				AudioManager.instance.Play("SpikeFire");
 				sparks.Play();
 			}
 		}
