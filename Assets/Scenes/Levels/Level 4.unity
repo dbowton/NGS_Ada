@@ -5628,6 +5628,9 @@ MonoBehaviour:
   attackDelay: 2
   maxAttackCount: 2
   isKillBox: 1
+  OnHitSFX:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &57000540
 Transform:
   m_ObjectHideFlags: 0
@@ -28792,6 +28795,21 @@ MonoBehaviour:
   attackDelay: 3
   maxAttackCount: 2
   isKillBox: 0
+  OnHitSFX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 314032664}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SwordHit
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &629557615
 GameObject:
   m_ObjectHideFlags: 0
@@ -49156,6 +49174,21 @@ MonoBehaviour:
   attackDelay: 3
   maxAttackCount: 2
   isKillBox: 0
+  OnHitSFX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 314032664}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SwordHit
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1292446107
 GameObject:
   m_ObjectHideFlags: 0
