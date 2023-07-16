@@ -228,6 +228,7 @@ namespace Player
                 //can we attack
                 if (!attacking && !_attackedThisFrame)
                 {
+                    AudioManager.instance.Play("SwordSwing");
                     animator.SetTrigger("Attack" + ((_attackCount % mainWeapon.maxAttackCount) + 1));
                     _attackedThisFrame = true;
                 }
