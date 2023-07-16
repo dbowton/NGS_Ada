@@ -47,7 +47,7 @@ MonoBehaviour:
   sounds:
   - name: PlayerHurt
     clip: {fileID: 8300000, guid: 391908c29f8d4c84fbfa996c53992b63, type: 3}
-    volume: 0.3
+    volume: 1
     pitch: 1
     spatialBlend: 1
     loop: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SwordSwing
     clip: {fileID: 8300000, guid: 6afc7b7713ff65d4d8436dce7bd3d7cd, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     spatialBlend: 1
     loop: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SwordHit
     clip: {fileID: 8300000, guid: ccc2337638043a4498edfdd6d6fa13cf, type: 3}
-    volume: 0.55
+    volume: 1
     pitch: 1
     spatialBlend: 1
     loop: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EnemyDeath
     clip: {fileID: 8300000, guid: c5f9fab649098214692da64241b18cff, type: 3}
-    volume: 0.858
+    volume: 1
     pitch: 1
     spatialBlend: 1
     loop: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EnemyHurt
     clip: {fileID: 8300000, guid: c5f9fab649098214692da64241b18cff, type: 3}
-    volume: 0.3
+    volume: 1
     pitch: 1
     spatialBlend: 1
     loop: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CannonFire
     clip: {fileID: 8300000, guid: ac8a31f0b50cb83438e7060994f82ac4, type: 3}
-    volume: 0.1
+    volume: 1
     pitch: 1
     spatialBlend: 1
     loop: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CannonImpact
     clip: {fileID: 8300000, guid: 5ff823f546b52574a931e1d9b44290a6, type: 3}
-    volume: 0.06
+    volume: 1
     pitch: 1
     spatialBlend: 1
     loop: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BallistaFire
     clip: {fileID: 8300000, guid: 706d2e6c8a9e79640a7968cffc73dd36, type: 3}
-    volume: 0.3
+    volume: 1
     pitch: 1
     spatialBlend: 1
     loop: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: HammerFire
     clip: {fileID: 8300000, guid: 60d29fbb964f44f41a00ffc726464148, type: 3}
-    volume: 0.1
+    volume: 1
     pitch: 1
     spatialBlend: 1
     loop: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SpikeFire
     clip: {fileID: 8300000, guid: 85e890e800369403ea5af9b10adecb94, type: 3}
-    volume: 0.08
+    volume: 1
     pitch: 1
     spatialBlend: 1
     loop: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ambient1
     clip: {fileID: 8300000, guid: 2fb2b5c48f49da74eb9d076b874fc160, type: 3}
-    volume: 1
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -143,7 +143,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ambient2
     clip: {fileID: 8300000, guid: ac699d8cc40c8f644ab5330e41d96588, type: 3}
-    volume: 1
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ambient3
     clip: {fileID: 8300000, guid: 91f820c11898b6e4882bd836c8c4e753, type: 3}
-    volume: 1
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ambient4
     clip: {fileID: 8300000, guid: d227190cd67e95b4c9250cdf23dae34d, type: 3}
-    volume: 1
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ambient5
     clip: {fileID: 8300000, guid: 2d6db0da4edfed74092f72177440b215, type: 3}
-    volume: 1
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Action1
     clip: {fileID: 8300000, guid: 5a1944aa7c9b294499f993b3c5b484f5, type: 3}
-    volume: 0.5
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -183,7 +183,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Action2
     clip: {fileID: 8300000, guid: 3f9d2a49059160546818cd858b1adc43, type: 3}
-    volume: 0.85
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -191,7 +191,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Action3
     clip: {fileID: 8300000, guid: 75809951836972743baf521ade23dca0, type: 3}
-    volume: 0.85
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -199,7 +199,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Action4
     clip: {fileID: 8300000, guid: c7539e82f49a8554cae4b061c0ff1227, type: 3}
-    volume: 0.85
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -207,7 +207,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Action5
     clip: {fileID: 8300000, guid: 826bb8ea4939f9340ba3d55e1120eb1f, type: 3}
-    volume: 0.85
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -215,7 +215,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MainMenuTheme
     clip: {fileID: 8300000, guid: 0f9afe08b776e4544bd5f09c23eccfe8, type: 3}
-    volume: 0.85
+    volume: 0.1
     pitch: 1
     spatialBlend: 0
     loop: 1
