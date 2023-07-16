@@ -39,19 +39,13 @@ public class playerInput : MonoBehaviour
 		{
             transform.localEulerAngles += Vector3.up * Input.GetAxis("Mouse X");
         }
-
-        if (Input.GetKey(KeyCode.L))
-        {
-            gameObject.GetComponent<Health>().Damage(1);
-        }
     }
 
     public void Attack(bool isAttacking)
     {
         weapon.isAttacking = isAttacking;
+        Debug.Log("ATTACk");
         AudioManager.instance.Play("SwordSwing");
         //AudioManager.instance.Play("Test");
     }
-
-    
 }

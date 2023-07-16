@@ -90,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
             switch (attackCount % 2)
             {
                 case 0:
+                    Debug.Log("Attack");
                     animator.SetTrigger("Attack");
                     break;
                 case 1:
@@ -115,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void AttackStart()
     {
-        //Debug.Log("Attack start");
+        Debug.Log("Attack start");
         gameObject.GetComponent<playerInput>().Attack(true);
     }
 
@@ -129,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void AttackAnimationStart()
     {
-        //Debug.Log("Attack anim start");
+        Debug.Log("Attack anim start");
         canAttack = false;
         attackCount++;
         attackTimer.Reset();
